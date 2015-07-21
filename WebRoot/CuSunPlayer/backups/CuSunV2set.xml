@@ -1,0 +1,86 @@
+﻿<CuPlayer>
+
+     <Player_Set 
+		JcScpBufferTime = "5"
+ 		JcScpVolume = "75"
+		JcScpCode = "utf8"
+ 		JcScpImgDisplay = "no"
+		JcScpAutoHideControl="yes"
+		JcScpControlHideTime="0.5"
+		JcScpControlHeight="40"	
+		JcScpShowList= "next"
+		JcScpAutoRepeat = "no"
+		JcScpAutoPlay = "yes"
+		JcScpsetMode = "1"
+		JcScpAFrontCanClose = "no"
+		JcScpShowRightmenu = "yes"
+		JcScpShareMode = "JcScpVideoPath"
+	/>
+      <Logo_Set
+ 		JcScpLogoDisplay = "yes"
+ 		JcScpLogoPath = "img/index_1.jpg"
+ 		JcScpLogoPosition = "top-left"
+		JcScpLogoWidth = "44"
+ 		JcScpLogoHeight = "44"
+ 		JcScpLogoAlpha = "1"
+	/>
+      <Flashvars_Set
+		JcScpServer =""
+		JcScpVideoPath = ""
+		JcScpVideoPathHD = ""
+		JcScpImg ="Images/flashChangfa2.jpg" 
+        
+		ShowJcScpAFront = "no"
+		JcScpCountDowns = "10"
+		JcScpCountDownsPosition = "top-right"
+		JcScpAFrontW = "645"
+		JcScpAFrontH = "300"
+		JcScpAFrontPath = "Images/SevenColorPlayer_650x418.swf"
+		JcScpAFrontLink = "http://yxp.163.com/act/20120214.html"
+		
+		ShowJcScpAVideo= "no"
+		JcScpAVideoPath= "http://vf1.mtime.cn/Video/2012/07/11/flv/120711093250238753.flv"	
+		JcScpAVideoLink= "http://yxp.163.com/act/20120214.html"
+		
+		ShowJcScpAPause = "yes"
+		JcScpAPausePath = "Images/SevenColorPlayer_a1.swf"
+		JcScpAPauseW = "375"
+		JcScpAPauseH = "230"
+		JcScpAPauseLink= "http://yxp.163.com/act/20120214.html"
+		
+		ShowJcScpACorner = "yes"
+		JcScpACornerPath= "Images/SevenColorPlayer_a10.swf"
+		JcScpACornerW = "80"
+		JcScpACornerH = "50"
+		JcScpACornerPosition = "top-right"
+		JcScpACornerLink = "http://yxp.163.com/act/20120214.html"
+ 
+		ShowJcScpAEnd = "yes"
+		JcScpAEndPath = "Images/Cover_changfa.jpg"
+		JcScpAEndW = "400"
+		JcScpAEndH = "200"
+		JcScpAEndLink= "http://yxp.163.com/act/ShowJcScpAEnd466.html"
+		
+	 />
+
+	 <SkinColor_Set
+ 		JcScpBackcolor = "0x000000"
+ 		JcScpBackcolortop = "0x353535"
+ 		JcScpLightcolor = "0xcfcfcf"
+
+ 		JcScpFontcolor = "0xffffff"
+ 		JcScptimebg = "0x393939"
+
+ 		JcScpLoadbar = "0x898989"
+ 		JcScpLoaded = "0x4d4b4b"
+ 		JcScpLoadbg = "0x000000"
+ 		JcScpPlayBtn = "0x2d2d2d"
+		
+ 		JcScpBar = "0xffffff"
+	 />
+
+
+
+	
+</CuPlayer>
+

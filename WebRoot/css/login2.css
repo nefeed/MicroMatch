@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit, hr, table {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+	background: url(../img/loading_1.png) repeat-x;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	outline: none;
+	border: 0 none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+.bg {
+	background: url(../img/login2_bg.png) no-repeat center center;
+}
+
+.header {
+	margin-top: 194px;
+	text-align: center;
+}
+
+.header h1 {
+	font-size: 40px;
+	color: #fff;
+	font-weight: normal;
+}
+
+.form {
+	width: 320px;
+	margin: 0 auto;
+	background: url(../img/login_2_1.png) no-repeat top center;
+}
+
+.text {
+	width: 300px;
+	height: 20px;
+	padding: 13px 10px;
+	background: none;
+	color: #a6aca9;
+}
+
+.password {
+	width: 260px;
+	height: 20px;
+	padding: 13px 10px;
+	background: none;
+	float: left;
+}
+/*.text{ border-radius: 8px 8px 0 0;-moz-border-radius:  8px 8px 0 0; height:19px; padding:10px;
+    -webkit-border-radius: 8px 8px 0 0; width:328px; border:1px solid #cad3ce;}
+.password{ height:19px; padding:10px; border-radius: 0 0 8px 8px;-moz-border-radius:  8px 8px 0 0; 
+    -webkit-border-radius: 0 0 8px 8px; width:328px;border:1px solid #cad3ce;}*/
+.button {
+	background: url(../img/denglu_bn.png) no-repeat;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	float: left;
+	margin: 8px 0;
+}
+
+.checkbox {
+	position: relative;
+	top: 1px;
+}

@@ -1,0 +1,11 @@
+.vedio-name{
+	text-align:center;
+	}
+.vedio-name a{
+	font-szie:14px;
+	color:#959595;
+	}
+.vedio-name a:hover{
+	color:#959595;
+	cursor:pointer;
+	}

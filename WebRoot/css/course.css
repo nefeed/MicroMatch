@@ -1,0 +1,443 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit, hr {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+
+a {
+	text-decoration: none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+.play {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.play_top {
+	font-size: 12px;
+	line-height: 72px;
+	font-family: '宋体';
+	color: #999999;
+}
+
+.play_top a {
+	color: #999999;
+}
+
+.play_top a:hover {
+	text-decoration: underline;
+}
+
+.close_light_bg {
+	margin-top: 15px
+}
+
+.play_1 {
+	color: #595959;
+	font-size: 18px;
+}
+
+.play_2 {
+	overflow: hidden;
+	margin-top: 20px;
+	position: relative;
+}
+
+.play_2_left {
+	float: left;
+	position: relative;
+}
+
+.img {
+	position: absolute;
+	right: 0px;
+	top: 220px;
+	display: none;
+	cursor: pointer;
+}
+
+.play_2_right {
+	float: left;
+	background: url(../img/course_2.png);
+	width: 40px;
+	text-align: center;
+	height: 540px;
+}
+
+.play_2_right ul {
+	padding-top: 8px;
+}
+
+.play_2_right ul li {
+	height: 45px;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+.play_2_right ul li img {
+	margin: 2px 5px;
+}
+
+.play_2_right ul li a {
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.play_2_right ul .xiazai img {
+	margin: 2px 10px;
+}
+
+.play_2_right ul .dingyue img {
+	margin: 2px 10px;
+}
+
+.dingyue:hover, .xiazai:hover, .toupiao:hover {
+	background: #000;
+}
+/*.hide{ position:absolute; top:5px; right:40px;}
+*/
+.play_2_right ul li em {
+	background: url(../img/course_10.png);
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+.play_2_right ul li em a {
+	display: block;
+	color: #ffffff;
+	font-size: 12px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.play_2_right ul li em input {
+	cursor: pointer;
+	margin: 8px;
+}
+
+.hide_button1 {
+	background: url(../img/course_11.png) no-repeat;
+	width: 26px;
+	height: 24px;
+}
+
+.hide_button2 {
+	background: url(../img/course_12.png) no-repeat;
+	width: 25px;
+	height: 24px;
+}
+/*.em1{ position:absolute; top:3px; right:40px; display:none;}
+.em2{ position:absolute; top:55px; right:40px; display:none;}
+.em3{ position:absolute; top:107px; right:40px; display:none;}
+*/
+.em4 {
+	position: absolute;
+	top: 173px;
+	right: 40px;
+	display: none;
+	overflow: hidden;
+}
+
+.subject {
+	width: 1000px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.subject_left {
+	float: left;
+	padding: 20px 10px 20px 16px;
+	background: #f2f2f2;
+	width: 174px;
+}
+
+.subject_l_1 {
+	color: #595959;
+}
+
+.subject_l_2 {
+	color: #a8a8a8;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.subject_l_2 span {
+	margin-right: 30px;
+}
+
+.subject_left p {
+	font-size: 12px;
+	line-height: 18px;
+	color: #a8a8a8;
+}
+
+.subject_left ul {
+	margin-top: 15px;
+	width: 124px;
+}
+
+.subject_left ul li {
+	padding-right: 0px;
+	font-size: 12px;
+	color: #595959;
+	line-height: 30px;
+}
+
+.subject_left ul li a {
+	display: block;
+	background: url(../img/course_13.png) no-repeat right;
+	color: #595959;
+	text-decoration: underline;
+}
+
+.subject_right {
+	float: right;
+	width: 780px;
+}
+
+.subject_r_1 {
+	background: url(../img/course_14.png) bottom repeat-x;
+}
+
+.subject_r_1 em {
+	background: url(../img/course_15.png) left bottom no-repeat;
+	font-size: 18px;
+	color: #424242;
+	padding-bottom: 10px;
+}
+
+.subject_right ul {
+	overflow: hidden;
+}
+
+.subject_right ul li {
+	margin-top: 5px;
+	padding-top: 6px;
+	margin-right: 14px;
+	padding-bottom: 6px;
+	border: 2px;
+	solid: #fff;
+}
+
+.subject_right ul li a {
+	font-size: 14px;
+}
+
+.subject_right ul li p {
+	font-size: 12px;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+.subject_right ul li em {
+	color: #717171;
+	line-height: 32px;
+	margin-left: 5px;
+}
+
+.subject_right ul li i {
+	background: url(../img/course_16.png) left center no-repeat;
+	margin-left: 5px;
+	color: #bbbbbb;
+	padding-left: 16px;
+}
+
+.subject_right ul li:hover, .subject_right ul .subject_current {
+	border: 2px solid #4f96d3;
+}
+
+.talk {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.talk_1 {
+	color: #0b6abd;
+	font-size: 18px;
+	padding-left: 15px;
+	padding-top: 10px;
+	margin-bottom: 15px;
+}
+
+.talk_2 {
+	border: 1px solid #e5e5e5;
+	padding: 5px 18px 10px 18px;
+}
+
+.talk_2_1 {
+	overflow: hidden;
+	margin-top: 5px;
+	padding-top: 10px;
+	font-size: 12px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.talk_2_1 img {
+	float: left;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+.talk_center {
+	margin-left: 10px;
+	float: left;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.talk_center em {
+	color: #4c4c4c;
+}
+
+.talk_center i {
+	color: #8d8d8d;
+}
+
+.default-uinfo {
+	color: #808080;
+	font-size: 10px;
+	font-family: '微软雅黑';
+}
+
+.talk_center .i {
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+
+.talk_right {
+	margin-left: 10px;
+	float: right;
+	text-align: center;
+	color: #8d8d8d;
+	font-size: 12px;
+	padding-right: 25px;
+	padding-top: 10px;
+	width: 52px;
+}
+
+.talk_right em {
+	font-family: '微软雅黑';
+	color: #8d8d8d;
+	font-size: 30px;
+}
+
+.talk_right .talk_r_em {
+	color: #4f96d3;;
+	font-family: '微软雅黑';
+	font-size: 30px;
+}
+
+.talk_right a {
+	display: block;
+	color: #4f96d3;
+	margin-top: 10px;
+}
+
+.collapseBtn {
+	color: #1E90FF;
+	display: block;
+	float: right ;
+	margin-top: 10px;
+}
+
+.talk textarea {
+	margin-top: 20px;
+	font-size: 14px;
+	border: 1px solid #E3E3E3;
+	width: 1000px;
+	height: 100px;
+	padding: 5px;
+	resize: none;
+	color: #979797;
+}
+
+.talk textarea:hover {
+	border: 2px solid #1E90FF;
+}
+
+.talk button {
+	float: right;
+	margin: 15px 0 30px 0;
+	background: url(../img/denglu_7.png) no-repeat;
+	border: 0;
+	padding: 0;
+	width: 190px;
+	height: 40px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+}
+
+.talk button:hover {
+	background-image: url(../img/denglu_7_2.png);
+}
+/*.subject_left button{ float:right; margin-top: 6px; margin-right:8px; background:url(../img/denglu_7.png) no-repeat; border:0; padding:0; width:70px; height:25px; cursor:pointer; color:#fff; font-size:14px; border-radius:3px;}
+.subject_left button:hover{ background-image:url(../img/denglu_7_2.png);}
+*/
+.showResult {
+	margin-top: 250px;
+	font-size: 36px;
+	font-family: '微软雅黑';
+	color: #c0c0c0;
+	position: fixd;
+}
+/* 评论区未输入内容时的提示样式 */
+.scrBody {
+	margin-top: 10px ;
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none; /*webkit浏览器*/
+	-ms-user-select: none; /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;	
+}
+.showCResult {
+	text-align: center;
+	font-size: 16px;
+	font-family: '微软雅黑';
+	color: #c0c0c0;
+	position: fixd;
+}
+
+.btn-group button {
+	padding: 6px 10px ;
+	width: 74px ;
+	display: none ;
+}
+.optionBtn{
+	width: 70px ;
+	padding-top:6px ;
+	padding-left: 1px;
+	padding-right: 1px;
+	margin-top:5px ;
+}
+#updateBtn{
+	display: none ;
+}
+#addNewBtn{
+	display: none ;
+}

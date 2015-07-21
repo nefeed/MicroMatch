@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit, hr, table {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	outline: none;
+	border: 0 none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+.logo {
+	width: 1000px;
+	margin: 13px auto;
+	overflow: hidden;
+}
+
+.hr {
+	border: 1px solid #4f96d3
+}
+
+.logo_left {
+	float: left;
+	background: url(../img/index_2.jpg) right center no-repeat;
+	width: 235px;
+	margin-left: 14px;
+}
+
+.logo_right {
+	float: right;
+	width: 654px;
+}
+
+.logo_right ul {
+	overflow: hidden;
+	height: 44px;
+	width: 654px;
+}
+
+.logo_right ul li {
+	float: left;
+	line-height: 44px;
+}
+
+.logo_right ul li span {
+	margin: 0 35px 0 75px;
+}
+
+.logo_right ul li a {
+	color: #595959;
+}
+
+.logo_right ul li a:hover {
+	color: #0b6abd;
+}
+
+.logo_right ul li .logo_current {
+	color: #0b6abd;
+}
+
+.logo_li {
+	overflow: hidden;
+	margin: 4px 88px 4px 60px;
+	*margin: 4px 88px 4px 30px;
+}
+
+.logo_li input {
+	float: left;
+}
+
+.logo_text {
+	border: 1px solid #e0e0e0;
+	width: 152px;
+	padding-left: 10px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	color: #999999;
+}
+
+.logo_button {
+	background: url(../img/index_3.jpg) no-repeat center center;
+	width: 36px;
+	height: 36px;
+	border: 1px solid #e0e0e0;
+	border-left: 0;
+	cursor: pointer;
+}
+
+.logo_li2 {
+	background: url(../img/game_1.png) no-repeat 62px center;
+}
+
+.logo_right ul .logo_li2 a {
+	margin: 0 10px;
+	color: #0b6abd;
+}
+
+.subject {
+	overflow: hidden;
+	width: 1000px;
+	margin: 30px auto 70px auto;
+}
+
+.subject_left {
+	float: left;
+	width: 180px;
+	background: #f2f2f2;
+	padding-top: 15px;
+	height: 450px;
+}
+
+.subject_left em {
+	height: 34px;
+	line-height: 34px;
+	padding: 0 12px;
+	font-size: 12px;
+	color: #0b6abd;
+	cursor: pointer;
+}
+
+.subject_left .subject_current {
+	background-color: #4f96d3;
+	background-image: url(../img/game_2.png);
+	background-repeat: no-repeat;
+	background-position: 154px center;
+	color: #fff;
+}
+
+.subject_right {
+	float: right;
+	width: 770px;
+}
+
+.subject_right ul {
+	overflow: hidden;
+}
+
+.subject_right ul li {
+	float: left;
+	border: 1px solid #e0e0e0;
+	width: 233px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	background: #fff;
+}
+
+.main_1_a1 {
+	color: #666666;
+	padding-left: 15px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.subject_right ul li p {
+	font-family: '宋体';
+	font-size: 12px;
+	color: #666666;
+	padding-left: 15px;
+	padding-right: 10px;
+	line-height: 18px;
+	display: none;
+}
+
+.subject_right ul li em {
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 12px;
+	font-size: 12px;
+	font-family: '宋体';
+	color: #808080;
+	margin-top: 9px
+}
+
+.subject_right ul li em i {
+	padding-left: 25px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.subject_right ul li em .i1 {
+	background: url(../img/index_14.jpg) no-repeat left center;
+	float: left;
+}
+
+.subject_right ul li em .i2 {
+	background: url(../img/index_17.png) no-repeat 1px center;
+	float: left;
+}
+
+.subject_right ul li em .i3 {
+	float: right;
+}

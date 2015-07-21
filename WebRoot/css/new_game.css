@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit, hr, table {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	outline: none;
+	border: 0 none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+.subject {
+	width: 880px;
+	margin: 40px auto;
+}
+
+.subject label {
+	overflow: hidden;
+	display: block;
+	margin-bottom: 18px;
+}
+
+.subject label em {
+	float: left;
+	color: #5c5c5c;
+	font-size: 16px;
+	width: 107px;
+	padding: 10px 0;
+}
+
+.subject_text {
+	float: left;
+	border: 1px solid #CFCFCF;
+	width: 738px;
+	height: 42px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.subject_text2 {
+	float: left;
+	border: 1px solid #CFCFCF;
+	width: 760px;
+	height: 44px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.subject label i {
+	float: left;
+	width: 100px;
+	padding: 11px 0;
+}
+
+.subject label i select {
+	margin-right: 5px;
+}
+.subject label .SelectL {
+	float: left;
+	border: 1px solid #cfcfcf;
+	width: 740px;
+	height: 44px;
+	padding: 10px;
+	font-size: 14px;
+}
+.subject label .SelectL1 {
+	float: left;
+	border: 1px solid #cfcfcf;
+	width: 369px;
+	height: 44px;
+	padding: 10px;
+	font-size: 14px;
+}
+.subject label .SelectL2 {
+	float: left;
+	border: 1px solid #cfcfcf;
+	width: 369px;
+	height: 44px;
+	padding: 10px;
+	font-size: 14px;
+}
+.lable_right {
+	float: left;
+	padding: 8px;
+	width: 738px;
+	background-color: #ffffff;
+	border: 1px solid #cfcfcf;
+}
+/*.face{ overflow:hidden;}*/
+.label_button {
+	background: url(../img/new_game_3.png) no-repeat;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+	margin-bottom: 8px;
+}
+
+.lable_right textarea {
+	width: 725px;
+	font-size: 14px;
+	resize: none;
+	height: 145px;
+}
+
+.pic {
+	width: 402px;
+	height: 252px;
+	background: url(../img/new_game_bg.png) no-repeat;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 300px;
+}
+
+.newPic {
+	width: 380px;
+	height: 230px;
+	display: none;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 300px;
+}
+
+.pic_button {
+	float: center;
+	width: 205px;
+	margin: 20px auto;
+}
+
+.pic_button {
+	display: inline;
+}
+
+.subject_button {
+	margin-top: 20px;
+	margin-left: 340px;
+	background: url(../img/new_game_bt.png) no-repeat;
+	width: 205px;
+	padding-right: 29px;
+	height: 52px;
+	line-height: 52px;
+	text-align: right;
+	cursor: pointer;
+	font-size: 24px;
+	color: #fff;
+}
+
+.submitBTN {
+	float: right;
+	background: url(../img/new_game_bt2.png) no-repeat;
+	width: 98px;
+	height: 95px;
+	cursor: pointer;
+}
+
+.subject_upbutton {
+	margin-top: 85px;
+	width: 92px;
+	height: 81px;
+	cursor: pointer;
+	background:url(../img/new_game_4.png) no-repeat;
+}
+
+.subject_upbutton:hover, .subject_button:hover, .pic_submit input:hover
+	{
+	opacity: 0.7;
+}
+
+.pic_submit {
+	width: 98px;
+	overflow: hidden;
+}
+
+.pic_submit input {
+	float: right;
+	background: url(../img/new_game_bt2.png) no-repeat;
+	width: 98px;
+	height: 95px;
+	cursor: pointer;
+}
+
+.meituBody {
+	width: 800;
+	height: 600;
+	margin: 0 auto;
+}
+
+.subject_3 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.subject_3 input {
+	width: 190px;
+	height: 46px;
+	font-size: 21px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+/*.subject label em{ float:left; background:url(../img/new_game_1.png) repeat-x; height:38px; line-height:38px; border:1px solid #cccccc; width:118px; text-align:center; font-size:16px; color:#323232;}
+.subject .label em{ height:158px; line-height:158px; background:url(../img/new_game_2.png) repeat-x}
+.subject label .text{ float:left; padding:11px 8px; border:1px solid #cccccc; height:16px; border-left:0; width:263px;}
+.bg{ float:left; border:1px solid #cccccc;border-left:0; width:263px; padding:8px; }
+.bg i{ height:14px;}
+.bg textarea{ resize:none; width:263px; font-size:14px; height:123px; padding-top:5px;}
+.bg input{ background:url(../img/new_game_3.png) no-repeat; width:14px; height:14px; cursor:pointer; float:right;}
+
+*/
+
+/*2015-7-8*/
+.select_pic{
+	margin-left:250px;
+	margin-bottom:20px;
+}
+.select_pic_btn{
+	margin-left: 110px;
+	background: url(../img/new_game_match_bt.png) no-repeat;
+	width: 152px;
+	padding-right: 18px;
+	height: 37px;
+	line-height: 21px;
+	text-align: right;
+	cursor: pointer;
+	font-size: 18px;
+	color: #fff;
+}
+.select_pic_note{
+	display:block;
+	font-size:14px;
+	color:#999999;
+	margin-top:5px;
+	margin-left:32px;
+}
+.select_pic_note:hover{
+	color:#999999;
+}
+.confirm_btn{
+	width:120px;
+	height:35px;
+	background:url(../img/select_15.png) no-repeat;
+	font-size:18px;
+	color:#fff;
+	margin-top:20px;
+	margin-left:270px;
+}
+.cancel_btn{
+	width:120px;
+	height:35px;
+	background:url(../img/select_16.png) no-repeat;
+	font-size:18px;
+	color:#323232;
+	margin-top:20px;
+	margin-left:100px;
+}
+.sl-custom-file{
+	position:relative;
+	display:inline-block;
+	zoom:1;
+	cursor:pointer;
+	overflow:hidden;
+	vertical-align:middle;
+}
+.sl-custom-file .ui-input-file{
+	position:absolute;
+	right:0;
+	top:0;
+	_zoom:30;
+	font-size:300px\9;
+	height:100%;
+	_height:auto;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-ms-filter:"alpha(opacity=0)";
+	cursor:pointer;
+}

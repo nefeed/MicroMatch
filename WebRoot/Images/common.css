@@ -1,0 +1,52 @@
+/* ----------------------------------------
+	* Filename:     common.css
+	* Description:  Global CSS
+	* Website:      www.CuPlayer.com
+	* PageWidth:    960px
+	* CssCreate:    2012-11-14 23:02 
+------------------------------------------ */
+
+body { background:#ffffff url(CuPlayerBg.jpg); padding:0;margin:0;} 
+div,ul,li,ol,dl,dt,dd,form,img,p{margin: 0; padding: 0; border: 0; }
+li{list-style-type:none;}
+h1,h2,h4,h5,h6{margin: 0; padding: 0; font-size:14px;}
+
+/* __link */
+a {color: #313131; text-decoration:none;}
+a:link {color: #313131;text-decoration:none;}
+a:visited {color: #313131;text-decoration:none;}
+a:hover {color:red; text-decoration:underline;}
+a:active {color: #313131;}
+.blank {clear:both;}
+/* header */
+div#header { height:40px; background:#000000 url(Menubgs.jpg) center bottom;}
+div#header div.subnav{ width:960px;margin:0 auto;}
+div#header div.subnav p.sublogo {width:160px;float:left;}
+div#header div.subnav p.sublink {width:780px;float:left; border-right:1px #3e414a solid;}
+div#header div.subnav p.sublink a, div#header div.subnav p.sublink a:link,div#header div.subnav p.sublink a:visited { display:block;width:100px;float:right;font-size:12px;color:#cccccc; line-height:40px; text-decoration:none; text-align:center; border-left:1px #3e414a solid;}
+div#header div.subnav p.sublink a:hover{ color:#ffcc00; background:#3e414a;}
+/* footer */
+div#footer { height:100px; font-size:12px; margin-top:50px; border-top:1px #e2d8cc solid; background:#ffffff; font-family:Verdana, Arial, Helvetica, sans-serif,"ËÎÌו"; }
+div#footer div.copy { width:960px;margin:0 auto; padding-top:15px; color:#999999; height:87px; line-height:24px; background:url(CuLogobtn.jpg) no-repeat right 8px; }
+
+/* myplayer */
+div#myplayer { width:600px;margin:0 auto; border:1px #cccccc solid; clear:both;margin-top:50px; background:#ffffff; clear:both;}
+ul.mylist { width:100%; text-align:left;font-size:12px; }
+ul.mylist li { padding:1px 0; line-height:24px;height:24px; border-top:1px #efefef solid; }
+ul.mylist li a,ul.mylist li a:link,ul.myllist li a:visited{ padding:0px 6px 0px 30px; overflow:hidden; line-height:24px;height:24px;display:block;  background:url(Vico.jpg) no-repeat 6px 6px; text-decoration:none; color:#666666;}
+ul.mylist li a:hover{ color:#cc0000; background:#efefef url(Vico.jpg) no-repeat 6px 6px; }
+div#title { width:960px;margin:0 auto; height:40px;line-height:40px;font-family:Verdana, Arial, Helvetica, sans-serif,"ËÎÌו";}
+div#title h2 { text-align:center;}
+
+div#code {  width:960px;margin:0 auto; }
+div#code fieldset { width:620px;margin:0 auto; }
+div#code fieldset legend h1{ font-size:12px; color:#666666;}
+div#code textarea{ width:600px;margin:0 auto; }
+
+
+/* otherdemo */
+div#otherdemo { width:950px;margin:0 auto; margin-top:10px; font-size:12px; line-height:22px; border:1px #cccccc solid; padding:5px; height:90px;}
+div#otherdemo dl { width:180px;float:left; border-left:1px #cccccc solid; padding-left:5px; }
+div#otherdemo dl.b1 { border-left:none;}
+div#otherdemo dl dd a,div#otherdemo dl dd a:link,div#otherdemo dl dd a:visited{ padding-left:20px; background:url(Ico_01.gif) no-repeat left; display:block;height:22px;line-height:22px; font-family:Verdana, Arial, Helvetica, sans-serif,"ËÎÌו";}
+/* LastUpdate: 2012-11-14 23:02 */

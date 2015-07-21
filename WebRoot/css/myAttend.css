@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit, hr {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	outline: none;
+	border: 0 none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+.main {
+	width: 1000px;
+	margin: 0 auto;
+}
+.courseminiPic {
+	width: 230px ;
+	height: 130px ;
+}
+.main_1 {
+	border-bottom: 1px solid #f2f2f2;
+	height: 37px;
+	line-height: 37px;
+	overflow: hidden;
+}
+
+.main_1 a {
+	display: block;
+	text-align: center;
+	width: 166px;
+	color: #666666;
+	float: left;
+}
+
+.main_1_current, .main_1 a:hover {
+	background: url(../img/index_6.jpg) no-repeat center bottom;
+	color: #0b6abd;
+}
+
+.main_2 {
+	margin-top: 10px;
+}
+
+.main_21 {
+	height: 910px;
+}
+
+.main_22 {
+	height: 450px;
+}
+
+.main_21, .main_22 {
+	position: relative;
+}
+
+.ul1 {
+	position: absolute;
+	z-index: 4
+}
+
+.ul2 {
+	position: absolute;
+	top: 230px;
+	z-index: 3
+}
+
+.ul3 {
+	position: absolute;
+	top: 460px;
+	z-index: 2
+}
+
+.ul4 {
+	position: absolute;
+	top: 690px;
+	z-index: 1
+}
+
+.main ul {
+	display: block;
+}
+
+.main ul li {
+	float: left;
+	border: 1px solid #e0e0e0;
+	width: 230px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 8px;
+	margin-left: 8px;
+	padding-bottom: 10px;
+	position: relative;
+	background: #fff;
+}
+
+.main_1_a1 {
+	color: #666666;
+	padding-left: 15px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.main ul li p {
+	font-family: '宋体';
+	font-size: 12px;
+	color: #666666;
+	padding-left: 15px;
+	padding-right: 10px;
+	line-height: 18px;
+	display: none;
+}
+
+.main ul li em {
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 12px;
+	font-size: 12px;
+	font-family: '宋体';
+	color: #808080;
+	margin-top: 9px
+}
+
+.main ul li em i {
+	padding-left: 25px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.main ul li em .i1 {
+	background: url(../img/index_14.jpg) no-repeat left center;
+	float: left;
+}
+
+.main ul li em .i2 {
+	float: left;
+}
+
+.main ul li em .i3 {
+	float: right;
+}
+
+.img {
+	position: absolute;
+	top: 40px;
+	left: 91px;
+	display: none;
+}
+
+.talk {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.talk_1 {
+	margin-top: 20px;
+	color: #0b6abd;
+	font-size: 18px;
+	padding-left: 15px;
+	padding-top: 10px;
+	margin-bottom: 15px;
+}

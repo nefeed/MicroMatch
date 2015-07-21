@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit, hr {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+#emUserPicture {
+	height: 80px ;
+	width: 80px ;
+}
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	outline: none;
+	border: 0 none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+.subject {
+	border: 1px #ebebeb solid;
+	width: 998px;
+	height: 592px;
+	margin: 20px auto;
+	padding: 0 auto;
+}
+
+.subject_left {
+	float: left;
+	border-right: 1px #ebebeb solid;
+	width: 180px;
+	height: 100%
+}
+
+.subject_1 {
+	overflow: hidden;
+	border-bottom: 1px #ebebeb solid;
+}
+
+.subject_1 img {
+	float: left;
+	padding: 15px;
+}
+
+.subject_1 em {
+	float: left;
+	text-align: center;
+	font-size: 14px;
+	color: #595959;
+	padding: 15px 0;
+	line-height: 40px;
+}
+
+.subject_1 em input {
+	background: url(../img/person_2.png) no-repeat;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+
+.subject_2 {
+	margin-top: 20px;
+}
+
+.subject_2 li {
+	line-height: 40px;
+}
+
+.subject_2 li a {
+	padding-left: 12px;
+	color: #595959;
+	font-size: 12px;
+	display: block;
+}
+.courseminiPic {
+	width: 230px ;
+	height: 130px ;
+}
+.subject_2 .subject_current {
+	background: #4f96d3;
+}
+
+.subject_2 .subject_current a {
+	color: #fff;
+	background: url(../img/person_3.png) no-repeat 155px center;
+}
+
+.subject_right {
+	float: right;
+	width: 770px;
+}
+.right2 {
+	height: 540px ;
+}
+#upPicBody {
+	margin-top:30px ;
+}
+.subject_right ul {
+	overflow: hidden;
+}
+
+.subject_right ul li {
+	float: left;
+	border: 1px solid #e0e0e0;
+	width: 233px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	background: #fff;
+}
+
+.main_1_a1 {
+	color: #666666;
+	padding-left: 15px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.subject_right ul li p {
+	font-family: '宋体';
+	font-size: 12px;
+	color: #666666;
+	padding-left: 15px;
+	padding-right: 10px;
+	line-height: 18px;
+	display: none;
+}
+
+.subject_right ul li em {
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 12px;
+	font-size: 12px;
+	font-family: '宋体';
+	color: #808080;
+	margin-top: 9px
+}
+
+.subject_right ul li em i {
+	padding-left: 25px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.subject_right ul li em .i1 {
+	background: url(../img/index_14.jpg) no-repeat left center;
+	float: left;
+}
+
+.subject_right ul li em .i2 {
+	background: url(../img/index_17.png) no-repeat 1px center;
+	float: left;
+}
+
+.subject_right ul li em .i3 {
+	float: right;
+}
+
+.subject_r_1 {
+	overflow: hidden;
+	border-bottom: #ebebeb 1px solid;
+	margin: 20px 28px 20px 0;
+}
+
+.subject_r_1 em {
+	float: left;
+	width: 78px;
+	text-align: center;
+	font-size: 12px;
+	color: #595959;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.em_current {
+	border-bottom: 1px solid #4f96d3;
+}
+
+.showResult {
+	margin-top: 100px;
+	font-size: 36px;
+	font-family: '微软雅黑';
+	color: #c0c0c0;
+	position: fixd;
+}

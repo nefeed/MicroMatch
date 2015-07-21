@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+body, a, div, i, em, ul, ol, li, span, dl, dt, dd, td, tr, b, br, img,
+	strong, p, form, input, textarea, text, table, submit {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 14px;
+	font-family: '微软雅黑';
+	background: url(../img/loading_1.png) repeat-x;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0 none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	outline: none;
+	border: 0 none;
+}
+
+em, i {
+	font-style: normal;
+	display: block;
+}
+
+#wkNickName {
+	color: #ffffff;
+}
+
+.header {
+	overflow: hidden;
+}
+
+.ul {
+	overflow: hidden;
+	float: right;
+	margin: 20px 0
+}
+
+.ul li {
+	float: left;
+	list-style-type: none;
+	color: #e5e5e5;
+	font-size: 21px;
+}
+
+.li {
+	background: url(../img/loading_5.png) 140px center no-repeat;
+	/* border-right:2px solid #e6e6e6;*/
+	padding: 0 30px;
+}
+
+.li img {
+	margin-right: 10px;
+}
+
+.li2 {
+	background: url(../img/loading_6.png) left center no-repeat
+}
+
+.subject {
+	overflow: hidden;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	width: 900px;
+	margin: 220px auto;
+}
+
+.subject a {
+	margin: 0 38px;
+	color: #fff;
+	font-size: 21px;
+}
