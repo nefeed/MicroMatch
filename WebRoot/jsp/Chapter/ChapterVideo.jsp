@@ -78,8 +78,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type=text/javascript>
 		<!--
 		//酷播迷你：官方连播代码示例//
-		var CuPlayerList ="<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4"
-		var sp =CuPlayerList.split("|")  
+		var CuPlayerList ="<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4|<%=basePath%>/BoguChapter/baozou.mp4";
+		var sp =CuPlayerList.split("|");
 		var num = sp.length;
 		var video_index = 0;
 		function getNext(pars)

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <em><a id = "emNickName" >NickName</a><br /><input style = "display: none ;" type="button" /></em>
         </div>
         <ul class="subject_2">
-        	<li id="geren" class="subject_current"><a href="javascript:">个人中心</a></li><li id="picSettings"><a href="javascript:;" >头像设置</a></li><li id="person_Logout" onclick = "logOut()" ><a  href="javascript:;">一键注销</a></li>
+        	<li id="geren" class="subject_current"><a href="javascript:">个人中心</a></li><li id="picSettings"><a href="javascript:" >头像设置</a></li><li id="person_Logout" onclick = "logOut()" ><a  href="javascript:">一键注销</a></li>
         </ul>	
     </div>
     <div id = "mainBody" class="subject_right right1">

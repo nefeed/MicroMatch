@@ -81,13 +81,13 @@ $(function() {
 		$('#am4').hide();
 		$('#am5').hide();
 		$('#am6').hide();
-		$('#a1').addClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a1').addClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a2').hover(function(){
 		$('#am1').attr('style' , 'display:none') ;
 		$('#am2').attr('style' , 'display:block') ;
@@ -95,13 +95,13 @@ $(function() {
 		$('#am4').attr('style' , 'display:none') ;
 		$('#am5').attr('style' , 'display:none') ;
 		$('#am6').attr('style' , 'display:none') ;
-		$('#a2').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a2').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a3').hover(function(){
 		$('#am1').hide();
 		$('#am2').hide();
@@ -109,13 +109,13 @@ $(function() {
 		$('#am4').hide();
 		$('#am5').hide();
 		$('#am6').hide();
-		$('#a3').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a3').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a4').hover(function(){
 		$('#am1').hide();
 		$('#am2').hide();
@@ -123,13 +123,13 @@ $(function() {
 		$('#am4').show();
 		$('#am5').hide();
 		$('#am6').hide();
-		$('#a4').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a4').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a5').hover(function(){
 		$('#am1').hide();
 		$('#am2').hide();
@@ -137,13 +137,13 @@ $(function() {
 		$('#am4').hide();
 		$('#am5').show();
 		$('#am6').hide();
-		$('#a5').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
+		$('#a5').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a6').hover(function(){
 		$('#am1').hide();
 		$('#am2').hide();
@@ -151,11 +151,11 @@ $(function() {
 		$('#am4').hide();
 		$('#am5').hide();
 		$('#am6').show();
-		$('#a6').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
+		$('#a6').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
 		$('#a5').removeClass('main_1_current')
 		})
 });
@@ -196,7 +196,7 @@ function showChildSubject( i , SID ) {
 			var url = '';
 			for ( var j = 0 ; j < json.length ; j ++ ){
 				url = 'subjectCourse.jsp?SubName='+json[j].SubjectName ;
-				litemp += '<li><a href='+url+'>' + json[j].SubjectName + '</a></li><br>'
+				litemp += '<li><a href='+url+'>' + json[j].SubjectName + '</a></li><br>';
 				url = null ;
 			}
 			$sul.append( litemp ) ;

@@ -59,7 +59,7 @@ function ajaxFileUpload1() {
                 alert('上传失败,错误代码如下！\n' + e);
               }
             }
-    )
+    );
     return false;
 }
 //上传课程图片2
@@ -81,7 +81,7 @@ function ajaxFileUpload2() {
                 alert('上传失败,错误代码如下！\n' + e);
               }
             }
-    )
+    );
     return false;
 }
 /**
@@ -146,7 +146,7 @@ function confirmSaveCourse() {
 			CoverPicture:imgSrc,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = 'jsp/Course/courseInfo.jsp?CourseNum='+json.CourseNum ;
+				location.href = 'courseInfo.jsp?CourseNum='+json.CourseNum ;
 			} else if ( json.result == 1 ) {
 				alert( "课程创建失败！" ) ;
 			}
@@ -155,5 +155,5 @@ function confirmSaveCourse() {
 }
 
 function backToHome() {
-	location.href = 'mainActivity.jsp' ;
+	location.href = './/.//mainActivity.jsp' ;
 }

@@ -49,8 +49,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div id="fileQueue"></div>  
     					<input type="file" name="uploadify" id="uploadify" />  
     					<div class="btn-group btn-group-sm" role="group" style = "width:140px ;"> 
-    						<button type="button" class="btn btn-primary" onclick="javascript:$('#uploadify').uploadify('upload')">开始上传</button>   
-    						<button type="button" class="btn btn-danger" onclick="javascript:$('#uploadify').uplaodify('cancel','*')">取消上传</button>  
+    						<button type="button" class="btn btn-primary" onclick="$('#uploadify').uploadify('upload')">开始上传</button>
+    						<button type="button" class="btn btn-danger" onclick="$('#uploadify').uplaodify('cancel','*')">取消上传</button>
    						</div>
 					</div>
 				</div>

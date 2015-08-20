@@ -19,7 +19,7 @@ $(function(){
 		xiuxiu.onInit = function ()
 		{
 			xiuxiu.loadPhoto("");
-		}	
+		};
 		xiuxiu.onUploadResponse = function (data)
 		{
 			imgSrc = decodeURI(data) ;
@@ -31,7 +31,7 @@ $(function(){
 			$('#blockInit').hide() ;
 			$('#blockInit').attr( 'style', 'display: none;' ) ;
 		}
-	}
+	};
 	 $("#subSelect").change(function(){
          $("#subSelect option").each(function(i,o){
         	 showChildSubSelect($("#subSelect").val()) ;

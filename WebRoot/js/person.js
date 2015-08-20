@@ -23,7 +23,7 @@ $(function() {
 		xiuxiu.onInit = function ()
 		{
 			xiuxiu.loadPhoto("");
-		}	
+		};
 		xiuxiu.onUploadResponse = function (data)
 		{
 			userPic = decodeURI(data) ;
@@ -38,14 +38,14 @@ $(function() {
 		$('#person_Logout').removeClass('subject_current');
 		$('.right1').show();
 		$('.right2').hide();
-		})
+		});
 	$('#picSettings').click(function(){
 		$(this).addClass('subject_current');
 		$('#geren').removeClass('subject_current');
 		$('#person_Logout').removeClass('subject_current');
 		$('.right2').show();
 		$('.right1').hide();
-		})
+		});
 	/*$('#person_Logout').click(function(){
 		$(this).addClass('subject_current');
 		$('#geren').removeClass('subject_current');
@@ -62,7 +62,7 @@ $(function() {
 		$('#ul1').show();
 		$('#ul2').hide();
 		$('#ul3').hide() ;
-		})
+		});
 	$('#em2').click(function(){
 		p = 0 ;
 		ot = 1 ;
@@ -74,7 +74,7 @@ $(function() {
 		$('#ul1').hide();
 		$('#ul3').hide() ;
 
-		})
+		});
 	$('#em3').click(function(){
 		p = 0 ;
 		ot = 2 ;
@@ -85,7 +85,7 @@ $(function() {
 		$('#ul3').show() ;
 		$('#ul1').hide();
 		$('#ul2').hide();
-		})
+		});
 	$('#person_Logout').on('click', function(){
 		$(this).addClass('subject_current');
 		$('#geren').removeClass('subject_current');

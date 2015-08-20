@@ -8,12 +8,12 @@ flash.onmouseover=function(){
 	flashLeft.style.display='block';
 	flashRight.style.display='block';
 	clearInterval(dodo);
-}
+};
 flash.onmouseout=function(){
 	flashLeft.style.display='none';
 	flashRight.style.display='none';
 	dodo=setInterval(rightDo,3000);//每隔3秒执行一次
-}
+};
 for(var i=0;i<spans.length;i++)
 {
 	spans[i].onmouseover=function(){
@@ -64,7 +64,7 @@ flashLeft.onclick=function(){
 		bool=0;
 		opacity(0,newNum,oldNum);
 	}
-}
+};
 
 function rightDo(){
 	var oldNum,newNum;//定义旧的位置与新的位置

@@ -11,4 +11,4 @@ updateStr: "确定",
 timeStr: "时间",
 quickStr: "快速选择", 
 err_1: '最小日期不能大于最大日期!'
-}
+};

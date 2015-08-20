@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -67,18 +67,18 @@
                         	<form>
                         	<li class="modal_li">
                             	<span class="sp_txt">账号</span>
-                                <input id = "signinAccount" type="text" class="ipt_txt1" value="邮箱/手机/用户名" onfocus="if (this.value == '邮箱/手机/用户名') {this.value = '';}" onblur="if (this.value == '') {this.value = '邮箱/手机/用户名';}" />
+                                <input id = "signinAccount" type="text" class="ipt_txt1" placeholder="用户名/手机号/邮箱" />
                             </li>
                             <li class="modal_li">
                             	<span class="sp_txt">密码</span>
-                                <input id = "signinPassword" type="password" class="ipt_txt1"  onfocus="if (this.value == ''){javascript:$('.pwd_tip').toggle()}" onblur="if (this.value == '') {javascript:$('.pwd_tip').toggle()}" />
+                                <input id = "signinPassword" type="password" class="ipt_txt1"  placeholder="密码" />
 								<span class="pwd_tip">密码</span>                               
                             </li>
                             <li>
                             	<span class="sp_txt">验证码</span>
-                                <input id = "signinvalidate" type="text" class="ipt_txt2" value="验证码" onfocus="if (this.value == '验证码') {this.value = '';}" onblur="if (this.value == '') {this.value = '验证码';}" />
+                                <input id = "signinvalidate" type="text" class="ipt_txt2" placeholder="验证码" />
                                 <img id="signindate" alt="" src=""/>  
-        						<a href="javascript:;" onclick="getVerifyCode()">换一张</a>
+        						<a href="javascript:" onclick="getVerifyCode()">换一张</a>
                             </li>
                             <li class="modal_li1">
                                 <input type="checkbox" id="ckb_freelog" checked />
@@ -93,13 +93,13 @@
                         	<form>
                         	<li>
                             	<span class="sp_txt">手机号</span>
-                                <input id="signPhone" type="text" class="ipt_txt1" value="手机号" onfocus="if (this.value == '手机号') {this.value = '';}" onblur="if (this.value == '') {this.value = '手机号';}" />
+                                <input id="signPhone" type="text" class="ipt_txt1" placeholder="手机号码" />
                             </li>
                             <li>
                             	<span class="sp_txt">验证码</span>
-                                <input id="signValidate" type="text" class="ipt_txt2" value="验证码" onfocus="if (this.value == '验证码') {this.value = '';}" onblur="if (this.value == '') {this.value = '验证码';}"/>
+                                <input id="signValidate" type="text" class="ipt_txt2" placeholder="验证码"/>
                                 <img id="signdate" alt="" src=""/>  
-        						<a href="javascript:;" onclick="getVerifyCode()">换一张</a>
+        						<a href="javascript:" onclick="getVerifyCode()">换一张</a>
                             </li>
                              <li>
                             	<span class="sp_txt">动态码</span>
@@ -116,22 +116,22 @@
                         	<form>
                         	<li class="modal_li">
                             	<span class="sp_txt">用户名</span>
-                                <input id = "signupAccount" type="text" class="ipt_txt1" value="用户名" onfocus="if (this.value == '用户名') {this.value = '';}" onblur="if (this.value == '') {this.value = '用户名';}"/>
+                                <input id = "signupAccount" type="text" class="ipt_txt1" placeholder="用户名"/>
                             </li>
                             <li >
                             	<span class="sp_txt">设置密码</span>
-                                <input id = "signupPassword" type="password" class="ipt_txt1"  onfocus="if (this.value == ''){javascript:$('.pwd_tip').toggle()}" onblur="if (this.value == '') {javascript:$('.pwd_tip').toggle()}" />
+                                <input id = "signupPassword" type="password" class="ipt_txt1" placeholder="密码" />
 								<span class="pwd_tip">6~15位</span>
                             </li>
                             <li>
                             	<span class="sp_txt">用户昵称</span>
-                                <input id = "signupNickName" type="text" class="ipt_txt1" value="昵称" onfocus="if (this.value == '昵称') {this.value = '';}" onblur="if (this.value == '') {this.value = '昵称';}" />
+                                <input id = "signupNickName" type="text" class="ipt_txt1" placeholder="昵称" />
                             </li>
                             <li class="modal_li">
                             	<span class="sp_txt">验证码</span>
-                                <input id = "signupvalidate" type="text" class="ipt_txt2" value="验证码" onfocus="if (this.value == '验证码') {this.value = '';}" onblur="if (this.value == '') {this.value = '验证码';}"/>
+                                <input id = "signupvalidate" type="text" class="ipt_txt2" placeholder="验证码"/>
                                 <img id="signupdate" alt="" src=""/>  
-       							<a href="javascript:;" onclick="getVerifyCode()">换一张</a>
+       							<a href="javascript:" onclick="getVerifyCode()">换一张</a>
                             </li>
                             <li>
                             	<input type="submit" value="注册" class="btn1" onclick = "signUp()"/>
@@ -159,10 +159,10 @@
 	    	<div id="HaveLoginType" class="login" style="display: none"> 
 				<div id="fat-menu" class="dropdown" style="">
 				<a class="caretl"></a>
-		            <a id="loginNick" onclick="myInfomation()" href="javascript:;" role="button" class="dropdown-toggle" data-toggle="dropdown" style="font-size:18px;color: #8d8791;">Eternal</a>
+		            <a id="loginNick" onclick="myInfomation()" href="javascript:" role="button" class="dropdown-toggle" data-toggle="dropdown" style="font-size:18px;color: #8d8791;">Eternal</a>
 		            <ul id = "loginOtherOption" class="dropdown-menu dropdownul" role="menu" aria-labelledby="loginNick">
 		                <li role="presentation" class="personalli" >
-		                    <a role="menuitem" tabindex="-1" onclick="myInfomation()" href="javascript:;" style = "font-size:14px ;border-top:1px solid #e0e0e0;">
+		                    <a role="menuitem" tabindex="-1" onclick="myInfomation()" href="javascript:" style = "font-size:14px ;border-top:1px solid #e0e0e0;">
 		                    	<img src="Images/personal.png" />
 		                    	&nbsp;&nbsp;个人中心
 		                    </a>
@@ -186,7 +186,7 @@
 		                <li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;">
 						</li>
 		                <li role="presentation" class="retirli">
-		                	<a role="menuitem" tabindex="-1" id="logOutBtn" onclick="logOut()" href="javascript:;" style = "font-size:14px ;padding-left:25px;">
+		                	<a role="menuitem" tabindex="-1" id="logOutBtn" onclick="logOut()" href="javascript:" style = "font-size:14px ;padding-left:25px;">
 		                		<img src="Images/retire.png"/>
 		                		&nbsp;&nbsp;退出
 		                	</a>

@@ -1,7 +1,7 @@
 //star
 $(document).ready(function(){
     var stepW = 24;
-    var description = new Array("1","2","3","4","̫5");
+    var description = ["1","2","3","4","̫5"];
     var stars = $("#star > li");
     var descriptionTemp;
     $("#showb").css("width",0);
@@ -36,4 +36,4 @@ function stopDefault(e){
     else
            window.event.returnValue = false;
     return false;
-};
+}

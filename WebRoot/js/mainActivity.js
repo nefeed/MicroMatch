@@ -83,8 +83,8 @@ function showTheNewestMatches( newestNum ) {
 		var endTime = '' ;
 		var master_href = '' ;
 		var nmtemp = '' ;
-		var begintime = new Array() ;
-		var stoptime = new Array() ;
+		var begintime = [] ;
+		var stoptime = [] ;
 		for ( var i = 0 ; i < indexNum ; i ++ ) {
 			imgsrc = json[i].MatchPicture ; // 比赛图片路径
 			mhref = 'jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ; // 比赛超链接地址
@@ -484,4 +484,4 @@ function stopDefault(e){
     else
            window.event.returnValue = false;
     return false;
-};
+}

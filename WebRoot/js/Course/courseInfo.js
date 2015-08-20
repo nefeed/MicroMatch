@@ -177,7 +177,7 @@ function reply( index , commentId ) {
 		var $comcontent = $('#publishCommentContent') ;
 		$comcontent.val( ' 回复 ' + $('#comNick'+index).html() + ' ： ' ) ;
 		$comcontent.focus() ;
-		javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight ;		
+		document.getElementsByTagName('BODY')[0].scrollTop = document.getElementsByTagName('BODY')[0].scrollHeight;
 	}
 }
 

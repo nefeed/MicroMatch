@@ -651,8 +651,8 @@ function UpdateMatch() {
 		MatchContent = $("#MatchContent").val() ;
 		StartTime = $("#StartTime").val() ;
 		EndTime = $("#EndTime").val() ;
-		var begintime = new Array() ;
-		var stoptime = new Array() ;
+		var begintime = [] ;
+		var stoptime = [] ;
 		begintime = StartTime.split('-') ;
 		stoptime = EndTime.split('-') ;
 		var eyear = parseInt(begintime[0]);
@@ -1078,7 +1078,7 @@ function stopDefault(e){
     else
            window.event.returnValue = false;
     return false;
-};
+}
 /**
  * 
  * @Description: 结束当前阶段比赛

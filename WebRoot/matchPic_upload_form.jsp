@@ -37,7 +37,7 @@
        Iterator<FileItem> i = items.iterator();
        String alFileName = "" ;
        while (i.hasNext()) {
-           FileItem fi = (FileItem) i.next();
+           FileItem fi = i.next();
            String fileName = fi.getName();
            if (fileName != null) {
 		       File fullFile = new File(fi.getName());

@@ -11,4 +11,4 @@ updateStr: "\u78BA\u5B9A",
 timeStr: "\u6642\u9593",
 quickStr: "\u5FEB\u901F\u9078\u64C7",
 err_1: '\u6700\u5C0F\u65E5\u671F\u4E0D\u80FD\u5927\u65BC\u6700\u5927\u65E5\u671F!'
-}
+};

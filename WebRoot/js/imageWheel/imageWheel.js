@@ -44,5 +44,5 @@ $(document).ready(function(){
 			$('#picshow_img li').eq(currentEQ).show();
 			return false;
 		});
-	};
-})
+	}
+});

@@ -4,7 +4,7 @@ function Confirm() {
 	var UserPassword = $("#UserPassword").val() ;
 	var UserPassword2 = $("#UserPassword2").val() ;
 	var NickName = $("#NickName").val() ;
-	var UserType = $("#UserType").val()
+	var UserType = $("#UserType").val();
 	
 	if( UserName.length == 0 ){
 		alert("账号不能为空！") ;

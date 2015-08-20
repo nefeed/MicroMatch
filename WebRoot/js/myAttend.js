@@ -89,53 +89,53 @@ $(function() {
 	$('#a1').hover(function(){
 		$('.main_21').show();
 		$('.main_22').hide();
-		$('#a1').addClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a1').addClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a2').hover(function(){
 		$('.main_22').show();
 		$('.main_21').hide();
-		$('#a2').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a2').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a3').hover(function(){
-		$('#a3').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a3').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a4').hover(function(){
-		$('#a4').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a5').removeClass('main_1_current')
+		$('#a4').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a5').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a5').hover(function(){
-		$('#a5').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
+		$('#a5').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
 		$('#a6').removeClass('main_1_current')
-		})
+		});
 	$('#a6').hover(function(){
-		$('#a6').addClass('main_1_current')
-		$('#a1').removeClass('main_1_current')
-		$('#a2').removeClass('main_1_current')
-		$('#a3').removeClass('main_1_current')
-		$('#a4').removeClass('main_1_current')
+		$('#a6').addClass('main_1_current');
+		$('#a1').removeClass('main_1_current');
+		$('#a2').removeClass('main_1_current');
+		$('#a3').removeClass('main_1_current');
+		$('#a4').removeClass('main_1_current');
 		$('#a5').removeClass('main_1_current')
 		})
 });

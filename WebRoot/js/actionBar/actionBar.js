@@ -112,15 +112,21 @@ function listenSearch() {
 }
 /*登录、注册*/
 function loginchg(){
-	document.getElementById("login_ul").style.display="block";
-	document.getElementById("free_regin_ul").style.display="none";
-	document.getElementById("regin_ul").style.display="none";
+	$('#login_ul').show() ;
+	$('#free_regin_ul').hide() ;
+	$('#regin_ul').hide() ;
+	$('#loginTab').attr('class', 'modal_nav1') ;
+	$('#free_loginTab').attr('class', 'modal_nav2') ;
+	$('#reginTab').attr('class', 'modal_nav2') ;
 	getVerifyCode() ;
 }
 function reginchg(){
-	document.getElementById("login_ul").style.display="none";
-	document.getElementById("free_regin_ul").style.display="none";
-	document.getElementById("regin_ul").style.display="block";
+	$('#login_ul').hide() ;
+	$('#free_regin_ul').hide() ;
+	$('#regin_ul').show() ;
+	$('#loginTab').attr('class', 'modal_nav2') ;
+	$('#free_loginTab').attr('class', 'modal_nav2') ;
+	$('#reginTab').attr('class', 'modal_nav1') ;
 	getVerifyCode() ;
 }
 
@@ -195,10 +201,11 @@ function signUp() {
 				UserType:userType,
 			},function(json){
 				if ( json.result == 0 ){
-					alert( "注册成功\n" +
+					alert( "注册成功！\n" +
 							json.NickName+"欢迎来到博古微课云平台！" ) ;
 					$('#signinAccount').val( userName ) ;
 					$('#signinPassword').val( userPassword ) ;
+					$('#signinvalidate').val( verifycode ) ;
 					signIn() ;
 				}else if ( json.result == 1 ) {
 					alert( "此账号已经存在！\n请修改账号继续尝试！" ) ;

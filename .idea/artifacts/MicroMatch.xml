@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="MicroMatch">
+    <output-path>$PROJECT_DIR$/out/artifacts/MicroMatch</output-path>
+    <root id="root" />
+  </artifact>
+</component>

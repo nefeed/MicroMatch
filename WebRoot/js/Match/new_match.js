@@ -52,7 +52,7 @@ function ajaxFileUpload1() {
                 alert('上传失败,错误代码如下！\n' + e);
               }
             }
-    )
+    );
     return false;
 }
 //上传比赛图片2
@@ -74,7 +74,7 @@ function ajaxFileUpload2() {
                 alert('上传失败,错误代码如下！\n' + e);
               }
             }
-    )
+    );
     return false;
 }
 function saveMatch() {
@@ -82,8 +82,8 @@ function saveMatch() {
 	var mContent = $('#matchContent').val() ;
 	var sTime = $('#startInput').val() ;
 	var eTime = $('#endInput').val() ;
-	var begintime = new Array() ;
-	var stoptime = new Array() ;
+	var begintime = [] ;
+	var stoptime = [] ;
 	begintime = sTime.split('-') ;
 	stoptime = eTime.split('-') ;
 	var eyear = parseInt(begintime[0]);
@@ -117,7 +117,7 @@ function saveMatch() {
 		},function(json){
 			if ( json.result == 0 ) {
 				alert( "发布比赛成功！" ) ;
-				location.href = 'jsp/Match/MatchInfo.jsp?MatchNum='+json.MatchNum ;
+				location.href = 'MatchInfo.jsp?MatchNum='+json.MatchNum ;
 			} else if ( json.result == 1 ) {
 				alert( "发布比赛失败！" ) ;
 			}
@@ -126,5 +126,5 @@ function saveMatch() {
 }
 
 function backToHome() {
-	location.href = 'mainActivity.jsp' ;
+	location.href = './/.//mainActivity.jsp' ;
 }

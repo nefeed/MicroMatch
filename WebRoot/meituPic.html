@@ -12,12 +12,12 @@ window.onload=function(){
 	xiuxiu.setUploadURL("jsp_upload_form.jsp");//修改为您自己的上传接收图片程序
 	xiuxiu.onBeforeUpload = function(data, id){
 		xiuxiu.setUploadArgs({filetype: data.type, type: "image", filename: data.name });
-	}
+	};
 
 	xiuxiu.onInit = function ()
 	{
 		xiuxiu.loadPhoto("http://open.web.meitu.com/sources/images/1.jpg");
-	}	
+	};
 	xiuxiu.onUploadResponse = function (data)
 	{
 		alert("上传响应" + data);  可以开启调试

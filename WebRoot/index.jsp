@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -96,7 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<div class="main">
 		<div class="main_1">
-	    	<a id="a1" class="main_1_current" href="searchCourse.jsp?unsureCourseName= ">所有课程</a><a id="a2" href="javascript:;"></a><a id="a3" href="javascript:;"></a><a id="a4" href="javascript:;"></a><a id="a5" href="javascript:;"></a><a id="a6" href="javascript:;"></a>
+	    	<a id="a1" class="main_1_current" href="searchCourse.jsp?unsureCourseName= ">所有课程</a><a id="a2" href="javascript:"></a><a id="a3" href="javascript:"></a><a id="a4" href="javascript:"></a><a id="a5" href="javascript:"></a><a id="a6" href="javascript:"></a>
 	    </div>
 	    <div class="main_2">
 	        <div id = "am1" class="main_21" style="display:none;">

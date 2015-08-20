@@ -58,7 +58,7 @@ $(function() {
 //					so.addVariable("CuPlayerAutoPlay","no"); //是否自动播放
 //					so.write("CuPlayer");
 				//酷播迷你：官方连播代码示例
-				var sp =CuPlayerList.split("|")  
+				var sp =CuPlayerList.split("|");
 				var num = sp.length;
 				var video_index = 0;
 				function getNext(pars)
@@ -263,7 +263,7 @@ function reply( index , commentId ) {
 			var $comcontent = $('#publishCommentContent') ;
 			$comcontent.val( ' 回复 ' + $('#comNick'+index).html() + ' ： ' ) ;
 			$comcontent.focus() ;
-			javascript:document.getElementsByTagName('BODY')[0].scrollTop=document.getElementsByTagName('BODY')[0].scrollHeight ;		
+			document.getElementsByTagName('BODY')[0].scrollTop = document.getElementsByTagName('BODY')[0].scrollHeight;
 		}		
 	}
 }
