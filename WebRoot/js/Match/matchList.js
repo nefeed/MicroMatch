@@ -14,7 +14,7 @@ function showMatches() {
 	$.getJSON("./servlet/QueryAllMatchesServlet",{
 	},function(json){
 		if ( json == null || json.length == 0 ) {
-			var showResult = '<p class = "showResult" >所有用户都太懒了，还没有上传比赛！</p>' ;
+			var showResult = '<p class = "showResult" >所有Collage都太懒了，还没有Publish比赛！</p>' ;
 			$("#withoutResult").append(showResult) ;
 		} else {
 			mJson = json ;

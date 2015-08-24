@@ -24,7 +24,7 @@ $(function(){
  * 进入课程
  */
 function openCourse() {
-	location.href = 'course.jsp?CourseNum='+CourseNum+'&ListId=0' ;
+	location.href = '../../course.jsp?CourseNum='+CourseNum+'&ListId=0' ;
 }
 
 
@@ -67,7 +67,7 @@ function loadChapter(){
  * 发表评论
  */
 function publishComment(){
-	if ( LoginUserNum == '' || LoginUserType == undefinded ) {
+	if ( LoginUserNum == '' || LoginUserType == 'undefinded' ) {
 		alert( '请登入后继续尝试！' ) ;
 		location.href = 'login.jsp' ;
 	} else {

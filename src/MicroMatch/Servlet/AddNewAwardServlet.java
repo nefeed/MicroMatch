@@ -1,20 +1,19 @@
 package MicroMatch.Servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Timestamp;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import net.sf.json.JSONObject;
 import MicroMatch.Entity.AwardEntity;
 import MicroMatch.Entity.MatchEntity;
 import MicroMatch.Factory.BllFacadeFactory;
 import MicroMatch.Interface.BllInterface;
 import MicroMatch.Tools.ConvertCharSet;
+import net.sf.json.JSONObject;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Timestamp;
 
 public class AddNewAwardServlet extends HttpServlet {
 	private BllFacadeFactory bllFacadeFactory = BllFacadeFactory.getBllFactoryInstance() ;
@@ -72,8 +71,8 @@ public class AddNewAwardServlet extends HttpServlet {
 		
 		String userNum = request.getParameter( "UserNum" ) ;
 		String matchNum = request.getParameter( "MatchNum" ) ;
-		String awardName = ConvertCharSet.toUTF8( request.getParameter( "AwardName" ) ) ;
-		String remark = ConvertCharSet.toUTF8( request.getParameter( "Remark" ) ) ;
+		String awardName = ConvertCharSet.beUTF8( request.getParameter( "AwardName" ).toString() ) ;
+		String remark = ConvertCharSet.beUTF8( request.getParameter( "Remark" ).toString() ) ;
 		MatchEntity m = new MatchEntity() ;
 		m.setMatchNum(matchNum) ;
 		m.setUserNum(userNum) ;

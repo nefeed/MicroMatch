@@ -116,8 +116,7 @@ function saveMatch() {
 			MatchPic:imgSrc,
 		},function(json){
 			if ( json.result == 0 ) {
-				alert( "发布比赛成功！" ) ;
-				location.href = 'MatchInfo.jsp?MatchNum='+json.MatchNum ;
+				location.href = 'Match/MatchInfo.jsp?MatchNum='+json.MatchNum ;
 			} else if ( json.result == 1 ) {
 				alert( "发布比赛失败！" ) ;
 			}

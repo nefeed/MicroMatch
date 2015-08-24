@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import net.sf.json.JSONArray;
 import MicroMatch.Factory.BllFacadeFactory;
 import MicroMatch.Interface.BllInterface;
+import MicroMatch.Tools.ConvertCharSet;
 
 public class QueryCourseBySubNameServlet extends HttpServlet {
 	private BllFacadeFactory bllFacadeFactory = BllFacadeFactory.getBllFactoryInstance() ;
@@ -66,7 +67,7 @@ public class QueryCourseBySubNameServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		
-		String subName = request.getParameter("SubName") ;
+		String subName = ConvertCharSet.toUTF8( request.getParameter("SubName").toString() );
 		JSONArray json = bllInterface.QueryCourseBySubName( subName ) ;
 		out.print(json) ;
 		out.flush() ;

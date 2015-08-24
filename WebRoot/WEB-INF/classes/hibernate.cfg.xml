@@ -13,12 +13,12 @@
 	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 	
 	<!-- 服务器使用 -->
-	<!-- <property name="connection.username">bogusoft</property> -->
-	<!-- <property name="connection.password">bogusoft20110426`</property> -->
+	<property name="connection.username">gavincn</property>
+	<property name="connection.password">12345</property>
 	
 	<!-- 本地使用 -->
-	<property name="connection.username">root</property>
-	<property name="connection.password">12345</property>
+	<!-- <property name="connection.username">root</property> -->
+	<!-- <property name="connection.password">12345</property> -->
 	<property name="javax.persistence.validation.mode">none</property>
 	<!-- 是否显示sql   -->
   	<property name="show_sql">true</property>

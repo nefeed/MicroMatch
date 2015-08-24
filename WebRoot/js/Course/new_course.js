@@ -146,7 +146,7 @@ function confirmSaveCourse() {
 			CoverPicture:imgSrc,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = 'courseInfo.jsp?CourseNum='+json.CourseNum ;
+				location.href = 'Course/courseInfo.jsp?CourseNum='+json.CourseNum ;
 			} else if ( json.result == 1 ) {
 				alert( "课程创建失败！" ) ;
 			}

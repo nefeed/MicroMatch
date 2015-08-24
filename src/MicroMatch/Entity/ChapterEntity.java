@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "Chapter", schema = "", catalog = "micromatch")
+@Table(name = "chapter", schema = "", catalog = "micromatch")
 public class ChapterEntity implements java.io.Serializable {
 
 	// Fields

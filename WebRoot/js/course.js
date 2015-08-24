@@ -146,7 +146,7 @@ function showAccessory( objectType ) {
  * 发表评论
  */
 function publishComment(){
-	if ( LoginUserNum == '' || LoginUserType == undefinded ) {
+	if ( LoginUserNum == '' || LoginUserType == 'undefinded' ) {
 		alert( '请登入后继续尝试！' ) ;
 		location.href = 'login.jsp' ;
 	} else {
