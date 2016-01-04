@@ -19,8 +19,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<script type="text/javascript" src = "js/jquery.js"></script>
-	<script type="text/javascript" src = "js/Match/PublishMatch.js"></script>
 	
   </head>
   
@@ -45,5 +43,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div align="center">
     	<input type = "button" onclick="PublishConfirm()" value ="Confirm"><input type = "button" onclick="Cancel()" value="Cancel">
     </div>
+	<script type="text/javascript" src = "js/Match/PublishMatch.js"></script>
   </body>
 </html>

@@ -11,16 +11,16 @@
 <head>
 	<base href="<%=basePath%>">
 
-	<title>博古科技底栏</title>
+	<title>微课大赛底栏</title>
 	<link type="text/css" href="css/bottom.css" rel="stylesheet" />
 </head>
 
 <body>
 	<div class="bottom">
-		<span>技术支持: 杭州博古科技有限公司</span>
-		<span>电话：0571-89716094</span>
-		<span>邮箱：bogusoft@163.com</span>
-		<span>网址：http://www.boguedu.com.cn</span>
+		<span>技术支持: 章华隽 GavinChangCN</span>
+		<span>电话：15757856563</span>
+		<span>邮箱：gavinchangcn@163.com</span>
+		<span>网址：https://github.com/gavinchangcn</span>
 	</div>
 </body>
 </html>

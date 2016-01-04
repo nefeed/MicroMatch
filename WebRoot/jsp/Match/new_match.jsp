@@ -10,11 +10,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>新建比赛</title>
 	<link type="text/css" rel="stylesheet" href="css/new_game.css" />
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	
-	<script type="text/javascript" src="js/Match/new_match.js" ></script>
-	<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
-	<script src="http://open.web.meitu.com/sources/xiuxiu.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -80,6 +75,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <div class = "clear"></div>
 	</div>
 	<jsp:include page="../../bottom.jsp"/>
-
+	<script type="text/javascript" src="js/Match/new_match.js" ></script>
+	<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+	<script src="http://open.web.meitu.com/sources/xiuxiu.js" type="text/javascript"></script>
 </body>
 </html>

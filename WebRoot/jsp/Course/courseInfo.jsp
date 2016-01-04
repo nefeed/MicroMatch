@@ -20,9 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link type="text/css" rel="stylesheet" href="css/courseInfo.css" />
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="js/uploadify/uploadify.css" />
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
-	<script type="text/javascript" src="js/Course/courseInfo.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+
 	<script type="text/javascript">
 		var CourseNum = <%="'"+CourseNum+"'"%> ;
 	</script>
@@ -167,6 +165,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<a>附件名称：</a><input id = "fileName" type = "text" readonly="readonly" />
     	<a>附件地址：</a><input id = "fileAddress" type = "text" readonly="readonly" />
     </div>
-	<jsp:include page="../../bottom.jsp"/>
+	<jsp:include page="../../bottom.jsp"/> 
+	<script type="text/javascript" src="js/Course/courseInfo.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 </body>
 </html>

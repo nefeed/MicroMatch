@@ -19,12 +19,6 @@
 	<link type="text/css" rel="stylesheet" href="css/aspxcs.css"/>
 	<link type="text/css" rel="stylesheet" href="css/laypage.css" />
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css" />
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/Match/MatchInfo.js"></script>
-	<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-	<script type="text/javascript" src="js/laypage.js"></script>
-	<script type="text/javascript" src="js/mypj.js"></script>
 	<script type="text/javascript">
 		var MatchNum = <%="'" + MatchNum + "'"%> ;
 	</script>
@@ -300,5 +294,10 @@
 	</div>
 		<div class = "clear"></div>
 		<jsp:include page="../../bottom.jsp" />
+	<script type="text/javascript" src="js/Match/MatchInfo.js"></script>
+	<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+	<script type="text/javascript" src="js/laypage.js"></script>
+	<script type="text/javascript" src="js/mypj.js"></script>
 </body>
 </html>

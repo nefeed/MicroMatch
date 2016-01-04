@@ -19,9 +19,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<script type="text/javascript" src = "js/jquery.js"></script>
-	<script type="text/javascript" src = "js/Match/ShowUncheckedMatches.js"></script>
-
   </head>
   
   <body>
@@ -32,5 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	  		</tr>
     	</table>
   	</div>
+	<script type="text/javascript" src = "js/Match/ShowUncheckedMatches.js"></script>
+  	
   </body>
 </html>

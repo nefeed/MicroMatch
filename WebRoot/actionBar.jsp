@@ -38,11 +38,6 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/actionBar.css" />
 	<link type="text/css" rel="stylesheet"  href="css/blue.css"/>
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
-	<script type="text/javascript" src="js/actionBar/actionBar.js"></script>
-	<script type="text/javascript" src="js/icheck.min.js"></script>
-	<script type="text/javascript" src="js/myicheck.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript">
 		var LoginUserNum = <%="'" + LoginUserNum + "'"%> ;
 		var LoginNickName = <%="'" + LoginNickName + "'"%> ;
@@ -204,5 +199,10 @@
 	    	</div>
     	</div>
 	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
+	<script type="text/javascript" src="js/actionBar/actionBar.js"></script>
+	<script type="text/javascript" src="js/icheck.min.js"></script>
+	<script type="text/javascript" src="js/myicheck.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 </body>
 </html>

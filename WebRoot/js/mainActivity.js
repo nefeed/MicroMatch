@@ -406,31 +406,26 @@ function showAward( check ) {
 	var uname = '' ;
 	// check=true时，表示登录用户为比赛的创建者，否则check=false并非该比赛的创建者
 	if( check ) {
-		$('#awardTable').html('<tr class="info"><td>奖项名称</td><td>获奖课程</td><td>课程讲师</td><td class="otherOption" >操作</td></tr>') ; 
+		$('#awardTable').html('<tr class="info"><td>奖项名称</td><td>获奖课程</td><td>课程讲师</td></tr>') ; 
 		$.getJSON('./servlet/QueryMatchAwardServlet',{
 			MatchNum:newestMatchNum,
 		},function(json) {
 			if( json != null ) {
-				var optionBtn = '' ;
 				for ( var i = 0 ; i < json.length ; i ++ ) {
 					aname = json[i].AwardName ;
 					aremark = json[i].Remark ;
 					uname = json[i].NickName ;
 					chref = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
-					var method = 'chooseAward(' + json[i].ID + ')' ;
 					if( json[i].CourseNum == 'undefined' || json[i].CourseName == null ) {
 						cname = '未颁奖' ;
-						optionBtn = '<button onclick=' + method + ' type = "button" class="btn btn-success" data-toggle="modal" data-target="#giveAwardModal">颁奖</button>' ;
 					} else {
 						cname = '<a href="'+chref+'" >'
 						+ json[i].CourseName + '</a>' ;
-						optionBtn = '<button onclick=' + method + ' type = "button" class="btn btn-success" data-toggle="modal" data-target="#giveAwardModal">重新颁奖</button>' ;
 					}
 					temp += '<tr>'
 						+ '<td>' + aname + '</td>'
 						+ '<td>' + cname + '</td>'
 						+ '<td>' + uname + '</td>'
-						+ '<td class="otherOption">'+ optionBtn +'</td>'
 						+ '</tr>';
 				}				
 			} else {
@@ -448,7 +443,6 @@ function showAward( check ) {
 			MatchNum:newestMatchNum,
 		},function(json) {
 			if ( json != null ) {
-				var optionBtn = '' ;
 				for ( var i = 0 ; i < json.length ; i ++ ) {
 					aname = json[i].AwardName ;
 					aremark = json[i].Remark ;

@@ -38,10 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link type="text/css" rel="stylesheet" href="css/aspxcs.css"/>
     <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/imageWheel/imageWheel.css" />
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
-	<script type="text/javascript" src="js/mainActivity.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-	<script type="text/javascript" src="js/imageWheel/imageWheel.js"></script>
+
 	<script type="text/javascript">
 		var LoginUserNum = <%="'"+LoginUserNum+"'"%> ;
 		var LoginNickName = <%="'"+LoginNickName+"'"%> ;
@@ -626,5 +623,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="dividing-clear"></div>
 	</div>
 	<jsp:include page="bottom.jsp"/>
+	<script type="text/javascript" src="js/mainActivity.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+	<script type="text/javascript" src="js/imageWheel/imageWheel.js"></script>
   </body>
 </html>

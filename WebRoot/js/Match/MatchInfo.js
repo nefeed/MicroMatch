@@ -994,7 +994,7 @@ function chooseAward( aid ) {
  * 颁奖操作
  */
 function giveAward() {
-	var cNum = $('#acSelect').val() ;
+	var cNum = $('#chooseRegist').val() ;
 	if( awardId == 0 ){
 		alert('请选择至少一个奖项进行颁发！') ;
 	} else if( cNum == 0 ) {
