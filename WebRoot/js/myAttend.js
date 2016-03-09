@@ -7,7 +7,7 @@ $(function() {
 //	}
 	if( LoginUserNum == '' ) {
 		alert('请登入后继续尝试！') ;
-		location.href = 'index.jsp' ;
+		location.href = './login.jsp' ;
 	} else {
 		$.getJSON("./servlet/ShowMyAttendsServlet",{
 			UserNum:LoginUserNum,
@@ -15,7 +15,7 @@ $(function() {
 			var temp = '' ;
 			if( json == 'undefine' || json == null ) {
 				alert('你还没有订阅过课程，请订阅自己喜欢的课程后继续尝试！');
-				location.href = 'index.jsp' ;
+				location.href = './login.jsp' ;
 			} else {
 				for(var i = 0 ; i < json.length ; i ++ ){
 					var url = 'jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;

@@ -90,19 +90,19 @@ function logOut() {
 		
 	});
 	$.ajaxSettings.async = true ;
-	location.href = 'mainActivity.jsp' ;
+	location.href = './mainActivity.jsp' ;
 }
 function myInfomation() {
-	location.href = 'person.jsp?UserNum='+LoginUserNum ;
+	location.href = './person.jsp?UserNum='+LoginUserNum ;
 }
 
 function confirmSearch() {
 	var searchInput = $("#searchInput").val() ;
-	location.href = "searchCourse.jsp?unsureCourseName=" + searchInput ;
+	location.href = "./searchCourse.jsp?unsureCourseName=" + searchInput ;
 }
 
 function backToHome() {
-	location.href = "mainActivity.jsp" ;
+	location.href = "./mainActivity.jsp" ;
 }
 
 function listenSearch() {
@@ -149,7 +149,7 @@ function signIn() {
 				UserPassword:userPassword,
 			},function(json) {
 				if ( json.result == 0 ){
-					location.href="mainActivity.jsp" ;
+					location.href="./mainActivity.jsp" ;
 				}else if ( json.result == 1 ) {
 					alert( "密码错误！" ) ;
 				}else if ( json.result == 2 ) {

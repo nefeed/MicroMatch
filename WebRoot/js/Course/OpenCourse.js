@@ -32,7 +32,7 @@ function PollVote() {
 	});
 }
 function ShowVideo() {
-	location.href = "jsp/Chapter/ChapterVideo.jsp?ChapterNum="+ChapterNum+"&UserNum="+LoginUserNum ;
+	location.href = "../Chapter/ChapterVideo.jsp?ChapterNum="+ChapterNum+"&UserNum="+LoginUserNum ;
 }
 function Back() {
 	window.history.back() ;

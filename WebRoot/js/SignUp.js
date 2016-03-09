@@ -33,5 +33,5 @@ function Confirm() {
 	} 
 }
 function Cancle() {
-	location.href = "Login.jsp" ;
+	location.href = "../login.jsp" ;
 }

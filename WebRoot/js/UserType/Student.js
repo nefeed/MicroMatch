@@ -4,5 +4,5 @@ $(function(){
 });
 
 function Home() {
-	location.href = "Login.jsp" ;
+	location.href = "../../login.jsp" ;
 }

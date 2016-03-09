@@ -69,7 +69,7 @@ function loadChapter(){
 function publishComment(){
 	if ( LoginUserNum == '' || LoginUserType == 'undefinded' ) {
 		alert( '请登入后继续尝试！' ) ;
-		location.href = 'login.jsp' ;
+		location.href = '../../login.jsp' ;
 	} else {
 		var publishCommentContent = $('#publishCommentContent').val() ;
 		if( publishCommentContent.length >= 250 ){
@@ -266,7 +266,7 @@ function isMyCourse() {
  * 新增内容按钮事件
  */
 function addNewBtn() {
-	location.href = "jsp/afterNew.jsp?ObjectNum="+CourseNum+"&ObjectType=0" ;
+	location.href = "../afterNew.jsp?ObjectNum="+CourseNum+"&ObjectType=0" ;
 }
 
 /**
@@ -306,7 +306,7 @@ function registMatchBtn() {
  * 修改课程按钮，点击进入修改课程界面
  */
 function updateCourse() {
-	location.href = "jsp/Course/update_course.jsp?CourseNum="+CourseNum ;
+	location.href = "../Course/update_course.jsp?CourseNum="+CourseNum ;
 }
 function saveAccessory() {
 	var fileName = $('#fileName').val() ;
@@ -330,5 +330,5 @@ function saveAccessory() {
 }
 
 function addNewChapter() {
-	location.href = "jsp/Chapter/new_chapter.jsp?CourseNum=" + CourseNum ;
+	location.href = "../Chapter/new_chapter.jsp?CourseNum=" + CourseNum ;
 }

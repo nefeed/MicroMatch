@@ -1063,7 +1063,7 @@ function givePeriod() {
 				alert('您已经投过票！') ;
 			} else if ( check == 3 ) {
 				alert('您还未订阅该课程,请先进入课程详情页面，订阅课程！') ;
-				this.location.href = 'jsp/Course/courseInfo.jsp?CourseNum=' + chooseCNum ;
+				this.location.href = '../Course/courseInfo.jsp?CourseNum=' + chooseCNum ;
 			} else if ( check == 4 ) {
 				alert('该课程并未报名该比赛！') ;
 			}

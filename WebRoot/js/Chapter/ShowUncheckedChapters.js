@@ -29,7 +29,7 @@ function CheckChapter(ChapterNum){
 	});
 }
 function ShowChapterInfo(ChapterNum) {
-	location.href = "jsp/Chapter/ChapterInfo.jsp?ChapterNum="+ChapterNum+"&UserNum="+UserNum ;
+	location.href = "../Chapter/ChapterInfo.jsp?ChapterNum="+ChapterNum+"&UserNum="+UserNum ;
 }
 function Back() {
 		window.history.back() ;

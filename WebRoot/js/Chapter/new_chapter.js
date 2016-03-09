@@ -42,7 +42,7 @@ function confirmSaveChapter() {
 			VideoAddress:fileAddress,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = 'jsp/afterNew.jsp?ObjectNum='+json.ChapterNum+'&ObjectType=1' ;
+				location.href = '../afterNew.jsp?ObjectNum='+json.ChapterNum+'&ObjectType=1' ;
 			} else if ( json.result == 1 ) {
 				alert( "章节发布失败！" ) ;
 			}
@@ -51,5 +51,5 @@ function confirmSaveChapter() {
 }
 
 function backToHome() {
-	location.href = 'mainActivity.jsp' ;
+	location.href = '../../mainActivity.jsp' ;
 }

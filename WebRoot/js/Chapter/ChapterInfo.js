@@ -11,11 +11,11 @@ $(function(){
 });
 
 function ChangeUpload() {
-	location.href = "jsp/Accessory/UploadAccessory.jsp?ObjectType=1"+"&ObjectNum="+ChapterNum+"&UserNum="+UserNum ;
+	location.href = "../Accessory/UploadAccessory.jsp?ObjectType=1"+"&ObjectNum="+ChapterNum+"&UserNum="+UserNum ;
 }
 
 function ShowVideo() {
-	location.href = "jsp/Chapter/ChapterVideo.jsp?ChapterNum="+ChapterNum+"&UserNum="+UserNum ;
+	location.href = "../Chapter/ChapterVideo.jsp?ChapterNum="+ChapterNum+"&UserNum="+UserNum ;
 }
 
 function Back() {

@@ -125,7 +125,7 @@ function confirmUpdateCourse() {
 		},function(json){
 			if ( json.result == 0 ) {
 				alert( "课程修改成功！" ) ;
-				location.href = 'jsp/afterNew.jsp?ObjectNum='+CourseNum+'&ObjectType=0' ;
+				location.href = '../afterNew.jsp?ObjectNum='+CourseNum+'&ObjectType=0' ;
 			} else if ( json.result == 1 ) {
 				alert( "课程修改失败！" ) ;
 			}

@@ -221,7 +221,7 @@ function logOut() {
 	},function(json){
 		
 	});
-	location.href = "index.jsp" ;
+	location.href = "./index.jsp" ;
 }
 
 /**

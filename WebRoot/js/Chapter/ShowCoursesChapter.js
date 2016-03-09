@@ -17,10 +17,10 @@ $(function(){
 	});
 });
 function ShowChapterInfo(ChapterNum) {
-	location.href = "jsp/Chapter/ChapterInfo.jsp?ChapterNum="+ChapterNum+"&UserNum="+UserNum ;
+	location.href = "../Chapter/ChapterInfo.jsp?ChapterNum="+ChapterNum+"&UserNum="+UserNum ;
 }
 function AddChapter() {
-	$("#ToolBody").load( "jsp/Chapter/AddChapter.jsp?CourseNum="+CourseNum ) ;
+	$("#ToolBody").load( "../Chapter/AddChapter.jsp?CourseNum="+CourseNum ) ;
 }
 function Back() {
 		window.history.back() ;

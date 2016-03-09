@@ -148,7 +148,7 @@ function showAccessory( objectType ) {
 function publishComment(){
 	if ( LoginUserNum == '' || LoginUserType == 'undefinded' ) {
 		alert( '请登入后继续尝试！' ) ;
-		location.href = 'login.jsp' ;
+		location.href = './login.jsp' ;
 	} else {
 		var publishCommentContent = $('#publishCommentContent').val() ;
 		if( publishCommentContent.length >= 250 ){
@@ -254,7 +254,7 @@ function loadReply( index , commentID ) {
 function reply( index , commentId ) {
 	if( LoginUserNum == '' || LoginUserNum == 'undefinded') {
 		alert('登录可以享受更多精彩内容！') ;
-		location.href = 'login.jsp' ;
+		location.href = './login.jsp' ;
 	} else {
 		if( LoginNickName == $('#comNick'+index).html() ) {
 			alert('请不要回复自己！') ;
@@ -299,7 +299,7 @@ function showAttendBTN() {
 function attendConfirm() {
 	if( LoginUserNum == '' || LoginUserNum == 'undefinded' ){
 		alert('请您先尝试登录，再继续操作！') ;
-		location.href = 'login.jsp' ;
+		location.href = './login.jsp' ;
 	} else {
 		if( $('#attendBTN').text() == '点我订阅' ) {
 			$.getJSON("./servlet/AttendCourseServlet",{
@@ -360,7 +360,7 @@ function isMyCourse() {
  * 新增内容按钮事件
  */
 function addNewBtn() {
-	location.href = "jsp/afterNew.jsp?ObjectNum="+CourseNum+"&ObjectType=0" ;
+	location.href = "./jsp/afterNew.jsp?ObjectNum="+CourseNum+"&ObjectType=0" ;
 }
 
 /**
@@ -413,5 +413,5 @@ function newAudience() {
  * 修改课程按钮，点击进入修改课程界面
  */
 function updateCourse() {
-	location.href = "jsp/Course/update_course.jsp?CourseNum=" + CourseNum ;
+	location.href = "./jsp/Course/update_course.jsp?CourseNum=" + CourseNum ;
 }

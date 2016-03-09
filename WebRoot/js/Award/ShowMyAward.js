@@ -19,5 +19,5 @@ $(function(){
 });
 
 function ShowCourseInfo(CourseNum) {
-	location.href = "jsp/Course/CourseInfo.jsp?CourseNum="+CourseNum ;
+	location.href = "../Course/CourseInfo.jsp?CourseNum="+CourseNum ;
 }

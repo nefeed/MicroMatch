@@ -1,18 +1,18 @@
 function ShowUncheckedMatches() {
-	$("#ABody").load("jsp/Match/ShowUncheckedMatches.jsp") ;
+	$("#ABody").load("../Match/ShowUncheckedMatches.jsp") ;
 }
 function ShowUncheckedCourses() {
-	$("#ABody").load("jsp/Course/ShowUncheckedCourses.jsp") ;
+	$("#ABody").load("../Course/ShowUncheckedCourses.jsp") ;
 }
 function ShowUncheckedChapters() {
-	$("#ABody").load("jsp/Chapter/ShowUncheckedChapters.jsp") ;
+	$("#ABody").load("../Chapter/ShowUncheckedChapters.jsp") ;
 }
 function ShowAllUser() {
-	$("#ABody").load("jsp/User/ShowAllUser.jsp") ;
+	$("#ABody").load("../User/ShowAllUser.jsp") ;
 }
 function PublishMatch() {
-	$("#ABody").load( "jsp/Match/PublishMatch.jsp" ) ;
+	$("#ABody").load( "../Match/PublishMatch.jsp" ) ;
 }
 function Home() {
-	location.href = "Login.jsp" ;
+	location.href = "../../login_2.jsp" ;
 }

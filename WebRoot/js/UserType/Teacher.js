@@ -1,12 +1,12 @@
 
 function CreateCourse() {
-	$("#TBody").load( "jsp/Course/CreateCourse.jsp" ) ;
+	$("#TBody").load( "../Course/CreateCourse.jsp" ) ;
 }
 
 function ShowMyCourses() {
-	$("#TBody").load( "jsp/Course/ShowMyCourses.jsp" ) ;
+	$("#TBody").load( "../Course/ShowMyCourses.jsp" ) ;
 }
 
 function Home() {
-	location.href = "Login.jsp" ;
+	location.href = "../../login.jsp" ;
 }

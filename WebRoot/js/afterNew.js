@@ -33,5 +33,5 @@ function saveAccessory() {
 }
 
 function loadnewChapter() {
-	location.href = "jsp/Chapter/new_chapter.jsp?CourseNum=" + ObjectNum ;
+	location.href = "./Chapter/new_chapter.jsp?CourseNum=" + ObjectNum ;
 }
