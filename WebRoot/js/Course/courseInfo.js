@@ -280,7 +280,7 @@ function registMatchBtn() {
 		if ( json != null ) {
 			$('#MatchListTable').html('<tr class="info" ><td>奖项名称</td><td>比赛名称</td><td>开始时间</td><td>结束时间</td><td>操作</td></tr>') ;
 			for( var i = 0 ; i < json.length ; i ++ ) {
-				url = 'jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ;
+				url = '../Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ;
 				temp += '<tr>'
 					+ '<td>'+json[i].AwardName+'</td>'
 					+ '<td><a href='+url+'>'+json[i].MatchName+'</a></td>'

@@ -205,6 +205,7 @@ function updateUserPic( userPic ) {
 			UserPic:userPic,
 		},function(json){
 			if ( json.result == 0 ) {
+				alert('更新头像成功，点击“确认”进行刷新');
 				location.reload(true) ;
 			} else if ( json.result == 1 ) {
 				alert( '更新头像失败！' ) ;
@@ -247,7 +248,7 @@ function pageAttend() {
 			if ( i == aJson.length ) {
 				break ;
 			}
-			var url = 'jsp/Course/courseInfo.jsp?CourseNum='+aJson[i].CourseNum ;
+			var url = './jsp/Course/courseInfo.jsp?CourseNum='+aJson[i].CourseNum ;
 			// + '&ListId=0' ;
 
 			var cname = aJson[i].CourseName ;
@@ -291,7 +292,7 @@ function pageCourse() {
 			if ( i == cJson.length ) {
 				break ;
 			}
-			var url = 'jsp/Course/courseInfo.jsp?CourseNum='+cJson[i].CourseNum ;
+			var url = './jsp/Course/courseInfo.jsp?CourseNum='+cJson[i].CourseNum ;
 			// + '&ListId=0' ;
 			var cname = cJson[i].CourseName ;
 			if ( cname.length >= 20 ) {
@@ -334,7 +335,7 @@ function pageMatch() {
 			if ( i == mJson.length ) {
 				break ;
 			}
-			var url = 'jsp/Match/MatchInfo.jsp?MatchNum='+mJson[i].MatchNum ;
+			var url = './jsp/Match/MatchInfo.jsp?MatchNum='+mJson[i].MatchNum ;
 			var content = mJson[i].MatchContent ;
 			if( content.length >= 20) {
 				content = content.substring(0,16) ;

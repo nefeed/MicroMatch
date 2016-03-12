@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <title>比赛添加内容</title>
     
-	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/Match/afterNewMatch.js"></script>
 	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
     <script type="text/javascript">

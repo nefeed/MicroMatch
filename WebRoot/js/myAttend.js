@@ -18,7 +18,7 @@ $(function() {
 				location.href = './login.jsp' ;
 			} else {
 				for(var i = 0 ; i < json.length ; i ++ ){
-					var url = 'jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;
+					var url = './jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;
 					// + '&ListId=0' ;
 					var subject = json[i].SubjectName ;
 					var cname = json[i].CourseName ;

@@ -87,7 +87,7 @@ function showTheNewestMatches( newestNum ) {
 		var stoptime = [] ;
 		for ( var i = 0 ; i < indexNum ; i ++ ) {
 			imgsrc = json[i].MatchPicture ; // 比赛图片路径
-			mhref = 'jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ; // 比赛超链接地址
+			mhref = './jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ; // 比赛超链接地址
 			
 			mName = json[i].MatchName ; // 比赛名称
 			var miniName = mName ;
@@ -157,7 +157,7 @@ function showTheNewestMatches( newestNum ) {
 		secondMatchNum = json[1].MatchNum ;
 		$('#secondMatchTitle').html( json[1].MatchName ) ;
 		var $nmd1 = $('#newestMatchDiv1') ;
-		mhref = 'jsp/Match/MatchInfo.jsp?MatchNum=' + json[0].MatchNum ;
+		mhref = './jsp/Match/MatchInfo.jsp?MatchNum=' + json[0].MatchNum ;
 		$nmd1.html('<span class="dividing-text-left"></span><span class="dividing-text-center">' + json[0].MatchName + '</span><span class="dividing-text-right"></span> <a class="dividing-more" href="' + mhref + '">更多>></a>') ;				
 	});
 	showNewestRegisters( newestMatchNum, newestMatchTemp) ;
@@ -180,7 +180,7 @@ function showNewestRegisters() {
 			if ( i == indexNum ) {
 				break ;
 			}
-			url = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+			url = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 			cname = json[i].CourseName ;
 			if ( cname.length >= 16 ) {
 				cname = cname.substring(0, 12) ;
@@ -250,7 +250,7 @@ function showNewestCourses( cnum ) {
 			if ( json[i].Period == 0 ) {
 				cnum++ ;
 			} else {
-				url = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+				url = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 				cname = json[i].CourseName ;
 				if ( cname.length >= 16 ) {
 					cname = cname.substring(0, 12) ;
@@ -296,7 +296,7 @@ function showHotCourses( cnum ) {
 			if ( json[i].Period == 0 ) {
 				cnum++ ;
 			} else {
-				url = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+				url = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 				cname = json[i].CourseName ;
 				if ( cname.length >= 16 ) {
 					cname = cname.substring(0, 12) ;
@@ -415,7 +415,7 @@ function showAward( check ) {
 					aname = json[i].AwardName ;
 					aremark = json[i].Remark ;
 					uname = json[i].NickName ;
-					chref = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+					chref = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 					if( json[i].CourseNum == 'undefined' || json[i].CourseName == null ) {
 						cname = '未颁奖' ;
 					} else {
@@ -447,7 +447,7 @@ function showAward( check ) {
 					aname = json[i].AwardName ;
 					aremark = json[i].Remark ;
 					uname = json[i].NickName ;
-					chref = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+					chref = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 					if( json[i].CourseNum == 'undefined' || json[i].CourseName == null ) {
 						cname = '未颁奖' ;
 					} else {

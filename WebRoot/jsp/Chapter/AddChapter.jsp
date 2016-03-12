@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script> 
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
 	<script type="text/javascript" src="js/Chapter/AddChapter.js"></script>
 	<script type="text/javascript">
       var CourseNum = <%="'"+CourseNum+"'"%> ;

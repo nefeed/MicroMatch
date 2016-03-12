@@ -38,6 +38,12 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/actionBar.css" />
 	<link type="text/css" rel="stylesheet"  href="css/blue.css"/>
+	
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="js/actionBar/actionBar.js"></script>
+	<script type="text/javascript" src="js/icheck.min.js"></script>
+	<script type="text/javascript" src="js/myicheck.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript">
 		var LoginUserNum = <%="'" + LoginUserNum + "'"%> ;
 		var LoginNickName = <%="'" + LoginNickName + "'"%> ;
@@ -49,7 +55,6 @@
 	<div id="signModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog add_mdal">
       		<div class="login_modal">
-      			
 				<div class="modal_header">
                     	<a id="loginTab" class="modal_nav1" onclick="" >会员登入</a>
                         <a id="free_loginTab" class="modal_nav2" style="display: none;" onclick="" >免注册登入</a>
@@ -59,7 +64,6 @@
 				<div class="modal_content">
 					<div align = "center"  >
 						<ul id="login_ul" style="display:block;">
-                        	<form>
                         	<li class="modal_li">
                             	<span class="sp_txt">账号</span>
                                 <input id = "signinAccount" type="text" class="ipt_txt1" placeholder="用户名/手机号/邮箱" />
@@ -82,10 +86,8 @@
                             <li>
                             	<input type="submit" value="登入" class="btn1" onclick="signIn()" />
                             </li>
-                           </form>
                         </ul>
                         <ul id="free_regin_ul" style = "display: display;">
-                        	<form>
                         	<li>
                             	<span class="sp_txt">手机号</span>
                                 <input id="signPhone" type="text" class="ipt_txt1" placeholder="手机号码" />
@@ -105,10 +107,8 @@
                             <li>
                             	<input type="submit" value="登入" class="btn1"/>
                             </li>
-                           </form>
                         </ul>
                         <ul id="regin_ul" style="display:block;">
-                        	<form>
                         	<li class="modal_li">
                             	<span class="sp_txt">用户名</span>
                                 <input id = "signupAccount" type="text" class="ipt_txt1" placeholder="用户名"/>
@@ -131,7 +131,6 @@
                             <li>
                             	<input type="submit" value="注册" class="btn1" onclick = "signUp()"/>
                             </li>
-                           </form>
                         </ul>
                         <div class="clear"></div>
 					</div>
@@ -142,11 +141,11 @@
 	<div id = "header">
 		<div id = "top">
 			<div id = "logo">
-				<a href = "mainActivity.jsp"><img src="Images/logo1.png" alt="徽标" onclick="backToHome()"/></a>
-				<a href = "mainActivity.jsp"><img src="Images/logo2.png" alt="公司名称" onclick="backToHome()"/></a>
+				<a href = "./matchIndex.jsp"><img src="Images/logo1.png" alt="徽标" onclick="backToHome()"/></a>
+				<a href = "./matchIndex.jsp"><img src="Images/logo2.png" alt="公司名称" onclick="backToHome()"/></a>
 			</div>
-			<div class="navbg" ><a class = "navbg-link" href="mainActivity.jsp">首页</a></div>
-			<div class="navbg" ><a class = "navbg-link" href="jsp/Match/matchList.jsp">微赛</a></div>
+			<div class="navbg" ><a class = "navbg-link" href="./matchIndex.jsp">首页</a></div>
+			<div class="navbg" ><a class = "navbg-link" href="./jsp/Match/matchList.jsp">微赛</a></div>
 			<div class="search">
 		        <input id="searchInput" class="txtsearch" type="text" onkeydown="listenSearch()" placeholder="搜索课程名"/>
 		        <input type="submit" class="subsearch" value="" onclick="confirmSearch()" />
@@ -165,7 +164,7 @@
 						<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;">
 						</li>
 						<li role="presentation" class="courseli">
-							<a role="menuitem" tabindex="-1" href="jsp/Course/new_course.jsp" style = "font-size:14px ;">
+							<a role="menuitem" tabindex="-1" href="./jsp/Course/new_course.jsp" style = "font-size:14px ;">
 								<img src="Images/course.png"/>
 								&nbsp;&nbsp;新建课程
 							</a>
@@ -173,7 +172,7 @@
          				<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;">
          				</li>
          				<li role="presentation" class="matchli">
-         					<a role="menuitem" tabindex="-1" href="jsp/Match/new_match.jsp" style = "font-size:14px ;">
+         					<a role="menuitem" tabindex="-1" href="./jsp/Match/new_match.jsp" style = "font-size:14px ;">
          						<img src="Images/match.png"/>
          						&nbsp;&nbsp;新建比赛
          					</a>
@@ -199,10 +198,5 @@
 	    	</div>
     	</div>
 	</div>
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
-	<script type="text/javascript" src="js/actionBar/actionBar.js"></script>
-	<script type="text/javascript" src="js/icheck.min.js"></script>
-	<script type="text/javascript" src="js/myicheck.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 </body>
 </html>

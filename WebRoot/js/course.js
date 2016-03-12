@@ -10,9 +10,9 @@ $(function() {
 		$('#c1').text( json.CourseName ) ;
 		$('#c2').text( json.CourseName ) ;
 		$('#c3').text( json.CourseName ) ;
-		$('#c1').attr( 'href' , 'jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum ) ;
-		$('#c2').attr( 'href' , 'jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum ) ;
-		$('#c3').attr( 'href' , 'jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum ) ;
+		$('#c1').attr( 'href' , './jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum ) ;
+		$('#c2').attr( 'href' , './jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum ) ;
+		$('#c3').attr( 'href' , './jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum ) ;
 		$('#content1').text( json.CourseContent ) ;
 		$('#period').text( json.Period + '学时' ) ;
 		$('#createtime').text( json.Createtime ) ;
@@ -374,7 +374,7 @@ function registMatchBtn() {
 		if ( json != null ) {
 			$('#MatchListTable').html('<tr class="info" ><td>奖项名称</td><td>比赛名称</td><td>开始时间</td><td>结束时间</td><td>操作</td></tr>') ;
 			for( var i = 0 ; i < json.length ; i ++ ) {
-				url = 'jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ;
+				url = './jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ;
 				temp += '<tr>'
 					+ '<td>'+json[i].AwardName+'</td>'
 					+ '<td><a href='+url+'>'+json[i].MatchName+'</a></td>'

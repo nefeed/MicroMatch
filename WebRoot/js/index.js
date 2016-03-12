@@ -10,7 +10,7 @@ $(function() {
 			if ( i == json.length ) {
 				break ;
 			}
-			var url = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+			var url = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 			// + '&ListId=0' ;
 			var cname = json[i].CourseName ;
 			if ( cname.length >= 20 ) {
@@ -218,7 +218,7 @@ function loadingSubjectCourse( asubName , j ) {
 				if ( i == json.length ) {
 					break ;
 				}
-				var url = 'jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;
+				var url = './jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;
 				// + '&ListId=0' ;
 				var cname = json[i].CourseName ;
 				if ( cname.length >= 20 ) {

@@ -210,7 +210,7 @@ function showRegists() {
 				var qrtemp = '' ;
 				$qb.html('') ;
 				for(var i=0 ; i<json.length ; i++ ){
-					url = 'course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
+					url = '../../course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
 					var cname = json[i].CourseName ;
 					if ( cname.length >= 20 ) {
 						cname = cname.substring(0, 16) ;
@@ -914,7 +914,7 @@ function showAward( check ) {
 					for ( var i = 0 ; i < json.length ; i ++ ) {
 						aname = json[i].AwardName ;
 						aremark = json[i].Remark ;
-						chref = 'jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+						chref = '../Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 						var method = 'chooseAward(' + json[i].ID + ')' ;
 						if( json[i].CourseNum == 'undefined' || json[i].CourseName == null ) {
 							cname = '未颁奖' ;

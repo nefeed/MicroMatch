@@ -1,6 +1,6 @@
 
 $(function(){
-	$("#ShowAllCourseBody").load("jsp/Course/ShowAllCourses.jsp?UserNum="+LoginUserNum) ;
+	$("#ShowAllCourseBody").load("../Course/ShowAllCourses.jsp?UserNum="+LoginUserNum) ;
 });
 
 function Home() {

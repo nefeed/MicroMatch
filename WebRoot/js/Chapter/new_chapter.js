@@ -51,5 +51,5 @@ function confirmSaveChapter() {
 }
 
 function backToHome() {
-	location.href = '../../mainActivity.jsp' ;
+	location.href = '../../matchIndex.jsp' ;
 }

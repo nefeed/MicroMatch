@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>修改课程信息</title>
 	<link type="text/css" href="css/new_game.css" rel="stylesheet" />
-	<script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+	<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
 	<script src="js/Course/update_course.js" type="text/javascript"></script>
 	<script src="http://open.web.meitu.com/sources/xiuxiu.js" type="text/javascript"></script>
 	<script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>

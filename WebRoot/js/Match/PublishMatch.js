@@ -24,7 +24,7 @@ function PublishConfirm() {
 			EndTime:EndTime,
 		},function(json){
 			if ( json.result == 0 ) {
-				$("#body").load("jsp/UserType/College.jsp") ;
+				$("#body").load("../UserType/College.jsp") ;
 			} else if ( json.result == 1 ) {
 				alert( "发布比赛失败！" ) ;
 			}

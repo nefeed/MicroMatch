@@ -9,7 +9,7 @@ window.onload=function(){
 	xiuxiu.embedSWF("altContent",3,"100%","100%");
        /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
     xiuxiu.setUploadType(2);
-	xiuxiu.setUploadURL("jsp_upload_form.jsp");//修改为您自己的上传接收图片程序
+	xiuxiu.setUploadURL("./userPic_upload_form.jsp");//修改为您自己的上传接收图片程序
 	xiuxiu.onBeforeUpload = function(data, id){
 		xiuxiu.setUploadArgs({filetype: data.type, type: "image", filename: data.name });
 	};
@@ -30,7 +30,7 @@ window.onload=function(){
 </style>
 </head>
 <body>
-<div id="altContent">
-</div>
+	<div id="altContent">
+	</div>
 </body>
 </html>

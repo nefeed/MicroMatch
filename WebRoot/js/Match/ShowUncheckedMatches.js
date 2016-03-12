@@ -21,10 +21,10 @@ $(function(){
 		});
 });
 function ShowMatchInfo(MatchNum) {
-	$("#MatchBody").load( "jsp/Match/MatchInfo.jsp?MatchNum="+MatchNum ) ;
+	$("#MatchBody").load( "./MatchInfo.jsp?MatchNum="+MatchNum ) ;
 }
 function ShowMatchInfo(MatchNum) {
-	$("#AllMatchBody").load( "jsp/Match/MatchInfo.jsp?MatchNum="+MatchNum ) ;
+	$("#AllMatchBody").load( "./MatchInfo.jsp?MatchNum="+MatchNum ) ;
 }
 function CheckMatch( MatchNum ) {
 	$.getJSON("./servlet/CheckMatchServlet",{

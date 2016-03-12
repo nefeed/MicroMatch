@@ -22,7 +22,7 @@ $(function(){
 		});
 });
 function ShowMatchInfo(MatchNum) {
-	$("#AllMatchBody").load( "jsp/Match/MatchInfo.jsp?MatchNum="+MatchNum ) ;
+	$("#AllMatchBody").load( "./MatchInfo.jsp?MatchNum="+MatchNum ) ;
 }
 function Registration( MatchNum ) {
 	$.getJSON("./servlet/RegistrationServlet",{

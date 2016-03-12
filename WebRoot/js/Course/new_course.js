@@ -146,7 +146,7 @@ function confirmSaveCourse() {
 			CoverPicture:imgSrc,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = '../Course/courseInfo.jsp?CourseNum='+json.CourseNum ;
+				location.href = './courseInfo.jsp?CourseNum='+json.CourseNum ;
 			} else if ( json.result == 1 ) {
 				alert( "课程创建失败！" ) ;
 			}
@@ -155,5 +155,5 @@ function confirmSaveCourse() {
 }
 
 function backToHome() {
-	location.href = '../../mainActivity.jsp' ;
+	location.href = '../../matchIndex.jsp' ;
 }

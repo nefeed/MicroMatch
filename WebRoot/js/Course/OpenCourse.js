@@ -11,7 +11,7 @@ $(function(){
 		$("#AudienceNum").val(json.AudienceNum) ;
 		$("#SubscriptionNum").val(json.SubscriptionNum) ;
 		$("#Createtime").val(json.Createtime) ;
-			$("#ChpaterBody").load("jsp/Chapter/ShowCoursesChapter.jsp?CourseNum="+CourseNum+"&UserNum="+LoginUserNum);
+			$("#ChpaterBody").load("../Chapter/ShowCoursesChapter.jsp?CourseNum="+CourseNum+"&UserNum="+LoginUserNum);
 	});
 });
 

@@ -6,7 +6,7 @@ $(function(){
 		$("#ChapterContent").val(json.ChapterContent) ;
 		$("#ChapterVideo").val(json.ChapterVideo) ;
 		$("#Createtime").val(json.Createtime) ;
-		$("#DownloadAccessoryBody").load( "jsp/Accessory/ShowAccessory.jsp?ObjectType="+1+"&ObjectNum="+ChapterNum+"&UserNum="+UserNum ) ;
+		$("#DownloadAccessoryBody").load( "../Accessory/ShowAccessory.jsp?ObjectType="+1+"&ObjectNum="+ChapterNum+"&UserNum="+UserNum ) ;
 	});
 });
 
