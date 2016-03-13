@@ -166,5 +166,16 @@ public class ChapterEntity implements java.io.Serializable {
 		this.coverPicture = coverPicture;
 	}
 
+	@Override
+	public String toString() {
+		return "ChapterEntity [id=" + id + ", chapterName=" + chapterName
+				+ ", chapterContent=" + chapterContent + ", pid=" + pid
+				+ ", chapterVideo=" + chapterVideo + ", createTime="
+				+ createTime + ", courseNum=" + courseNum + ", chapterNum="
+				+ chapterNum + ", chapterVideoName=" + chapterVideoName
+				+ ", isChecked=" + isChecked + ", isComment=" + isComment
+				+ ", listId=" + listId + ", coverPicture=" + coverPicture + "]";
+	}
+
 	
 }

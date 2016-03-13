@@ -124,11 +124,13 @@ public class RegistrationDao extends DaoAbstract {
 		hql = "from RegistrationEntity r where r.matchNum=? and r.matchTemp=? order by r.pollNum DESC" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery(hql) ;
 			query.setString( 0, m.getMatchNum() ) ;
 			query.setInteger( 1 , m.getMatchTemp() ) ;
 			List<RegistrationEntity> lists =  query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists.size() == 0 || lists == null ) {
 				return null ;
 			} else {				

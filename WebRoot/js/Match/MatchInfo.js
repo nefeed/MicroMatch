@@ -1027,6 +1027,7 @@ function giveAward() {
 			$('#blockInit').hide() ;
 			if ( check == 0 ) {
 				showAward( true ) ;
+				location.reload(true) ;
 			} else if ( check == 1 ) {
 				alert("颁发奖项失败！") ;
 			} else if ( check == 2 ) {

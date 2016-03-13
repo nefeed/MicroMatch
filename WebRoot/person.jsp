@@ -27,26 +27,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript">
 		var TUserNum = <%="'"+TUserNum+"'"%> ;
 	</script>
-	<script type="text/javascript" src="http://open.web.meitu.com/sources/xiuxiu.js" ></script>
-	<script type="text/javascript">
-		window.onload=function() {
-		    /*第1个参数是加载编辑器div容器id，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
-			xiuxiu.embedSWF("altContent",5,"93%","100%");
-		    //修改为您自己的图片上传接口
-			xiuxiu.setUploadURL("/micromatch/servlet/uploadUserPicServlet");
-			xiuxiu.setUploadType(2);
-			xiuxiu.setUploadDataFieldName("userpic_file");
-			xiuxiu.onInit = function () {
-				xiuxiu.loadPhoto("");
-			};
-			xiuxiu.onUploadResponse = function (data) {
-				userPic = decodeURI(data) ;
-				userPic = userPic.replace(/ /, '').replace( /\r/,'' ).replace( /\n/,'' ).replace( /\t/, '') ;
-				$('#fileAddress').val(userPic) ;
-				updateUserPic( userPic ) ;
-			};
-		};
-	</script>
 </head>
 
 <body>
@@ -77,9 +57,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div id="page" style="text-align:center;margin-top:15px;"></div>
     </div>
     <div id = "upPicBody" class = "subject_right right2">
-    	<div id="altContent">
-			<h1>美图秀秀</h1>
-		</div>
+    	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
+	    <div class="select_pic">
+            <span class="sl-custom-file">
+	    		<input type="button" value="选择图片" class="select_pic_btn" />
+    			<input type="file" id="file_upload" name = "file" class="ui-input-file" />
+	    	</span>
+            <a class="select_pic_note">仅支持JPG、GIF、PNG常见图片类型,且文件小于5M</a>
+        </div>
+	    <div class="pic">
+	    	<img id = "newPic" class = "newPic"/>
+	    </div>
+	   	<div class="pic_button">
+	    	<input class="submitBTN" onclick="updateUserPic()" type="submit" value="" />
+	    </div>
     </div>
     <div style="display: none;">
     	<a>头像地址：</a><input id = "fileAddress" type = "text" readonly="readonly" />

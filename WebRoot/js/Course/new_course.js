@@ -52,7 +52,7 @@ function ajaxFileUpload1() {
             	imgSrc = data.address ;
                 $('#newPic').attr('src', data.address) ;
                 $('#newPic').show() ;
-                $('.sl-custom-file').hide() ;
+                $('#newPicArrow').hide() ;
               },
               error: function (data, status, e)//服务器响应失败处理函数
               {
@@ -74,7 +74,7 @@ function ajaxFileUpload2() {
             	imgSrc = data.address ;
                 $('#newPic').attr('src', data.address) ;
                 $('#newPic').show() ;
-                $('.sl-custom-file').hide() ;
+                $('#newPicArrow').hide() ;
               },
               error: function (data, status, e)//服务器响应失败处理函数
               {

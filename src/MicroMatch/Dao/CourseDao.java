@@ -151,10 +151,12 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity c where c.courseNum=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0, courseNum ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ){
 				return null ;
 			}else {
@@ -184,10 +186,12 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity c where c.userNum=?";
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery(hql) ;
 			query.setString( 0 , userNum ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			return lists ;
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -253,8 +257,10 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity";
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery(hql) ;
 			List<CourseEntity> lists = query.list() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return null ;
 			} else {
@@ -322,10 +328,12 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity c where c.isChecked=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setShort( 0 , check ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return null ;
 			}else {
@@ -386,10 +394,12 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity c where c.courseName like :courseName" ;
 		try {
 			session.clear() ; 
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( "courseName" , "%"+courseName+"%") ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return null ;
 			}else {
@@ -448,10 +458,12 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity c where c.subId=? Order by c.audienceNum DESC" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query  = session.createQuery( hql ) ;
 			query.setInteger( 0 , subId ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return null ;
 			}else {
@@ -480,11 +492,13 @@ public class CourseDao extends DaoAbstract {
 		hql = "from CourseEntity c Order by c.audienceNum DESC" ;
 		try{
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setFirstResult( 0 ) ;
 			query.setMaxResults( listNum ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if ( lists == null || lists.size() == 0 ) {
 				return null ;
 			} else {
@@ -511,11 +525,13 @@ public class CourseDao extends DaoAbstract {
 		Integer i = indexNum + 4 ; // 增加4条可选内容，一面内容错误
 		try{
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setFirstResult( 0 ) ;
 			query.setMaxResults( i ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if ( lists == null || lists.size() == 0 ) {
 				return null ;
 			} else {
@@ -542,11 +558,13 @@ public class CourseDao extends DaoAbstract {
 		Integer i = indexNum + 4 ; // 增加4条可选内容，一面内容错误
 		try{
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setFirstResult( 0 ) ;
 			query.setMaxResults( i ) ;
 			List<CourseEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if ( lists == null || lists.size() == 0 ) {
 				return null ;
 			} else {

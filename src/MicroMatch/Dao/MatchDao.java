@@ -117,10 +117,12 @@ public class MatchDao extends DaoAbstract {
 		hql = "from MatchEntity m where m.matchNum=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , matchNum ) ;
 			List<MatchEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists.size() != 0 ) {
 				return lists.get(0) ;				
 			}else {
@@ -148,10 +150,12 @@ public class MatchDao extends DaoAbstract {
 		hql = "from MatchEntity m where m.userNum=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0, userNum ) ;
 			List<MatchEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			return lists ;
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -257,9 +261,11 @@ public class MatchDao extends DaoAbstract {
 		hql = "from MatchEntity m ORDER BY m.publishTime DESC " ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery(hql) ;
 			List<MatchEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if ( lists == null || lists.size() == 0) {
 				return null ;
 			}else {				
@@ -329,10 +335,12 @@ public class MatchDao extends DaoAbstract {
 		hql = "from MatchEntity m where m.isChecked=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setShort( 0 , check ) ;
 			List<MatchEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return null ;
 			}else {
@@ -352,10 +360,12 @@ public class MatchDao extends DaoAbstract {
 		hql = "from MatchEntity m where m.matchName like :Mname" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( "Mname" , "%"+matchName+"%") ;
 			List<MatchEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return null ;
 			}else {
@@ -385,11 +395,13 @@ public class MatchDao extends DaoAbstract {
 		hql = "from MatchEntity m where m.userNum=? and m.matchNum=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , m.getUserNum() ) ;
 			query.setString( 1 , m.getMatchNum() ) ;
 			List<MatchEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			return !(lists == null || lists.size() == 0);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -410,10 +422,12 @@ public class MatchDao extends DaoAbstract {
 		Session session = HibernateSessionFactory.getSession() ;
 		hql = "from MatchEntity m where m.matchTemp=:matchTemp" ;
 		session.clear() ;
+		session.beginTransaction() ;
 		Query query =session.createQuery( hql ) ;
 		query.setParameter( "matchTemp" , matchTemp ) ;
 		List<MatchEntity> lists = query.list() ;
 		session.flush() ;
+		session.getTransaction().commit() ;
 		if ( lists == null || lists.size() == 0 ) {
 			return null ;
 		} else {

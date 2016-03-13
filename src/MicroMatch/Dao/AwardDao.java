@@ -12,14 +12,14 @@ public class AwardDao extends DaoAbstract {
 	String hql = "" ;
 	
 	/** 
-	* ������ insert
-	* ������ ���ӽ���
-	* ���أ� boolean
-	* �����ˣ��»���
-	* ����ʱ�䣺2015��4��13�� ����5:13:55
-	* �޸��ˣ�����
-	* �޸�ʱ�䣺2015��4��13�� ����5:13:55
-	* �޸ı�ע��
+	* 方法： insert
+	* 描述： 创建奖项
+	* 返回： boolean
+	* 创建人：章华隽
+	* 创建时间：2015年4月16日 下午7:21:25
+	* 修改人：Administrator
+	* 修改时间：2015年4月16日 下午7:21:25
+	* 修改备注：
 	* @throws 
 	*/ 
 	public boolean insert( AwardEntity award ) {
@@ -40,14 +40,14 @@ public class AwardDao extends DaoAbstract {
 	}
 	
 	/** 
-	* ������ update
-	* ������ �޸Ľ���
-	* ���أ� boolean
-	* �����ˣ��»���
-	* ����ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸��ˣ�����
-	* �޸�ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸ı�ע��
+	* 方法： insert
+	* 描述： 更新奖项
+	* 返回： boolean
+	* 创建人：章华隽
+	* 创建时间：2015年4月16日 下午7:21:25
+	* 修改人：Administrator
+	* 修改时间：2015年4月16日 下午7:21:25
+	* 修改备注：
 	* @throws 
 	*/ 
 	public boolean update( AwardEntity award ) {
@@ -175,10 +175,12 @@ public class AwardDao extends DaoAbstract {
 		Session session = HibernateSessionFactory.getSession() ;
 		hql = "from AwardEntity where courseNum=:coursenum" ;
 		session.clear() ;
+		session.beginTransaction() ;
 		Query query = session.createQuery( hql ) ;
 		query.setParameter("coursenum", courseNum) ;
 		List<AwardEntity> lists = query.list() ;
 		session.flush() ;
+		session.getTransaction().commit() ;
 		if ( lists == null || lists.size() == 0 ) {
 			return null;			
 		} else {

@@ -69,6 +69,7 @@ public class updateUserPicServlet extends HttpServlet {
 		
 		String userNum = request.getParameter( "UserNum" ) ;
 		String userPic = request.getParameter( "UserPic" ) ;
+		System.out.println("获得的UserPic:" + userPic);
 		UserEntity u = new UserEntity() ;
 		u.setUserNum( userNum ) ;
 		u.setUserPicture( userPic ) ;

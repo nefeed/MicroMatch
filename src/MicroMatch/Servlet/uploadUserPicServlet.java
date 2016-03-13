@@ -120,7 +120,10 @@ public class uploadUserPicServlet extends HttpServlet {
                 }
             }
         }
-        out.print( "userPic/"+ name + extName ) ;
+        JSONObject json = new JSONObject() ;
+        json.put( "address" , "userPic/"+ name + extName ) ;
+        json.put( "originalname", originalName ) ;
+        out.print( json ) ;
         out.flush() ;
         out.close() ;
 	}

@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 	    <div class="pic">
 	    	<img id = "newPic" class = "newPic"/>
-	    	<span class="sl-custom-file">
+	    	<span id = "newPicArrow" class="sl-custom-file">
 	    		<input type="button" class="subject_upbutton" />
     			<input type="file" id = "pic_upbutton" name = "file" class="ui-input-file" />
 	    	</span>

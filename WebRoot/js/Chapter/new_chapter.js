@@ -32,7 +32,7 @@ function confirmSaveChapter() {
 	} else if ( fileAddress == '' ) {
 		alert( '请上传章节视频！' ) ;
 	} else {
-		$.getJSON("./servlet/AddChapterServlet",{
+		$.getJSON("/micromatch/servlet/AddChapterServlet",{
 			UserNum:LoginUserNum,
 			CourseNum:CourseNum,
 			ChapterContent:chapterContent,
@@ -42,7 +42,7 @@ function confirmSaveChapter() {
 			VideoAddress:fileAddress,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+json.ChapterNum;
+				location.href = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum=' + CourseNum;
 			} else if ( json.result == 1 ) {
 				alert( "章节发布失败！" ) ;
 			}

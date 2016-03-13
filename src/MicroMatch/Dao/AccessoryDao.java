@@ -38,14 +38,14 @@ public class AccessoryDao extends DaoAbstract {
 	}
 	
 	/** 
-	* ������ update
-	* ������ �޸Ŀγ��½���Ϣ
-	* ���أ� boolean
-	* �����ˣ��»���
-	* ����ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸��ˣ�����
-	* �޸�ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸ı�ע��
+	* 方法： insert
+	* 描述： 更新附件
+	* 返回： boolean
+	* 创建人：章华隽
+	* 创建时间：2015年4月16日 下午7:21:25
+	* 修改人：Administrator
+	* 修改时间：2015年4月16日 下午7:21:25
+	* 修改备注：
 	* @throws 
 	*/ 
 	public boolean update ( AccessoryEntity accessory ) {

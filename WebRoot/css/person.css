@@ -72,7 +72,7 @@ em, i {
 }
 
 .subject_1 em input {
-	background: url(../img/person_2.png) no-repeat;
+	background: url(/micromatch/img/person_2.png) no-repeat;
 	cursor: pointer;
 	width: 18px;
 	height: 18px;
@@ -102,7 +102,7 @@ em, i {
 
 .subject_2 .subject_current a {
 	color: #fff;
-	background: url(../img/person_3.png) no-repeat 155px center;
+	background: url(/micromatch/img/person_3.png) no-repeat 155px center;
 }
 
 .subject_right {
@@ -163,12 +163,12 @@ em, i {
 }
 
 .subject_right ul li em .i1 {
-	background: url(../img/index_14.jpg) no-repeat left center;
+	background: url(/micromatch/img/index_14.jpg) no-repeat left center;
 	float: left;
 }
 
 .subject_right ul li em .i2 {
-	background: url(../img/index_17.png) no-repeat 1px center;
+	background: url(/micromatch/img/index_17.png) no-repeat 1px center;
 	float: left;
 }
 
@@ -202,4 +202,120 @@ em, i {
 	font-family: '微软雅黑';
 	color: #c0c0c0;
 	position: fixd;
+}
+
+.pic {
+	width: 402px;
+	height: 252px;
+	background: url(/micromatch/img/new_game_bg.png) no-repeat;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 300px;
+}
+
+.newPic {
+	width: 380px;
+	height: 230px;
+	display: none;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 300px;
+}
+
+.pic_button {
+	float: center;
+	width: 205px;
+	margin: 20px auto;
+}
+
+.pic_button {
+	display: inline;
+}
+
+.subject_button {
+	margin-top: 20px;
+	margin-left: 340px;
+	background: url(/micromatch/img/new_game_bt.png) no-repeat;
+	width: 205px;
+	padding-right: 29px;
+	height: 52px;
+	line-height: 52px;
+	text-align: right;
+	cursor: pointer;
+	font-size: 24px;
+	color: #fff;
+}
+
+.submitBTN {
+	float: right;
+	background: url(/micromatch/img/new_game_bt2.png) no-repeat;
+	width: 98px;
+	height: 95px;
+	cursor: pointer;
+}
+/*2015-7-8*/
+.select_pic{
+	margin: 0 auto;
+	text-align: center;
+	margin-top:50px;
+	margin-bottom:20px;
+}
+.select_pic_btn{
+	background: url(/micromatch/img/new_game_match_bt.png) no-repeat;
+	width: 152px;
+	padding-right: 18px;
+	height: 37px;
+	line-height: 21px;
+	text-align: right;
+	cursor: pointer;
+	font-size: 18px;
+	color: #fff;
+}
+.select_pic_note{
+	display:block;
+	font-size:14px;
+	color:#999999;
+	margin-top:5px;
+}
+.select_pic_note:hover{
+	color:#999999;
+}
+.confirm_btn{
+	width:120px;
+	height:35px;
+	background:url(/micromatch/img/select_15.png) no-repeat;
+	font-size:18px;
+	color:#fff;
+	margin-top:20px;
+	margin-left:270px;
+}
+.cancel_btn{
+	width:120px;
+	height:35px;
+	background:url(/micromatch/img/select_16.png) no-repeat;
+	font-size:18px;
+	color:#323232;
+	margin-top:20px;
+	margin-left:100px;
+}
+.sl-custom-file{
+	position:relative;
+	display:inline-block;
+	zoom:1;
+	cursor:pointer;
+	overflow:hidden;
+	vertical-align:middle;
+}
+.sl-custom-file .ui-input-file{
+	position:absolute;
+	right:0;
+	top:0;
+	_zoom:30;
+	font-size:300px\9;
+	height:100%;
+	_height:auto;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-ms-filter:"alpha(opacity=0)";
+	cursor:pointer;
 }

@@ -53,6 +53,7 @@ String hql = "" ;
 		hql = "from PollVoteEntity where studentNum=? and courseNum=? and matchNum=? and matchTemp=?" ;
 		try {
 			session.clear() ;
+			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , pollVote.getStudentNum() ) ;
 			query.setString( 1 , pollVote.getCourseNum() ) ;
@@ -60,6 +61,7 @@ String hql = "" ;
 			query.setInteger( 3 , pollVote.getMatchTemp() ) ;
 			List<PollVoteEntity> lists = query.list() ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			return !(lists == null || lists.size() == 0);
 		} catch (Exception e) {
 			// TODO: handle exception

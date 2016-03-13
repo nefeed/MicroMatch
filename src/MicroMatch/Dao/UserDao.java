@@ -4,6 +4,7 @@ import MicroMatch.Entity.UserEntity;
 import MicroMatch.Factory.HibernateSessionFactory;
 import MicroMatch.Tools.MD5Tool;
 import net.sf.json.JSONObject;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -398,6 +399,7 @@ public class UserDao extends DaoAbstract {
 	* @return:      boolean
 	* @throws
 	*/ 
+	@SuppressWarnings("unchecked")
 	public boolean updatePic(UserEntity u) {
 		// TODO Auto-generated method stub
 		Session session = HibernateSessionFactory.getSession() ;
@@ -410,17 +412,20 @@ public class UserDao extends DaoAbstract {
 			query.setString( 0 , u.getUserNum() ) ;
 			List<UserEntity> lists = query.list() ;
 			session.flush() ;
-			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
+				session.getTransaction().commit() ;
 				return false ;
 			} else {
 				UserEntity newU = lists.get(0) ;
 				newU.setUserPicture( u.getUserPicture() ) ;
-				return this.update( newU ) ;
+				session.update(newU);
+				session.getTransaction().commit() ;
+				return true;
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace() ;
+			session.getTransaction().rollback();
 			return false ;
 		}
 	}

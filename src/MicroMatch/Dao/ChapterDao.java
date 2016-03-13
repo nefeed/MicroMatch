@@ -35,6 +35,7 @@ public class ChapterDao extends DaoAbstract {
 		Random random = new Random() ;
 		char[] ranArray = new char[20] ;
 		session.clear() ;
+		session.beginTransaction() ;
 		while ( clash ) {
 			for (int i = 0; i < ranArray.length; i++) {
 				ranArray[i] = ranString.charAt( random.nextInt( 36 ) ) ;
@@ -52,25 +53,28 @@ public class ChapterDao extends DaoAbstract {
 		Short check = 0 ;
 		chapter.setIsChecked( check ) ;
 		chapter.setChapterNum( theRan ) ;
+		System.out.println("将要保存的Chapter:" + chapter.toString());
 		int period = this.showPeriod( courseNum ) ;
 		int lid = chapter.getListId() ;
-		if ( lid < period ) {
-			hql = "from ChapterEntity where courseNum=? and listId=?" ;
-			for ( int i = lid ; i < period ; i++ ) {
-				Query query = session.createQuery( hql ) ;
-				query.setString( 0 , courseNum ) ;
-				query.setInteger( 1 , i ) ;
-				List<ChapterEntity> templ = query.list() ;
-				ChapterEntity tempe = templ.get(0) ;
-				session.flush() ;
-				tempe.setListId( tempe.getListId() + 1 ) ;
-				session.update(tempe) ;
-				session.flush() ;
-			}
-		}
+		System.out.println("本课程 " + courseNum + " 的章节数:" + period);
 		try {
-			session.save( chapter ) ;
+			if ( lid < period ) {
+				hql = "from ChapterEntity where courseNum=? and listId=?" ;
+				for ( int i = lid ; i < period ; i++ ) {
+					Query query = session.createQuery( hql ) ;
+					query.setString( 0 , courseNum ) ;
+					query.setInteger( 1 , i ) ;
+					List<ChapterEntity> templ = query.list() ;
+					ChapterEntity tempe = templ.get(0) ;
+					session.flush() ;
+					tempe.setListId( tempe.getListId() + 1 ) ;
+					session.update(tempe) ;
+					session.flush() ;
+				}
+			}
+			session.saveOrUpdate( chapter ) ;
 			session.flush() ;
+			session.getTransaction().commit() ;
 			return chapter ;
 		} catch ( Exception e ) {
 			e.printStackTrace() ;
@@ -79,14 +83,14 @@ public class ChapterDao extends DaoAbstract {
 	}
 	
 	/** 
-	* ������ update
-	* ������ �޸Ŀγ��½���Ϣ
-	* ���أ� boolean
-	* �����ˣ��»���
-	* ����ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸��ˣ�����
-	* �޸�ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸ı�ע��
+	* 方法： insert
+	* 描述： 更新章节
+	* 返回： boolean
+	* 创建人：章华隽
+	* 创建时间：2015年4月16日 下午7:21:25
+	* 修改人：Administrator
+	* 修改时间：2015年4月16日 下午7:21:25
+	* 修改备注：
 	* @throws 
 	*/ 
 	public boolean update ( ChapterEntity chapter ) {

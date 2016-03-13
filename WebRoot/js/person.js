@@ -2,7 +2,6 @@
 var local = window.location;  
 var contextPath = local.pathname.split("/")[1];  
 var basePath = local.protocol+"//"+local.host+"/"+contextPath+'/';
-var userPic = '' ;
 var p = 0 ;
 var userType = 3 ;
 var aJson = null ; // 用于存放我的订阅Json
@@ -13,6 +12,9 @@ $(function() {
 	$.ajaxSettings.async = false ;
 	$('.right2').hide() ;
 	findTheOne() ; // 显示该用户的详情
+	$('#file_upload').change(function () {
+		ajaxFileUpload();
+	}) ;
 	$('#geren').click(function(){
 		$(this).addClass('subject_current');
 		$('#picSettings').removeClass('subject_current');
@@ -171,11 +173,34 @@ function whatUserType() {
 			break ;
 	}
 }
+
+// 上传用户头像1
+function ajaxFileUpload() {
+    $.ajaxFileUpload({
+              url: './servlet/uploadUserPicServlet', //用于文件上传的服务器端请求地址
+              secureuri: false, //是否需要安全协议，一般设置为false
+              fileElementId: 'file_upload', //文件上传域的ID
+              dataType: 'json', //返回值类型 一般设置为json
+              success: function (data, status)  //服务器成功响应处理函数
+              {
+            	$('#fileAddress').val(data.address) ;
+                $('#newPic').attr('src', data.address) ;
+                $('#newPic').show() ;
+              },
+              error: function (data, status, e)//服务器响应失败处理函数
+              {
+                alert('上传失败,错误代码如下！\n' + e);
+              }
+            }
+    );
+    return false;
+}
 /**
  * 更新用户头像
  */
-function updateUserPic( userPic ) {
-	if( UserPic = '' ) {
+function updateUserPic() {
+	var userPic = $('#fileAddress').val();
+	if( userPic == '' ) {
 		alert( '请先上传头像才尝试更新！') ;
 	} else {
 		$.getJSON( './servlet/updateUserPicServlet',{

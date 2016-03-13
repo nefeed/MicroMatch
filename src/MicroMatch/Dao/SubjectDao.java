@@ -13,14 +13,14 @@ public class SubjectDao extends DaoAbstract {
 	
 	
 	/** 
-	* ������ insert
-	* ������ ���ӽ���
-	* ���أ� boolean
-	* �����ˣ��»���
-	* ����ʱ�䣺2015��4��13�� ����5:13:55
-	* �޸��ˣ�����
-	* �޸�ʱ�䣺2015��4��13�� ����5:13:55
-	* �޸ı�ע��
+	* 方法： insert
+	* 描述： 创建目录
+	* 返回： boolean
+	* 创建人：章华隽
+	* 创建时间：2015年4月16日 下午7:21:25
+	* 修改人：Administrator
+	* 修改时间：2015年4月16日 下午7:21:25
+	* 修改备注：
 	* @throws 
 	*/ 
 	public boolean insert ( SubjectEntity subject ) {
@@ -39,14 +39,14 @@ public class SubjectDao extends DaoAbstract {
 	}
 	
 	/** 
-	* ������ update
-	* ������ �޸Ľ���
-	* ���أ� boolean
-	* �����ˣ��»���
-	* ����ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸��ˣ�����
-	* �޸�ʱ�䣺2015��4��13�� ����5:18:26
-	* �޸ı�ע��
+	* 方法： update
+	* 描述： 更新目录
+	* 返回： boolean
+	* 创建人：章华隽
+	* 创建时间：2015年4月16日 下午7:21:25
+	* 修改人：Administrator
+	* 修改时间：2015年4月16日 下午7:21:25
+	* 修改备注：
 	* @throws 
 	*/ 
 	public boolean update ( SubjectEntity subject ) {
