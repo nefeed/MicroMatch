@@ -6,7 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<base href="<%=basePath%>">
+	<base href="<%=basePath%>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>新建课程</title>
 	<link type="text/css" rel="stylesheet" href="css/new_game.css" />
@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script src="http://open.web.meitu.com/sources/xiuxiu.js" type="text/javascript"></script>
 </head>
 <body>
-	<jsp:include page="../../actionBar.jsp"/>
+	<jsp:include page="/actionBar.jsp"/>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
       		<div class="modal-content">
@@ -76,6 +76,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    </div>
 	    <div class = "clear"></div>
 	</div>
-	<jsp:include page="../../bottom.jsp"/>
+	<jsp:include page="/bottom.jsp"/>
 </body>
 </html>

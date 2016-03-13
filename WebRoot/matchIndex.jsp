@@ -31,10 +31,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%=basePath%>" />
     
-    <title>微课首页</title>
+    <title>微课大赛首页</title>
     <link type="text/css" rel="stylesheet" href="css/matchIndex.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/aspxcs.css"/>
     <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/imageWheel/imageWheel.css" />
@@ -52,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<jsp:include page="actionBar.jsp"/>
+  	<jsp:include page="/actionBar.jsp"/>
   	<!-- 评价课程Modal -->
 	<div id="periodModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog">
@@ -102,34 +104,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div id="picshow_tx">
 						<ul id = "newestMatchBigImgAlt">
-						  <li style="display: none;">
-							  <x3><a href="#" target="_blank">中国死飞店铺推介：上海死飞店FACTORY FIVE</a></x3>
-							  <p>上海第一家死飞精品店，由三个外国人与一中国人联合创办，主要经营客订个性单速车，帮助他们得到自己梦想中的车架。</p>
-						  </li>
-						  <li style="display: none;">
-							  <x3><a href="#" target="_blank">骑看世界：纯美的世界恬静的心冰岛骑游之旅</a></x3>
-							  <p>冰岛有“火山岛”、“雾岛”、“冰封的土地”、“冰与火之岛”之称。有想过在这里骑游吗？下面看看Ovegur的冰岛骑游之旅吧。</p>
-						  </li>
-						  <li style="display: list-item;">
-							  <x3><a href="#" target="_blank">空气糟糕透了！推荐几款实用的骑行防毒口罩</a></x3>
-							  <p>这几天，全国各地的空气糟糕透顶！北京空气污染指数又爆表了！！！经过资深车友的推荐及亲身体验，整理出几款超强防毒的骑行口罩。</p>
-						  </li>
-						  <li style="display: none;">
-							  <x3><a href="#" target="_blank">[组图]1200万像素带Wi-Fi 骑行记录仪Gopro Hero3评测</a></x3>
-							  <p>近年来户外骑行等运动录像盛行，Gopro这品牌可说功不可没，新版的Gopro Hero3具有1200万像素带Wi-Fi功能……</p>
-						  </li>
 						</ul>
 					</div>
 				</div>
 				<div id="select_btn">
-			    	<a id="sbr_title">
-			                	最新比赛
-			            		</a>
+			    	<a id="sbr_title">最新比赛</a>
 					<ul id = "newestRightMatchesUl">
-					  <li class="" style="border: none;"><a href="http://www.lanrentuku.com/" target="_blank"><img src="Images/01.jpg"><span class="select_text">上海死飞店</span><span class="select_date"><x>College</x>&nbsp&nbsp<x>08.01</x>-<x>08.30</x></span></a></li>
-					  <li class=""><a href="http://www.lanrentuku.com/" target="_blank"><img src="Images/02.jpg"><span class="select_text">骑看世界：北欧冰岛</span><span class="select_date"><x>College</x>&nbsp&nbsp<x>08.01</x>-<x>08.30</x></span></a></li>
-					  <li class="current"><a href="http://www.lanrentuku.com/" target="_blank"><img src="Images/03.jpg"><span class="select_text">推荐几款实用的骑行</span><span class="select_date"><x>College</x>&nbsp&nbsp<x>08.01</x>-<x>08.30</x></span></a></li>
-					  <li class=""><a href="http://www.lanrentuku.com/" target="_blank"><img src="Images/04.jpg"><span class="select_text">骑行记录仪</span><span class="select_date"><x>College</x>&nbsp&nbsp<x>08.01</x>-<x>08.30</x></span></a></li>
 					</ul>
 				</div>	
 			</div>
@@ -626,6 +606,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="dividing-clear"></div>
 	</div>
-	<jsp:include page="bottom.jsp"/>
+	<jsp:include page="/bottom.jsp"/>
   </body>
 </html>

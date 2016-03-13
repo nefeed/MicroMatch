@@ -19,5 +19,5 @@ $(function(){
 });
 
 function ShowCourseInfo(CourseNum) {
-	location.href = "../Course/CourseInfo.jsp?CourseNum="+CourseNum ;
+	location.href = "/micromatch/jsp/Course/CourseInfo.jsp?CourseNum="+CourseNum ;
 }

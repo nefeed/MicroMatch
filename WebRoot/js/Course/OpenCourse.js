@@ -11,7 +11,7 @@ $(function(){
 		$("#AudienceNum").val(json.AudienceNum) ;
 		$("#SubscriptionNum").val(json.SubscriptionNum) ;
 		$("#Createtime").val(json.Createtime) ;
-			$("#ChpaterBody").load("../Chapter/ShowCoursesChapter.jsp?CourseNum="+CourseNum+"&UserNum="+LoginUserNum);
+			$("#ChpaterBody").load("/micromatch/jsp/Chapter/ShowCoursesChapter.jsp?CourseNum="+CourseNum+"&UserNum="+LoginUserNum);
 	});
 });
 
@@ -32,7 +32,7 @@ function PollVote() {
 	});
 }
 function ShowVideo() {
-	location.href = "../Chapter/ChapterVideo.jsp?ChapterNum="+ChapterNum+"&UserNum="+LoginUserNum ;
+	location.href = "/micromatch/jsp/Chapter/ChapterVideo.jsp?ChapterNum="+ChapterNum+"&UserNum="+LoginUserNum ;
 }
 function Back() {
 	window.history.back() ;

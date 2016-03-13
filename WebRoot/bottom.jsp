@@ -9,7 +9,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<base href="<%=basePath%>">
+	<base href="<%=basePath%>" />
 
 	<title>微课大赛底栏</title>
 	<link type="text/css" href="css/bottom.css" rel="stylesheet" />

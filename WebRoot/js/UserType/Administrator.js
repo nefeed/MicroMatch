@@ -1,18 +1,18 @@
 function ShowUncheckedMatches() {
-	$("#ABody").load("../Match/ShowUncheckedMatches.jsp") ;
+	$("#ABody").load("/micromatch/jsp/Match/ShowUncheckedMatches.jsp") ;
 }
 function ShowUncheckedCourses() {
-	$("#ABody").load("../Course/ShowUncheckedCourses.jsp") ;
+	$("#ABody").load("/micromatch/jsp/Course/ShowUncheckedCourses.jsp") ;
 }
 function ShowUncheckedChapters() {
-	$("#ABody").load("../Chapter/ShowUncheckedChapters.jsp") ;
+	$("#ABody").load("/micromatch/jsp/Chapter/ShowUncheckedChapters.jsp") ;
 }
 function ShowAllUser() {
-	$("#ABody").load("../User/ShowAllUser.jsp") ;
+	$("#ABody").load("/micromatch/jsp/User/ShowAllUser.jsp") ;
 }
 function PublishMatch() {
-	$("#ABody").load( "../Match/PublishMatch.jsp" ) ;
+	$("#ABody").load( "/micromatch/jsp/Match/PublishMatch.jsp" ) ;
 }
 function Home() {
-	location.href = "../../login_2.jsp" ;
+	location.href = "/micromatch/login_2.jsp" ;
 }

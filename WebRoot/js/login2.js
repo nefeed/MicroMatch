@@ -15,7 +15,7 @@ function adminLogin(){
 					alert("您非管理员用户，请勿继续尝试登录！");
 				} else {
 					alert( json.NickName+"欢迎回来！" ) ;
-					location.href="./loading.jsp" ;
+					location.href="/micromatch/loading.jsp" ;
 				}			
 			} else if( json.result == 1 ) {
 				alert("密码错误！") ;

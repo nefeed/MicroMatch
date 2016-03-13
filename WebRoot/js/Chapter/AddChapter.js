@@ -22,7 +22,7 @@ function Confirm() {
 	},function(json){
 		if ( json.result == 0 ) {
 			alert( "章节创建成功！" ) ;
-			location.href = "../Chapter/ChapterInfo.jsp?ChapterNum="+json.ChapterNum+"&UserNum="+LoginUserNum ;
+			location.href = "/micromatch/jsp/Chapter/ChapterInfo.jsp?ChapterNum="+json.ChapterNum+"&UserNum="+LoginUserNum ;
 		} else if ( json.result == 1 ) {
 			alert( "章节创建失败！" ) ;
 		}

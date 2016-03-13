@@ -24,7 +24,7 @@ $(function(){
  * 进入课程
  */
 function openCourse() {
-	location.href = '../../course.jsp?CourseNum='+CourseNum+'&ListId=0' ;
+	window.location.href = '/micromatch/jsp/Course/course.jsp?CourseNum='+CourseNum+'&ListId=0' ;
 }
 
 
@@ -45,7 +45,7 @@ function loadChapter(){
 			var chaName = '' ;
 			for ( var i = 0 ; i < json.length ; i++ ) {
 				chaName = json[i].ChapterName ;
-				url = 'course.jsp?CourseNum=' + CourseNum
+				url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + CourseNum
 				+ '&ListId=' + i ;
 				var index = i + 1 ;
 				temp += '<tr>'
@@ -69,7 +69,7 @@ function loadChapter(){
 function publishComment(){
 	if ( LoginUserNum == '' || LoginUserType == 'undefinded' ) {
 		alert( '请登入后继续尝试！' ) ;
-		location.href = '../../login.jsp' ;
+		location.href = '/micromatch/login.jsp' ;
 	} else {
 		var publishCommentContent = $('#publishCommentContent').val() ;
 		if( publishCommentContent.length >= 250 ){
@@ -217,6 +217,7 @@ function attendConfirm() {
 			},function(json){
 				if( json.result == 0 ) {
 					showAttendBTN() ;
+					alert( '订阅成功！' ) ;	
 				} else if (json.result == 1 ) {
 					alert( '订阅失败！' ) ;			
 				} else if (json.result == 2 ) {
@@ -231,6 +232,7 @@ function attendConfirm() {
 			},function(json){
 				if( json.result == 0 ) {
 					showAttendBTN() ;
+					alert('订阅失败！');
 				} else if (json.result == 1 ) {
 					alert( '取消订阅失败！' ) ;			
 				}
@@ -266,7 +268,7 @@ function isMyCourse() {
  * 新增内容按钮事件
  */
 function addNewBtn() {
-	location.href = "../afterNew.jsp?ObjectNum="+CourseNum+"&ObjectType=0" ;
+	location.href = "/micromatch/jsp/afterNew.jsp?ObjectNum="+CourseNum+"&ObjectType=0" ;
 }
 
 /**
@@ -280,7 +282,7 @@ function registMatchBtn() {
 		if ( json != null ) {
 			$('#MatchListTable').html('<tr class="info" ><td>奖项名称</td><td>比赛名称</td><td>开始时间</td><td>结束时间</td><td>操作</td></tr>') ;
 			for( var i = 0 ; i < json.length ; i ++ ) {
-				url = '../Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ;
+				url = '/micromatch/jsp/Match/MatchInfo.jsp?MatchNum=' + json[i].MatchNum ;
 				temp += '<tr>'
 					+ '<td>'+json[i].AwardName+'</td>'
 					+ '<td><a href='+url+'>'+json[i].MatchName+'</a></td>'
@@ -306,7 +308,7 @@ function registMatchBtn() {
  * 修改课程按钮，点击进入修改课程界面
  */
 function updateCourse() {
-	location.href = "../Course/update_course.jsp?CourseNum="+CourseNum ;
+	location.href = "/micromatch/jsp/Course/update_course.jsp?CourseNum="+CourseNum ;
 }
 function saveAccessory() {
 	var fileName = $('#fileName').val() ;
@@ -330,5 +332,5 @@ function saveAccessory() {
 }
 
 function addNewChapter() {
-	location.href = "../Chapter/new_chapter.jsp?CourseNum=" + CourseNum ;
+	location.href = "/micromatch/jsp/Chapter/new_chapter.jsp?CourseNum=" + CourseNum ;
 }

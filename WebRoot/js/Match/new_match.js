@@ -7,7 +7,7 @@ $(function(){
 //	    /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
 //		xiuxiu.embedSWF("altContent",5,"100%","99%");
 //	    //修改为您自己的图片上传接口
-//		xiuxiu.setUploadURL(basePath+"matchPic_upload_form.jsp");
+//		xiuxiu.setUploadURL("/micromatch/matchPic_upload_form.jsp");
 //		xiuxiu.setUploadType(2);
 //		xiuxiu.setUploadDataFieldName("TestFile");
 //		xiuxiu.onInit = function ()
@@ -116,7 +116,7 @@ function saveMatch() {
 			MatchPic:imgSrc,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = '../Match/MatchInfo.jsp?MatchNum='+json.MatchNum ;
+				location.href = '/micromatch/jsp/Match/MatchInfo.jsp?MatchNum='+json.MatchNum ;
 			} else if ( json.result == 1 ) {
 				alert( "发布比赛失败！" ) ;
 			}
@@ -125,5 +125,5 @@ function saveMatch() {
 }
 
 function backToHome() {
-	location.href = '../../matchIndex.jsp' ;
+	location.href = 'matchIndex.jsp' ;
 }

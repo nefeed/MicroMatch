@@ -6,7 +6,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%=basePath%>" />
     
     <title>比赛列表</title>
     
@@ -21,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <jsp:include page="../../actionBar.jsp"/>
+    <jsp:include page="/actionBar.jsp"/>
     <!--  <div class="talk">
 		<div class="talk_1" id = "subjectItself">
     		微赛列表
@@ -121,6 +122,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  </div>
 	</div>
 	<div id="page" style="text-align:center;margin-top:15px;"></div>
-	<jsp:include page="../../bottom.jsp"/>
+	<jsp:include page="/bottom.jsp"/>
   </body>
 </html>

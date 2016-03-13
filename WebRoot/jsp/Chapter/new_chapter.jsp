@@ -7,7 +7,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<base href="<%=basePath%>">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="<%=basePath%>" />
 	<title>新建章节</title>
 	<link rel="stylesheet" type="text/css" href="css/new_game.css" />
 	<link rel="stylesheet" type="text/css" href="js/uploadify/uploadify.css" />
@@ -19,14 +20,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript">
       var CourseNum = <%="'"+CourseNum+"'"%> ;
     </script>
-
 </head>
-
-<body>
-	<jsp:include page="../../actionBar.jsp"/>
 	<script type="text/javascript" src="js/uploadify/swfobject.js"></script>
-	<script type="text/javascript" src="js/uploadify/jquery.uploadify.js"></script>
-
+	<script type="text/javascript" src="js/uploadify/jquery.uploadify.min.js"></script>
+	<script type="text/javascript">
+			$('#uploadify').uploadify({  
+		        'auto'           : false,  
+		        'swf'            : '/micromatch/js/uploadify/uploadify.swf',  
+		        'uploader'       : '/micromatch/servlet/UploadVideoServlet',
+		        'queueID'        : 'fileQueue',
+		        'folder'         : 'CuSunPlayer/ChapterVideo',
+		        'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
+		        'queueSizeLimit' : 1,  
+		        'fileTypeDesc'   : '只支持flv和mp4格式的视频',  
+		        'fileTypeExts'   : '*.flv;*.mp4',
+		        'multi'          : false,  
+		        'buttonText'     : '本地文件',
+				'onUploadSuccess' : function(file, data, response) {
+					$('#videoName').val(file.name) ;
+					$('#videoAddress').val('CuSunPlayer/Chaptervideo/' + data) ;
+					$('#myModal').modal('hide') ;
+					$('#myModal').hide() ;
+					$('#blockInit').hide() ;
+					$('#blockInit').attr( 'style', 'display: none;' ) ;
+					$('.vedio-name').html(file.name) ;
+					$('.vedio-name').show() ;
+				},
+		        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+		    		alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+		   		},
+			});
+	</script>
+<body>
+	<jsp:include page="/actionBar.jsp"/>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true" style = "left:32%; width:600px; ">
 		<div class="modal-dialog">
       		<div class="modal-content">
@@ -55,34 +81,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal fade -->
-	<script type="text/javascript">
-		$('#uploadify').uploadify({  
-	        'auto'           : false,  
-	        'swf'            : 'js/uploadify/uploadify.swf',  
-	        'uploader'       : '../../servlet/UploadVideoServlet',
-	        'queueID'        : 'fileQueue',
-	        'folder'         : 'CuSunPlayer/ChapterVideo',
-	        'cancelImg'      : 'js/uploadify/uploadify-cancel.png',
-	        'queueSizeLimit' : 1,  
-	        'fileTypeDesc'   : '只支持flv和mp4格式的视频',  
-	        'fileTypeExts'   : '*.flv;*.mp4',
-	        'multi'          : false,  
-	        'buttonText'     : '本地文件',
-			'onUploadSuccess' : function(file, data, response) {
-				$('#videoName').val(file.name) ;
-				$('#videoAddress').val('CuSunPlayer/Chaptervideo/' + data) ;
-				$('#myModal').modal('hide') ;
-				$('#myModal').hide() ;
-				$('#blockInit').hide() ;
-				$('#blockInit').attr( 'style', 'display: none;' ) ;
-				$('.vedio-name').html(file.name) ;
-				$('.vedio-name').show() ;
-			},
-	        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
-	    		alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
-	   		},
-		});
-	</script>
 	<div class="subject">
 		<label><em>章节名称：</em><input id = "newChapterName" class="subject_text" type="text" /></label>
 	    <label>
@@ -114,6 +112,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    </div>
 	    <div class = "clear"></div>
 	</div>
-	<jsp:include page="../../bottom.jsp"/>
+	<jsp:include page="/bottom.jsp"/>
 </body>
 </html>

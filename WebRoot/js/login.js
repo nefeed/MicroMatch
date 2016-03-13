@@ -33,7 +33,7 @@ function confirmLogin() {
 			UserPassword:userPassword,
 		},function(json) {
 			if ( json.result == 0 ){
-				location.href="./matchIndex.jsp" ;
+				location.href="/micromatch/matchIndex.jsp" ;
 			}else if ( json.result == 1 ) {
 				alert( "密码错误！" ) ;
 			}else if ( json.result == 2 ) {

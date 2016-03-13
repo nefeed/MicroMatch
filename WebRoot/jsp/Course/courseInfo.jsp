@@ -12,24 +12,52 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		CourseNum = "" ;
 	}
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<base href="<%=basePath%>">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="<%=basePath%>" />
 	<title>课程</title>
 	<link type="text/css" rel="stylesheet" href="css/courseInfo.css" />
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="js/uploadify/uploadify.css" />
 
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/Course/courseInfo.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript">
 		var CourseNum = <%="'"+CourseNum+"'"%> ;
+	</script>
+	<script type="text/javascript" src="js/uploadify/swfobject.js" ></script>  
+	<script type="text/javascript" src="js/uploadify/jquery.uploadify.min.js"></script>
+	<script type="text/javascript" >
+		$('#uploadify').uploadify({  
+	        'auto'           : false,  
+	        'swf'            : '/micromatch/js/uploadify/uploadify.swf',  
+	        'uploader'       : '/micromatch/servlet/UploadServlet', 
+	        'queueID'        : 'fileQueue',  
+	        'folder'         : 'Accessory',
+	        'removeCompleted': false ,
+	        'queueSizeLimit' : 1,  
+	        'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
+	        'fileTypeDesc'   : 'doc.ppt.pdf.xls',  
+	        'fileTypeExts'   : '*.doc;*.ppt;*.pdf;*.xls',  
+	        'multi'          : false,  
+	        'buttonText'     : '本地文件',
+			'onUploadSuccess': function(file, data, response) {
+				$('#fileName').val(file.name) ;
+				$('#fileAddress').val( 'Accessory/' + data ) ;
+				saveAccessory( fileName , fileAddress ) ;
+			},
+	        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+	    		alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+	   		},
+		});
 	</script>
 </head>
 
 <body>
-	<jsp:include page="../../actionBar.jsp"/>
-	<script type="text/javascript" src="js/uploadify/swfobject.js" ></script>  
-	<script type="text/javascript" src="js/uploadify/jquery.uploadify.js"></script>
+	<jsp:include page="/actionBar.jsp"/>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
       		<div class="modal-content">
@@ -55,30 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal fade -->
-	<script type="text/javascript" >
-		$('#uploadify').uploadify({  
-	        'auto'           : false,  
-	        'swf'            : '../../js/uploadify/uploadify.swf',  
-	        'uploader'       : '../../servlet/UploadServlet', 
-	        'queueID'        : 'fileQueue',  
-	        'folder'         : 'Accessory',
-	        'removeCompleted': false ,
-	        'queueSizeLimit' : 1,  
-	        'cancelImg'      : '../../js/uploadify/uploadify-cancel.png',
-	        'fileTypeDesc'   : 'doc.ppt.pdf.xls',  
-	        'fileTypeExts'   : '*.doc;*.ppt;*.pdf;*.xls',  
-	        'multi'          : false,  
-	        'buttonText'     : '本地文件',
-			'onUploadSuccess': function(file, data, response) {
-				$('#fileName').val(file.name) ;
-				$('#fileAddress').val( 'Accessory/' + data ) ;
-				saveAccessory( fileName , fileAddress ) ;
-			},
-	        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
-	    		alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
-	   		},
-		});
-	</script>
+	
 	<div id="MatchListBody" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true" style = "left:32%; width:600px; ">
 		<div class="modal-dialog">
       		<div class="modal-content">
@@ -165,8 +170,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<a>附件名称：</a><input id = "fileName" type = "text" readonly="readonly" />
     	<a>附件地址：</a><input id = "fileAddress" type = "text" readonly="readonly" />
     </div>
-	<jsp:include page="../../bottom.jsp"/> 
-	<script type="text/javascript" src="js/Course/courseInfo.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+	<jsp:include page="/bottom.jsp"/> 
 </body>
 </html>

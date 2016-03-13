@@ -6,15 +6,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>比赛审核</title>
-<link type="text/css" href="css/game.css" rel="stylesheet" />
-<script src="js/jquery.js" type="text/javascript" ></script>
-<script src="js/game.js" type="text/javascript" ></script>
+	<base href="<%=basePath%>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>比赛审核</title>
+	<link type="text/css" href="css/game.css" rel="stylesheet" />
+	<script src="js/jquery.js" type="text/javascript" ></script>
+	<script src="js/game.js" type="text/javascript" ></script>
 </head>
 
 <body>
-<jsp:include page="actionBar.jsp"/>
+<jsp:include page="/actionBar.jsp"/>
 <div class="subject">
 	<div class="subject_left">
     	<em id="em1" class="subject_current">未审核</em><em id="em2">已审核</em>
@@ -111,6 +112,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </table>
     </div>
 </div>
-<jsp:include page="bottom.jsp"/>
+<jsp:include page="/bottom.jsp"/>
 </body>
 </html>

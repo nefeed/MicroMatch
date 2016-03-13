@@ -7,7 +7,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%=basePath%>" />
     
     <title>比赛添加内容</title>
     
@@ -21,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <jsp:include page="../../actionBar.jsp"/>
+    <jsp:include page="/actionBar.jsp"/>
     <div id="registrationBody" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true" style = "left:32%; width:600px; ">
 		<div class="modal-dialog">
       		<div class="modal-content">
@@ -77,6 +78,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<a>附件名称：</a><input id = "fileName" type = "text" readonly="readonly" />
     	<a>附件地址：</a><input id = "fileAddress" type = "text" readonly="readonly" />
     </div>
-    <jsp:include page="../../bottom.jsp"/>
+    <jsp:include page="/bottom.jsp"/>
   </body>
 </html>

@@ -13,25 +13,6 @@ $(function() {
 	$.ajaxSettings.async = false ;
 	$('.right2').hide() ;
 	findTheOne() ; // 显示该用户的详情
-	window.onload=function(){
-	    /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
-		xiuxiu.embedSWF("altContent",5,"93%","100%");
-	    //修改为您自己的图片上传接口
-		xiuxiu.setUploadURL(basePath+"userPic_upload_form.jsp");
-		xiuxiu.setUploadType(2);
-		xiuxiu.setUploadDataFieldName("TestFile");
-		xiuxiu.onInit = function ()
-		{
-			xiuxiu.loadPhoto("");
-		};
-		xiuxiu.onUploadResponse = function (data)
-		{
-			userPic = decodeURI(data) ;
-			userPic = userPic.replace(/ /, '').replace( /\r/,'' ).replace( /\n/,'' ).replace( /\t/, '') ;
-			$('#fileAddress').val(userPic) ;
-			updateUserPic( userPic ) ;
-		}
-	};
 	$('#geren').click(function(){
 		$(this).addClass('subject_current');
 		$('#picSettings').removeClass('subject_current');
@@ -90,20 +71,17 @@ $(function() {
 		$(this).addClass('subject_current');
 		$('#geren').removeClass('subject_current');
 		$('#picSettings').removeClass('subject_current');
-					 $.layer({
-						 title: '一键注销',
-						area: ['200px','100px'],
-						btn: ['确定注销','取消'],
-						dialog: {
-							btns: 2,                    
-							type: 4,
-							btn: ['确定注销','取消']
-						}
-						
-						
-					});
-						
-				})
+		$.layer({
+			title: '一键注销',
+			area: ['200px','100px'],
+			btn: ['确定注销','取消'],
+			dialog: {
+				btns: 2,                    
+				type: 4,
+				btn: ['确定注销','取消']
+			}		
+		});		
+	})
 });
 /**
  * 显示该用户的详情信息
@@ -222,7 +200,7 @@ function logOut() {
 	},function(json){
 		
 	});
-	location.href = "./index.jsp" ;
+	location.href = "/micromatch/index.jsp" ;
 }
 
 /**
@@ -248,7 +226,7 @@ function pageAttend() {
 			if ( i == aJson.length ) {
 				break ;
 			}
-			var url = './jsp/Course/courseInfo.jsp?CourseNum='+aJson[i].CourseNum ;
+			var url = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+aJson[i].CourseNum ;
 			// + '&ListId=0' ;
 
 			var cname = aJson[i].CourseName ;
@@ -292,7 +270,7 @@ function pageCourse() {
 			if ( i == cJson.length ) {
 				break ;
 			}
-			var url = './jsp/Course/courseInfo.jsp?CourseNum='+cJson[i].CourseNum ;
+			var url = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+cJson[i].CourseNum ;
 			// + '&ListId=0' ;
 			var cname = cJson[i].CourseName ;
 			if ( cname.length >= 20 ) {
@@ -335,7 +313,7 @@ function pageMatch() {
 			if ( i == mJson.length ) {
 				break ;
 			}
-			var url = './jsp/Match/MatchInfo.jsp?MatchNum='+mJson[i].MatchNum ;
+			var url = '/micromatch/jsp/Match/MatchInfo.jsp?MatchNum='+mJson[i].MatchNum ;
 			var content = mJson[i].MatchContent ;
 			if( content.length >= 20) {
 				content = content.substring(0,16) ;

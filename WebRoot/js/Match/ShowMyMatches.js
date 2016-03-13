@@ -20,11 +20,11 @@ $(function(){
 	});
 });
 function PublishMatch() {
-	$("#CBody").load( "./PublishMatch.jsp" ) ;
+	$("#CBody").load( "/micromatch/jsp/Match/PublishMatch.jsp" ) ;
 }
 function Back() {
 	window.history.back() ;
 }
 function ShowMatchInfo(MatchNum) {
-	$("#CBody").load( "./MatchInfo.jsp?MatchNum="+MatchNum ) ;
+	$("#CBody").load( "/micromatch/jsp/Match/MatchInfo.jsp?MatchNum="+MatchNum ) ;
 }

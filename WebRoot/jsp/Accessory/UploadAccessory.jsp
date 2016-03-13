@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%=basePath%>" />
     
     <title>Upload Accessory</title>
     
@@ -18,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<link href="css/uploadify.css" rel="stylesheet" type="text/css" />
+	<link href="js/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -31,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       var ObjectNum = <%="'"+ObjectNum+"'"%> ;
       var UserNum = <%="'"+UserNum+"'"%> ;
     </script>
-	<script type="text/javascript" src="js/uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" src="js/uploadify/jquery.uploadify.min.js"></script>
 	<script type="text/javascript" src="js/uploadify/swfobject.js"></script>
 	<script type="text/javascript">
 	$(function() {
@@ -40,8 +41,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        'method' : "get",
        	  'formData' : {'folder' : '/BoguAccessory','ObjectType' : ObjectType , 'ObjectNum' : ObjectNum , 'UserNum' : UserNum },
           'height' : 30,
-          'swf' : '<%=basePath%>js/uploadify/uploadify.swf', 
-          'uploader' : '<%=basePath%>servlet/UploadServlet', 
+          'swf' : '/micromatch/js/uploadify/uploadify.swf', 
+          'uploader' : '/micromatch/servlet/UploadServlet', 
           'width' : 120,
           'fileTypeDesc' : 'doc',
           'fileTypeExts' : '*.doc',

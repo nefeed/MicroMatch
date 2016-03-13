@@ -23,24 +23,24 @@ $(function(){
 				// 管理员用户
 				// 个人中心，新建课程，新建比赛，退出
 				lootemp = '<li role="presentation" class="personalli" ><a role="menuitem" tabindex="-1" onclick="myInfomation()" href="javascript:;" style = "font-size:14px ;border-top:1px solid #e0e0e0;"><img src="Images/personal.png" />&nbsp;&nbsp;个人中心</a></li>'
-					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="./jsp/Course/new_course.jsp" style = "font-size:14px ;"><img src="Images/course.png"/>&nbsp;&nbsp;新建课程</a></li>'
-					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="matchli"><a role="menuitem" tabindex="-1" href="./jsp/Match/new_match.jsp" style = "font-size:14px ;"><img src="Images/match.png"/>&nbsp;&nbsp;新建比赛</a></li>'
+					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="/micromatch/jsp/Course/new_course.jsp" style = "font-size:14px ;"><img src="Images/course.png"/>&nbsp;&nbsp;新建课程</a></li>'
+					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="matchli"><a role="menuitem" tabindex="-1" href="/micromatch/jsp/Match/new_match.jsp" style = "font-size:14px ;"><img src="Images/match.png"/>&nbsp;&nbsp;新建比赛</a></li>'
 					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="retirli"><a role="menuitem" tabindex="-1" id="logOutBtn" onclick="logOut()" href="javascript:;" style = "font-size:14px ;padding-left:25px;"><img src="Images/retire.png"/>&nbsp;&nbsp;退出</a></li>' ;
 				break ;
 			case 1 :
 				// 学院用户
 				// 个人中心，我的订阅，新建比赛，退出
 				lootemp = '<li role="presentation" class="personalli" ><a role="menuitem" tabindex="-1" onclick="myInfomation()" href="javascript:;" style = "font-size:14px ;border-top:1px solid #e0e0e0;"><img src="Images/personal.png" />&nbsp;&nbsp;个人中心</a></li>'
-					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="./myAttend.jsp" style = "font-size:14px ;"><img src="Images/myAttend.png"/>&nbsp;&nbsp;我的订阅</a></li>'
-					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="matchli"><a role="menuitem" tabindex="-1" href="./jsp/Match/new_match.jsp" style = "font-size:14px ;"><img src="Images/match.png"/>&nbsp;&nbsp;新建比赛</a></li>'
+					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="/micromatch/myAttend.jsp" style = "font-size:14px ;"><img src="Images/myAttend.png"/>&nbsp;&nbsp;我的订阅</a></li>'
+					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="matchli"><a role="menuitem" tabindex="-1" href="/micromatch/jsp/Match/new_match.jsp" style = "font-size:14px ;"><img src="Images/match.png"/>&nbsp;&nbsp;新建比赛</a></li>'
 					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="retirli"><a role="menuitem" tabindex="-1" id="logOutBtn" onclick="logOut()" href="javascript:;" style = "font-size:14px ;padding-left:25px;"><img src="Images/retire.png"/>&nbsp;&nbsp;退出</a></li>' ;
 				break ;
 			case 2 :
 				// 教师用户
 				// 个人中心，我的订阅，新建课程，退出
 				lootemp = '<li role="presentation" class="personalli" ><a role="menuitem" tabindex="-1" onclick="myInfomation()" href="javascript:;" style = "font-size:14px ;border-top:1px solid #e0e0e0;"><img src="Images/personal.png" />&nbsp;&nbsp;个人中心</a></li>'
-					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="./myAttend.jsp" style = "font-size:14px ;"><img src="Images/myAttend.png"/>&nbsp;&nbsp;我的订阅</a></li>'
-					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="./jsp/Course/new_course.jsp" style = "font-size:14px ;"><img src="Images/course.png"/>&nbsp;&nbsp;新建课程</a></li>'
+					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="/micromatch/myAttend.jsp" style = "font-size:14px ;"><img src="Images/myAttend.png"/>&nbsp;&nbsp;我的订阅</a></li>'
+					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="courseli"><a role="menuitem" tabindex="-1" href="/micromatch/jsp/Course/new_course.jsp" style = "font-size:14px ;"><img src="Images/course.png"/>&nbsp;&nbsp;新建课程</a></li>'
 					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="retirli"><a role="menuitem" tabindex="-1" id="logOutBtn" onclick="logOut()" href="javascript:;" style = "font-size:14px ;padding-left:25px;"><img src="Images/retire.png"/>&nbsp;&nbsp;退出</a></li>' ;
 				break ;
 			case 3 :
@@ -51,8 +51,8 @@ $(function(){
 					+ '<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;"></li><li role="presentation" class="retirli"><a role="menuitem" tabindex="-1" id="logOutBtn" onclick="logOut()" href="javascript:;" style = "font-size:14px ;padding-left:25px;"><img src="Images/retire.png"/>&nbsp;&nbsp;退出</a></li>' ;
 				break ;
 		}
-		$("#logOutBtn").attr( 'href' , './matchIndex.jsp' ) ;
-		$("#loginBtn").attr( 'href' , './login.jsp') ;
+		$("#logOutBtn").attr( 'href' , '/matchIndex.jsp' ) ;
+		$("#loginBtn").attr( 'href' , '/login.jsp') ;
 		$loo.html( lootemp ) ;
 	}
 	
@@ -85,24 +85,24 @@ $(function(){
 
 function logOut() {
 	$.ajaxSettings.async = false ;
-	$.getJSON('./servlet/logOutServlet',{
+	$.getJSON('/micromatch/servlet/logOutServlet',{
 	},function(json){
 		
 	});
 	$.ajaxSettings.async = true ;
-	location.href = './matchIndex.jsp' ;
+	location.href = '/micromatch/matchIndex.jsp' ;
 }
 function myInfomation() {
-	location.href = './person.jsp?UserNum='+LoginUserNum ;
+	location.href = '/micromatch/person.jsp?UserNum='+LoginUserNum ;
 }
 
 function confirmSearch() {
 	var searchInput = $("#searchInput").val() ;
-	location.href = "./searchCourse.jsp?unsureCourseName=" + searchInput ;
+	location.href = "/micromatch/jsp/Course/searchCourse.jsp?unsureCourseName=" + searchInput ;
 }
 
 function backToHome() {
-	location.href = "./matchIndex.jsp" ;
+	location.href = "/micromatch/matchIndex.jsp" ;
 }
 
 function listenSearch() {
@@ -144,12 +144,12 @@ function signIn() {
 		} else if( userPassword.length == 0 ) {
 			alert("密码不能为空！") ;
 		} else {		
-			$.getJSON("./servlet/LoginServlet",{
+			$.getJSON("/micromatch/servlet/LoginServlet",{
 				UserName:userName,
 				UserPassword:userPassword,
 			},function(json) {
 				if ( json.result == 0 ){
-					location.href="./matchIndex.jsp" ;
+					location.href="/micromatch/matchIndex.jsp" ;
 				}else if ( json.result == 1 ) {
 					alert( "密码错误！" ) ;
 				}else if ( json.result == 2 ) {
@@ -194,7 +194,7 @@ function signUp() {
 		} else if( userType.length == 0 ) {
 			alert( "用户类型不能为空！" ) ;
 		} else {
-			$.getJSON( "./servlet/SignUpServlet",{
+			$.getJSON( "/micromatch/servlet/SignUpServlet",{
 				UserName:userName,
 				UserPassword:userPassword,
 				NickName:nickName,
@@ -232,7 +232,7 @@ function signInWithoutUp() {
 function getVerifyCode() {
 	$('#signupvalidate').val("");
 	$.ajax({
-        url: './servlet/VerifyCodeServlet',
+        url: '/micromatch/servlet/VerifyCodeServlet',
         type: 'post' ,
         dataType: 'json',
         success:function(data){

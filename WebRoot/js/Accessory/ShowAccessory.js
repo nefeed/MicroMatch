@@ -1,5 +1,5 @@
 $(function(){
-	$.getJSON("./servlet/QueryAccessoryByObjectTypeAndNumServlet",{
+	$.getJSON("/micromatch/servlet/QueryAccessoryByObjectTypeAndNumServlet",{
 		ObjectNum:ObjectNum,
 		ObjectType:ObjectType,
 	},function(json){
@@ -8,7 +8,7 @@ $(function(){
 		if( json.length != 0 ){
 			var accessoryName = "" ;
 			for(var i=0;i<json.length;i=i+1){
-				accessoryName = "<a href=./servlet/DownloadServlet?AccessoryName="+json[i].AccessoryName
+				accessoryName = "<a href=/servlet/DownloadServlet?AccessoryName="+json[i].AccessoryName
 				+"&UserNum="+LoginUserNum
 				+"&ObjectNum="+ObjectNum
 				+"&ObjectType="+ObjectType
@@ -16,7 +16,7 @@ $(function(){
 				+ json[i].AccessoryName+"</a>" ;
 				attemp+="<tr><td>"
 					+ accessoryName + "</td><td>"
-					+ "<a href=./servlet/DownloadServlet?AccessoryName="+json[i].AccessoryName
+					+ "<a href=/servlet/DownloadServlet?AccessoryName="+json[i].AccessoryName
 					+"&UserNum="+LoginUserNum
 					+"&ObjectNum="+ObjectNum
 					+"&ObjectType="+ObjectType

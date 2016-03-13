@@ -21,11 +21,11 @@ $(function(){
 	});
 });
 function CreateCourse() {
-	$("#TBody").load( "./new_course.jsp" ) ;
+	$("#TBody").load( "/micromatch/jsp/Course/new_course.jsp" ) ;
 }
 function Back() {
 	window.history.back() ;
 }
 function ShowCourseInfo(CourseNum) {
-	$("#TBody").load( "./courseInfo.jsp?CourseNum="+CourseNum ) ;
+	$("#TBody").load( "/micromatch/jsp/Course/courseInfo.jsp?CourseNum="+CourseNum ) ;
 }

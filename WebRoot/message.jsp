@@ -2,7 +2,8 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>消息提示</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <title>消息提示</title>
   </head>
   
   <body>

@@ -32,6 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="<%=basePath%>" />
 	<title>首页</title>
 	<link type="text/css" rel="stylesheet" href="css/index.css" />
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
@@ -44,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body>
-	<jsp:include page="actionBar.jsp"/>
+	<jsp:include page="/actionBar.jsp"/>
 	<div id = "container">
 		<div class="subject">
 			<div class="subject_1">
@@ -78,10 +79,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        		<div class="flash" id="flash">
 						<a id="flash_left" class="flash_left" href="javascript:void(0)" style="display:none;">左</a>
 						<ul class="flash_img">
-	    					<li class="flash_imgCur"><a href="./jsp/Course/courseInfo.jsp?CourseNum=A86OVAHH43SKS9YXE2PR&ListId=0" target="_blank"><img src="img/index_22.png" alt="图1" /></a></li>
-	       					<li style="opacity:0;filter:alpha(opacity=0);"><a href="./jsp/Course/courseInfo.jsp?CourseNum=A86OVAHH43SKS9YXE2SR&ListId=0" target="_blank"><img src="img/index_23.png" alt="图2" /></a></li>
-	        				<li style="opacity:0;filter:alpha(opacity=0);"><a href="./jsp/Course/courseInfo.jsp?CourseNum=A86ASKHH43SKS9YXE2SR&ListId=0" target="_blank"><img src="img/index_22.png" alt="图3" /></a></li>
-	        				<li style="opacity:0;filter:alpha(opacity=0);"><a href="./jsp/Course/courseInfo.jsp?CourseNum=C35JGU9YKQ6Q3J3K8O5K&ListId=0" target="_blank"><img src="img/index_23.png" alt="图2" /></a></li>
+	    					<li class="flash_imgCur"><a href="/micromatch/jsp/Course/courseInfo.jsp?CourseNum=A86OVAHH43SKS9YXE2PR&ListId=0" target="_blank"><img src="img/index_22.png" alt="图1" /></a></li>
+	       					<li style="opacity:0;filter:alpha(opacity=0);"><a href="/micromatch/jsp/Course/courseInfo.jsp?CourseNum=A86OVAHH43SKS9YXE2SR&ListId=0" target="_blank"><img src="img/index_23.png" alt="图2" /></a></li>
+	        				<li style="opacity:0;filter:alpha(opacity=0);"><a href="/micromatch/jsp/Course/courseInfo.jsp?CourseNum=A86ASKHH43SKS9YXE2SR&ListId=0" target="_blank"><img src="img/index_22.png" alt="图3" /></a></li>
+	        				<li style="opacity:0;filter:alpha(opacity=0);"><a href="/micromatch/jsp/Course/courseInfo.jsp?CourseNum=C35JGU9YKQ6Q3J3K8O5K&ListId=0" target="_blank"><img src="img/index_23.png" alt="图2" /></a></li>
 	    				</ul>
 	    				<a id="flash_right" class="flash_right" href="javascript:void(0)" style="display:none;">右</a>
 	    				<div class="flash_btn">
@@ -96,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="main">
 			<div class="main_1">
-		    	<a id="a1" class="main_1_current" href="searchCourse.jsp?unsureCourseName= ">所有课程</a><a id="a2" href="javascript:"></a><a id="a3" href="javascript:"></a><a id="a4" href="javascript:"></a><a id="a5" href="javascript:"></a><a id="a6" href="javascript:"></a>
+		    	<a id="a1" class="main_1_current" href="/micromatch/jsp/Course/searchCourse.jsp?unsureCourseName= ">所有课程</a><a id="a2" href="javascript:"></a><a id="a3" href="javascript:"></a><a id="a4" href="javascript:"></a><a id="a5" href="javascript:"></a><a id="a6" href="javascript:"></a>
 		    </div>
 		    <div class="main_2">
 		        <div id = "am1" class="main_21" style="display:none;">
@@ -127,6 +128,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 	</div>
 	<script type="text/javascript" language="javascript" src="js/js.js"></script>
-	<jsp:include page="bottom.jsp"/>
+	<jsp:include page="/bottom.jsp"/>
 </body>
 </html>

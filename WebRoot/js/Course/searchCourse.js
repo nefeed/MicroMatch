@@ -82,7 +82,7 @@ function pageCourses() {
 			if ( i == cJson.length ) {
 				break ;
 			}
-			var url = './jsp/Course/courseInfo.jsp?CourseNum='+cJson[i].CourseNum ;
+			var url = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+cJson[i].CourseNum ;
 			// + '&ListId=0' ;
 			var cname = cJson[i].CourseName ;
 			if ( cname.length >= 20 ) {

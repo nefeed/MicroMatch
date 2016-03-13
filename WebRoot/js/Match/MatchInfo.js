@@ -17,7 +17,7 @@ $(function(){
 		$('#matchStart').html(json.StartTime) ;
 		$('#matchEnd').html(json.EndTime) ;
 		$('#matchMaker').html("创建者： " + json.NickName) ;
-		$('#matchMaker').attr('href','../../person.jsp?UserNum='+json.UserNum) ;
+		$('#matchMaker').attr('href','/person.jsp?UserNum='+json.UserNum) ;
 		$('#publishTime').html("发布时间： " + json.PublishTime) ;
 		
 		
@@ -64,7 +64,7 @@ function pageCourses() {
 			if ( i == cJson.length ) {
 				break ;
 			}
-			url = 'course.jsp?CourseNum=' + cJson[i].CourseNum + '&ListId=0' ;
+			url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + cJson[i].CourseNum + '&ListId=0' ;
 			var cname = cJson[i].CourseName ;
 			if ( cname.length >= 16 ) {
 				cname = cname.substring(0, 12) ;
@@ -210,7 +210,7 @@ function showRegists() {
 				var qrtemp = '' ;
 				$qb.html('') ;
 				for(var i=0 ; i<json.length ; i++ ){
-					url = '../../course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
+					url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
 					var cname = json[i].CourseName ;
 					if ( cname.length >= 20 ) {
 						cname = cname.substring(0, 16) ;
@@ -294,7 +294,7 @@ function showRegists() {
 				var qrtemp = '' ;
 				$qb.html('') ;
 				for(var i=0 ; i<json.length ; i++ ){
-					url = 'course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
+					url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
 					var cname = json[i].CourseName ;
 					if ( cname.length >= 20 ) {
 						cname = cname.substring(0, 16) ;
@@ -376,7 +376,7 @@ function showRegists() {
 				var frtemp = '' ;
 				$fb.html('') ;
 				for(var i=0 ; i<json.length ; i++ ){
-					url = 'course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
+					url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
 					var cname = json[i].CourseName ;
 					if ( cname.length >= 20 ) {
 						cname = cname.substring(0, 16) ;
@@ -460,7 +460,7 @@ function showRegists() {
 				var qrtemp = '' ;
 				$qb.html('') ;
 				for(var i=0 ; i<json.length ; i++ ){
-					url = 'course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
+					url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
 					var cname = json[i].CourseName ;
 					if ( cname.length >= 20 ) {
 						cname = cname.substring(0, 16) ;
@@ -542,7 +542,7 @@ function showRegists() {
 				var frtemp = '' ;
 				$fb.html('') ;
 				for(var i=0 ; i<json.length ; i++ ){
-					url = 'course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
+					url = '/micromatch/jsp/Course/course.jsp?CourseNum=' + json[i].CourseNum + '&ListId=0' ;
 					var cname = json[i].CourseName ;
 					if ( cname.length >= 20 ) {
 						cname = cname.substring(0, 16) ;
@@ -754,7 +754,7 @@ function isMyMatch() {
 				var optionTemp = '' ;
 				if ( matchTemp == 3 ) {
 					optionTemp = '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#updateMatchModal">修改比赛</button> '
-						+ '<button id="updateBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#newAwardModal">新增奖项</button>' ;
+						+ '<button id="updateBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#newAwardModal" function="clearNewAwardContent()">新增奖项</button>' ;
 				} else {
 					optionTemp = '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#updateMatchModal">修改比赛</button> '
 						+ '<button id="updateBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#newAwardModal">新增奖项</button>'
@@ -770,6 +770,21 @@ function isMyMatch() {
 		$registBody.hide() ;
 	}
 	showAward( check ) ;
+}
+
+/**
+ * 清空奖项内容
+ * 
+ * @Description: TODO
+ * @param    
+ * @return void  
+ * @throws
+ * @author Gavin
+ * @date 2016年3月13日
+ */
+function clearNewAwardContent() {
+	$('#newAwardName').val('');
+	$('#newAwardRemark').val('');
 }
 
 /**
@@ -914,7 +929,7 @@ function showAward( check ) {
 					for ( var i = 0 ; i < json.length ; i ++ ) {
 						aname = json[i].AwardName ;
 						aremark = json[i].Remark ;
-						chref = '../Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+						chref = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 						var method = 'chooseAward(' + json[i].ID + ')' ;
 						if( json[i].CourseNum == 'undefined' || json[i].CourseName == null ) {
 							cname = '未颁奖' ;
@@ -1000,7 +1015,7 @@ function giveAward() {
 	} else if( cNum == 0 ) {
 		alert('请选择选择课程后进行颁奖！') ;
 	} else {
-		$.getJSON('./servlet/GivenAwardServlet',{
+		$.getJSON('/micromatch/servlet/GivenAwardServlet',{
 			UserNum:LoginUserNum,
 			MatchNum:MatchNum,
 			AwardId:awardId,
@@ -1063,7 +1078,7 @@ function givePeriod() {
 				alert('您已经投过票！') ;
 			} else if ( check == 3 ) {
 				alert('您还未订阅该课程,请先进入课程详情页面，订阅课程！') ;
-				this.location.href = '../Course/courseInfo.jsp?CourseNum=' + chooseCNum ;
+				this.location.href = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum=' + chooseCNum ;
 			} else if ( check == 4 ) {
 				alert('该课程并未报名该比赛！') ;
 			}

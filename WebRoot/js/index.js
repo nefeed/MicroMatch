@@ -10,7 +10,7 @@ $(function() {
 			if ( i == json.length ) {
 				break ;
 			}
-			var url = './jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
+			var url = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum=' + json[i].CourseNum ;
 			// + '&ListId=0' ;
 			var cname = json[i].CourseName ;
 			if ( cname.length >= 20 ) {
@@ -170,13 +170,13 @@ function showIndexSubject() {
 		for ( var i = 0 ; i < json.length ; i ++ ) {
 			$subject = $("#s"+i) ;
 			$subject.text( json[i].SubjectName ) ;
-			$subject.attr( 'href' , 'subjectCourse.jsp?SubName='+json[i].SubjectName  ) ;
+			$subject.attr( 'href' , '/micromatch/jsp/Course/subjectCourse.jsp?SubName='+json[i].SubjectName  ) ;
 			showChildSubject( i , json[i].SID ) ;
 			if( i != json.length - 1 ) {
 				var j = i + 2 ;
 				$subject2 = $("#a"+j) ;
 				$subject2.text( json[i].SubjectName ) ;
-				$subject2.attr( 'href' , 'subjectCourse.jsp?SubName='+json[i].SubjectName  ) ;
+				$subject2.attr( 'href' , '/micromatch/jsp/Course/subjectCourse.jsp?SubName='+json[i].SubjectName  ) ;
 				$subject2 = null ;
 				loadingSubjectCourse( json[i].SubjectName , j ) ;
 			}
@@ -195,7 +195,7 @@ function showChildSubject( i , SID ) {
 			var litemp = '' ;
 			var url = '';
 			for ( var j = 0 ; j < json.length ; j ++ ){
-				url = 'subjectCourse.jsp?SubName='+json[j].SubjectName ;
+				url = '/micromatch/jsp/Course/subjectCourse.jsp?SubName='+json[j].SubjectName ;
 				litemp += '<li><a href='+url+'>' + json[j].SubjectName + '</a></li><br>';
 				url = null ;
 			}
@@ -218,7 +218,7 @@ function loadingSubjectCourse( asubName , j ) {
 				if ( i == json.length ) {
 					break ;
 				}
-				var url = './jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;
+				var url = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+json[i].CourseNum ;
 				// + '&ListId=0' ;
 				var cname = json[i].CourseName ;
 				if ( cname.length >= 20 ) {

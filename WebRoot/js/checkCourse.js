@@ -7,7 +7,7 @@ $(function(){
 		var temp = '' ;
 		var courseName = '' ;
 		for(var i=0;i<json.length;i=i+1){
-			var url = 'course.jsp?CourseNum='+json[i].CourseNum
+			var url = '/micromatch/jsp/Course/course.jsp?CourseNum='+json[i].CourseNum
 			+ '&ListId=0&UserNum='+LoginUserNum ;
 			courseName = '<a href='+url+' style="text-decoration:none;text-align:center">'
 			+ json[i].CourseName+'</a>' ;
@@ -48,7 +48,7 @@ function hoverUnCheck() {
 		var temp = '' ;
 		var courseName = '' ;
 		for(var i=0;i<json.length;i=i+1){
-			var url = 'course.jsp?CourseNum='+json[i].CourseNum
+			var url = '/micromatch/jsp/Course/course.jsp?CourseNum='+json[i].CourseNum
 			+ '&ListId=0&UserNum='+LoginUserNum ;
 			courseName = '<a href='+url+' style="text-decoration:none;text-align:center">'
 			+ json[i].CourseName+'</a>' ;
@@ -74,7 +74,7 @@ function hoverHaveCheck() {
 		var temp = '' ;
 		var courseName = '' ;
 		for(var i=0;i<json.length;i=i+1){
-			var url = 'course.jsp?CourseNum='+json[i].CourseNum
+			var url = '/micromatch/jsp/Course/course.jsp?CourseNum='+json[i].CourseNum
 			+ '&ListId=0&UserNum='+LoginUserNum ;
 			courseName = '<a href='+url+' style="text-decoration:none;text-align:center">'
 			+ json[i].CourseName+'</a>' ;

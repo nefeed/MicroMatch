@@ -8,7 +8,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%=basePath%>" />
     <title>章节详情界面</title>
     
 	<meta http-equiv="pragma" content="no-cache">
@@ -16,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<link href="css/uploadify.css" rel="stylesheet" type="text/css" />
+	<link href="js/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	--> 
@@ -36,8 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        'method' : "get",
        	  'formData' : {'folder' : '/BoguChapter','ChapterNum' : ChapterNum },
           'height' : 30,
-          'swf' : '<%=basePath%>js/uploadify/uploadify.swf', 
-          'uploader' : '<%=basePath%>servlet/UploadVideoServlet', 
+          'swf' : '/micromatch/js/uploadify/uploadify.swf', 
+          'uploader' : '/micromatch/servlet/UploadVideoServlet', 
+          'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
           'width' : 120,
           'fileTypeDesc' : 'mp4或flv文件' ,
           'fileTypeExts' : '*.mp4,*.flv',

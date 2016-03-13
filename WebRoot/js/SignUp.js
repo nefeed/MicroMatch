@@ -33,5 +33,5 @@ function Confirm() {
 	} 
 }
 function Cancle() {
-	location.href = "../login.jsp" ;
+	location.href = "/micromatch/login.jsp" ;
 }

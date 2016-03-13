@@ -15,22 +15,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="<%=basePath%>" />
 	<title>个人中心</title>
-	<link rel="stylesheet" type="text/css" href="css/person.css" />
+	<link type="text/css" rel="stylesheet" href="css/person.css" />
 	<link type="text/css" rel="stylesheet" href="css/laypage.css" />
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript" src="js/person.js" ></script>
-	<script type="text/javascript" src="http://open.web.meitu.com/sources/xiuxiu.js" ></script>
 	<script type="text/javascript" src="js/laypage.js"></script>
 	<script type="text/javascript" src="js/mypj.js"></script>
 	<script type="text/javascript">
 		var TUserNum = <%="'"+TUserNum+"'"%> ;
 	</script>
+	<script type="text/javascript" src="http://open.web.meitu.com/sources/xiuxiu.js" ></script>
+	<script type="text/javascript">
+		window.onload=function() {
+		    /*第1个参数是加载编辑器div容器id，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
+			xiuxiu.embedSWF("altContent",5,"93%","100%");
+		    //修改为您自己的图片上传接口
+			xiuxiu.setUploadURL("/micromatch/servlet/uploadUserPicServlet");
+			xiuxiu.setUploadType(2);
+			xiuxiu.setUploadDataFieldName("userpic_file");
+			xiuxiu.onInit = function () {
+				xiuxiu.loadPhoto("");
+			};
+			xiuxiu.onUploadResponse = function (data) {
+				userPic = decodeURI(data) ;
+				userPic = userPic.replace(/ /, '').replace( /\r/,'' ).replace( /\n/,'' ).replace( /\t/, '') ;
+				$('#fileAddress').val(userPic) ;
+				updateUserPic( userPic ) ;
+			};
+		};
+	</script>
 </head>
 
 <body>
-	<jsp:include page="actionBar.jsp"/>
+	<jsp:include page="/actionBar.jsp"/>
 <div class="subject">
 	<div class="subject_left">
     	<div class="subject_1">
@@ -61,10 +81,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<h1>美图秀秀</h1>
 		</div>
     </div>
-    <div style = "display: none ;">
+    <div style="display: none;">
     	<a>头像地址：</a><input id = "fileAddress" type = "text" readonly="readonly" />
     </div>
 </div>
-<jsp:include page="bottom.jsp"/>
+<jsp:include page="/bottom.jsp"/>
 </body>
 </html>

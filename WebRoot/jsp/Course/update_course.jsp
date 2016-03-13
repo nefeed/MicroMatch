@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<base href="<%=basePath%>">
+	<base href="<%=basePath%>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>修改课程信息</title>
 	<link type="text/css" href="css/new_game.css" rel="stylesheet" />
@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</script>
 </head>
 <body>
-	<jsp:include page="../../actionBar.jsp"/>
+	<jsp:include page="/actionBar.jsp"/>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
       		<div class="modal-content">
@@ -67,17 +67,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            </div>
 	        </div>
 	    </label>
+	    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+	    <div class="select_pic">
+            <span class="sl-custom-file">
+	    		<input type="button" value="选择图片" class="select_pic_btn" />
+    			<input type="file" id="file_upload" name = "file" class="ui-input-file" />
+	    	</span>
+            <a class="select_pic_note">仅支持JPG、GIF、PNG常见图片类型,且文件小于5M</a>
+        </div>
 	    <div class="pic">
-	    	<img id = "newPic" class = "newPic" />
-	    	<img data-toggle="modal" data-target="#myModal" id = "pic_upbutton" src = "img/new_game_4.png" type = "button" class="subject_upbutton" />
+	    	<img id = "newPic" class = "newPic"/>
 	    </div>
-	    
 	    <div class="pic_button">
-	    	<input data-toggle="modal" data-target="#myModal" id="file_upload" class="subject_button" type="button" value="选择图片" />
 	    	<input class="submitBTN" onclick="confirmUpdateCourse()" type="submit" value="" />
 	    </div>
 	    <div class = "clear"></div>
 	</div>
-	<jsp:include page="../../bottom.jsp"/>
+	<jsp:include page="/bottom.jsp"/>
 </body>
 </html>

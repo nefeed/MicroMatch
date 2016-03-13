@@ -33,7 +33,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<base href="<%=basePath%>">	
+	<base href="<%=basePath%>" />
 	<title>导航栏主页</title>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/actionBar.css" />
@@ -70,8 +70,7 @@
                             </li>
                             <li class="modal_li">
                             	<span class="sp_txt">密码</span>
-                                <input id = "signinPassword" type="password" class="ipt_txt1"  placeholder="密码" />
-								<span class="pwd_tip">密码</span>                               
+                                <input id = "signinPassword" type="password" class="ipt_txt1"  placeholder="密码" />                              
                             </li>
                             <li>
                             	<span class="sp_txt">验证码</span>
@@ -115,8 +114,7 @@
                             </li>
                             <li >
                             	<span class="sp_txt">设置密码</span>
-                                <input id = "signupPassword" type="password" class="ipt_txt1" placeholder="密码" />
-								<span class="pwd_tip">6~15位</span>
+                                <input id = "signupPassword" type="password" class="ipt_txt1" placeholder="密码 (6~15位)" />
                             </li>
                             <li>
                             	<span class="sp_txt">用户昵称</span>
@@ -141,11 +139,11 @@
 	<div id = "header">
 		<div id = "top">
 			<div id = "logo">
-				<a href = "./matchIndex.jsp"><img src="Images/logo1.png" alt="徽标" onclick="backToHome()"/></a>
-				<a href = "./matchIndex.jsp"><img src="Images/logo2.png" alt="公司名称" onclick="backToHome()"/></a>
+				<a href = "/micromatch/matchIndex.jsp"><img src="Images/logo1.png" alt="徽标" onclick="backToHome()"/></a>
+				<a href = "/micromatch/matchIndex.jsp"><img src="Images/logo2.png" alt="公司名称" onclick="backToHome()"/></a>
 			</div>
-			<div class="navbg" ><a class = "navbg-link" href="./matchIndex.jsp">首页</a></div>
-			<div class="navbg" ><a class = "navbg-link" href="./jsp/Match/matchList.jsp">微赛</a></div>
+			<div class="navbg" ><a class = "navbg-link" href="/micromatch/matchIndex.jsp">首页</a></div>
+			<div class="navbg" ><a class = "navbg-link" href="/micromatch/jsp/Match/matchList.jsp">微赛</a></div>
 			<div class="search">
 		        <input id="searchInput" class="txtsearch" type="text" onkeydown="listenSearch()" placeholder="搜索课程名"/>
 		        <input type="submit" class="subsearch" value="" onclick="confirmSearch()" />
@@ -164,7 +162,7 @@
 						<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;">
 						</li>
 						<li role="presentation" class="courseli">
-							<a role="menuitem" tabindex="-1" href="./jsp/Course/new_course.jsp" style = "font-size:14px ;">
+							<a role="menuitem" tabindex="-1" href="/micromatch/jsp/Course/new_course.jsp" style = "font-size:14px ;">
 								<img src="Images/course.png"/>
 								&nbsp;&nbsp;新建课程
 							</a>
@@ -172,7 +170,7 @@
          				<li role="presentation" class="divider" style="margin:0px 0px;height:1px;width:126px;">
          				</li>
          				<li role="presentation" class="matchli">
-         					<a role="menuitem" tabindex="-1" href="./jsp/Match/new_match.jsp" style = "font-size:14px ;">
+         					<a role="menuitem" tabindex="-1" href="/micromatch/jsp/Match/new_match.jsp" style = "font-size:14px ;">
          						<img src="Images/match.png"/>
          						&nbsp;&nbsp;新建比赛
          					</a>

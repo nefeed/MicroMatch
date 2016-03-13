@@ -9,29 +9,35 @@ $(function(){
 	$('#newCourseBtn').attr( 'class' , 'logo_current' ) ;
 	loadSubject() ;
 
-	window.onload=function(){
-	    /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
-		xiuxiu.embedSWF("altContent",5,"100%","99%");
-	    //修改为您自己的图片上传接口
-		xiuxiu.setUploadURL(basePath+"coursePic_upload_form.jsp");
-		xiuxiu.setUploadType(2);
-		xiuxiu.setUploadDataFieldName("TestFile");
-		xiuxiu.onInit = function ()
-		{
-			xiuxiu.loadPhoto("");
-		};
-		xiuxiu.onUploadResponse = function (data)
-		{
-			imgSrc = decodeURI(data) ;
-			imgSrc = imgSrc.replace(/ /, '').replace( /\r/,'' ).replace( /\n/,'' ).replace( /\t/, '') ;
-			$('#newPic').attr('src', basePath+imgSrc) ;
-			$('#newPic').show() ;
-			$('#pic_upbutton').hide() ;
-			$('#myModal').hide() ;
-			$('#blockInit').hide() ;
-			$('#blockInit').attr( 'style', 'display: none;' ) ;
-		}
-	};
+//	window.onload=function(){
+//	    /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
+//		xiuxiu.embedSWF("altContent",5,"100%","99%");
+//	    //修改为您自己的图片上传接口
+//		xiuxiu.setUploadURL("/micromatch/coursePic_upload_form.jsp");
+//		xiuxiu.setUploadType(2);
+//		xiuxiu.setUploadDataFieldName("TestFile");
+//		xiuxiu.onInit = function ()
+//		{
+//			xiuxiu.loadPhoto("");
+//		};
+//		xiuxiu.onUploadResponse = function (data)
+//		{
+//			imgSrc = decodeURI(data) ;
+//			imgSrc = imgSrc.replace(/ /, '').replace( /\r/,'' ).replace( /\n/,'' ).replace( /\t/, '') ;
+//			$('#newPic').attr('src', basePath+imgSrc) ;
+//			$('#newPic').show() ;
+//			$('#pic_upbutton').hide() ;
+//			$('#myModal').hide() ;
+//			$('#blockInit').hide() ;
+//			$('#blockInit').attr( 'style', 'display: none;' ) ;
+//		}
+//	};
+	$('#file_upload').change(function () {
+		ajaxFileUpload1();
+	}) ;
+	$('#pic_upbutton').change(function () {
+        ajaxFileUpload2();
+    }) ;
 	 $("#subSelect").change(function(){
          $("#subSelect option").each(function(i,o){
         	 showChildSubSelect($("#subSelect").val()) ;
@@ -40,11 +46,33 @@ $(function(){
 	
 	 loadInfomation() ;
 });
+// 上传课程图片1
+function ajaxFileUpload1() {
+    $.ajaxFileUpload({
+              url: './servlet/uploadCourseImgServlet', //用于文件上传的服务器端请求地址
+              secureuri: false, //是否需要安全协议，一般设置为false
+              fileElementId: 'file_upload', //文件上传域的ID
+              dataType: 'json', //返回值类型 一般设置为json
+              success: function (data, status)  //服务器成功响应处理函数
+              {
+            	imgSrc = data.address ;
+                $('#newPic').attr('src', data.address) ;
+                $('#newPic').show() ;
+                $('.sl-custom-file').hide() ;
+              },
+              error: function (data, status, e)//服务器响应失败处理函数
+              {
+                alert('上传失败,错误代码如下！\n' + e);
+              }
+            }
+    );
+    return false;
+}
 /**
  * 遍历得到的课程信息
  */
 function loadInfomation() {
-	$.getJSON('./servlet/QueryCourseByCourseNumServlet',{
+	$.getJSON('/micromatch/servlet/QueryCourseByCourseNumServlet',{
 		CourseNum:CourseNum,
 	},function(json){
 		$('#newCourseName').val( json.CourseName ) ;
@@ -125,7 +153,7 @@ function confirmUpdateCourse() {
 		},function(json){
 			if ( json.result == 0 ) {
 				alert( "课程修改成功！" ) ;
-				location.href = '../afterNew.jsp?ObjectNum='+CourseNum+'&ObjectType=0' ;
+				location.href = '/micromatch/jsp/afterNew.jsp?ObjectNum='+CourseNum+'&ObjectType=0' ;
 			} else if ( json.result == 1 ) {
 				alert( "课程修改失败！" ) ;
 			}

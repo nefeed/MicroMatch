@@ -11,7 +11,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<base href="<%=basePath%>">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="<%=basePath%>" />
 	
 	<title>比赛详情</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -19,13 +20,19 @@
 	<link type="text/css" rel="stylesheet" href="css/aspxcs.css"/>
 	<link type="text/css" rel="stylesheet" href="css/laypage.css" />
 	<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="js/Match/MatchInfo.js"></script>
+	<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+	<script type="text/javascript" src="js/laypage.js"></script>
+	<script type="text/javascript" src="js/mypj.js"></script>
 	<script type="text/javascript">
 		var MatchNum = <%="'" + MatchNum + "'"%> ;
 	</script>
 </head>
 
 <body>
-	<jsp:include page="../../actionBar.jsp" />
+	<jsp:include page="/actionBar.jsp" />
 	<!-- 修改比赛Modal -->
 	<div id="updateMatchModal" class="modal fade" tabindex="-1"
 		role="dialog" data-backdrop="static" aria-labelledby="myModalLabel"
@@ -293,11 +300,6 @@
 		<div id="page" style="text-align:center;margin-top:10px;"></div>
 	</div>
 		<div class = "clear"></div>
-		<jsp:include page="../../bottom.jsp" />
-	<script type="text/javascript" src="js/Match/MatchInfo.js"></script>
-	<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-	<script type="text/javascript" src="js/laypage.js"></script>
-	<script type="text/javascript" src="js/mypj.js"></script>
+		<jsp:include page="/bottom.jsp" />
 </body>
 </html>

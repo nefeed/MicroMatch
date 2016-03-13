@@ -35,7 +35,7 @@ function pageMatchs() {
 			break ;
 		}
 		var mname = mJson[i].MatchName ;
-		var url = './MatchInfo.jsp?MatchNum=' + mJson[i].MatchNum ;
+		var url = '/micromatch/jsp/Match/MatchInfo.jsp?MatchNum=' + mJson[i].MatchNum ;
 		var registrationNum = mJson[i].RegistrationNum ;
 		var mtemp = '' ;
 		switch(mJson[i].MatchTemp) {

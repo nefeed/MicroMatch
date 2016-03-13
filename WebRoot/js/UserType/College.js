@@ -1,10 +1,10 @@
 
 function Home() {
-	location.href = "../../login.jsp" ;
+	location.href = "/micromatch/login.jsp" ;
 }
 function PublishMatch() {
-	$("#CBody").load( "../Match/PublishMatch.jsp" ) ;
+	$("#CBody").load( "/micromatch/jsp/Match/PublishMatch.jsp" ) ;
 }
 function ShowMyMatches() {
-	$("#CBody").load( "../Match/ShowMyMatches.jsp" ) ;
+	$("#CBody").load( "/micromatch/jsp/Match/ShowMyMatches.jsp" ) ;
 }

@@ -9,7 +9,7 @@ $(function(){
 //	    /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
 //		xiuxiu.embedSWF("altContent",5,"100%","99%");
 //	    //修改为您自己的图片上传接口
-//		xiuxiu.setUploadURL(basePath+"coursePic_upload_form.jsp");
+//		xiuxiu.setUploadURL("./coursePic_upload_form.jsp");
 //		xiuxiu.setUploadType(2);
 //		xiuxiu.setUploadDataFieldName("TestFile");
 //		xiuxiu.onInit = function ()
@@ -40,7 +40,7 @@ $(function(){
          });
      });
 });
-//上传课程图片1
+// 上传课程图片1
 function ajaxFileUpload1() {
     $.ajaxFileUpload({
               url: './servlet/uploadCourseImgServlet', //用于文件上传的服务器端请求地址
@@ -62,7 +62,7 @@ function ajaxFileUpload1() {
     );
     return false;
 }
-//上传课程图片2
+// 上传课程图片2
 function ajaxFileUpload2() {
     $.ajaxFileUpload({
               url: './servlet/uploadCourseImgServlet', //用于文件上传的服务器端请求地址
@@ -146,7 +146,7 @@ function confirmSaveCourse() {
 			CoverPicture:imgSrc,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = './courseInfo.jsp?CourseNum='+json.CourseNum ;
+				location.href = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+json.CourseNum ;
 			} else if ( json.result == 1 ) {
 				alert( "课程创建失败！" ) ;
 			}
@@ -155,5 +155,5 @@ function confirmSaveCourse() {
 }
 
 function backToHome() {
-	location.href = '../../matchIndex.jsp' ;
+	location.href = '/micromatch/matchIndex.jsp' ;
 }

@@ -23,7 +23,7 @@ $(function(){
 });
 
 function OpenCourse(CourseNum) {
-	$("#CoursesBody").load( "./OpenCourse.jsp?CourseNum="+CourseNum ) ;
+	$("#CoursesBody").load( "/micromatch/jsp/Course/OpenCourse.jsp?CourseNum="+CourseNum ) ;
 }
 function CheckCourse(CourseNum){
 	$.getJSON("./servlet/CheckCourseServlet",{
