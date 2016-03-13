@@ -31,35 +31,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="js/uploadify/jquery.uploadify.min.js"></script>
 	<script type="text/javascript" src="js/uploadify/swfobject.js"></script>
     <script type="text/javascript">
-		  $(function() {
-      $("#file_upload").uploadify({
-       'auto' : false,
-       'method' : "get",
-       	  'formData' : {'folder' : '/BoguChapter','ChapterNum' : ChapterNum },
-          'height' : 30,
-          'swf' : '/micromatch/js/uploadify/uploadify.swf', 
-          'uploader' : '/micromatch/servlet/UploadVideoServlet', 
-          'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
-          'width' : 120,
-          'fileTypeDesc' : 'mp4或flv文件' ,
-          'fileTypeExts' : '*.mp4,*.flv',
-          'fileSizeLimit' : '5MB',
-          'buttonText' : '选择文件',
-          'uploadLimit' : 5,
-          'successTimeout' : 5,
-          'requeueErrors' : false,
-          'removeTimeout' : 10,
-          'removeCompleted' : false,
-          'queueSizeLimit' :10,
-          'queueID'  : 'uploader_queue',
-          'progressData' : 'speed',
-          'onInit' : function (){},
-       // 单个文件上传成功时的处理函数
-          'onQueueComplete' : function(queueData) {
-     $('#uploader_msg').html(queueData.uploadsSuccessful + ' files were successfully uploaded.');
-    }     
-      });
-  });
+		$(function() {
+		      $("#file_upload").uploadify({
+		       'auto' : false,
+		       'method' : "get",
+		       	  'formData' : {'folder' : '/BoguChapter','ChapterNum' : ChapterNum },
+		          'height' : 30,
+		          'swf' : '/micromatch/js/uploadify/uploadify.swf', 
+		          'uploader' : '/micromatch/servlet/UploadVideoServlet', 
+		          'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
+		          'width' : 120,
+		          'fileTypeDesc' : 'mp4或flv文件' ,
+		          'fileTypeExts' : '*.mp4,*.flv',
+		          'fileSizeLimit' : '5MB',
+		          'buttonText' : '选择文件',
+		          'uploadLimit' : 5,
+		          'successTimeout' : 5,
+		          'requeueErrors' : false,
+		          'removeTimeout' : 10,
+		          'removeCompleted' : false,
+		          'queueSizeLimit' :10,
+		          'queueID'  : 'uploader_queue',
+		          'progressData' : 'speed',
+		          'onInit' : function (){},
+		       // 单个文件上传成功时的处理函数
+		          'onQueueComplete' : function(queueData) {
+		     $('#uploader_msg').html(queueData.uploadsSuccessful + ' files were successfully uploaded.');
+		    }     
+	      });
+ 	 	});
 	</script>
     <style type="text/css">
 		table tr td{ border-top:#00CCFF solid 1px; text-align:center; }

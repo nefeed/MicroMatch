@@ -42,7 +42,7 @@ function confirmSaveChapter() {
 			VideoAddress:fileAddress,
 		},function(json){
 			if ( json.result == 0 ) {
-				location.href = '/micromatch/jsp/afterNew.jsp?ObjectNum='+json.ChapterNum+'&ObjectType=1' ;
+				location.href = '/micromatch/jsp/Course/courseInfo.jsp?CourseNum='+json.ChapterNum;
 			} else if ( json.result == 1 ) {
 				alert( "章节发布失败！" ) ;
 			}

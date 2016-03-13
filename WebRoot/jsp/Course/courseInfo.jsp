@@ -28,36 +28,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript">
 		var CourseNum = <%="'"+CourseNum+"'"%> ;
 	</script>
-	<script type="text/javascript" src="js/uploadify/swfobject.js" ></script>  
-	<script type="text/javascript" src="js/uploadify/jquery.uploadify.min.js"></script>
-	<script type="text/javascript" >
-		$('#uploadify').uploadify({  
-	        'auto'           : false,  
-	        'swf'            : '/micromatch/js/uploadify/uploadify.swf',  
-	        'uploader'       : '/micromatch/servlet/UploadServlet', 
-	        'queueID'        : 'fileQueue',  
-	        'folder'         : 'Accessory',
-	        'removeCompleted': false ,
-	        'queueSizeLimit' : 1,  
-	        'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
-	        'fileTypeDesc'   : 'doc.ppt.pdf.xls',  
-	        'fileTypeExts'   : '*.doc;*.ppt;*.pdf;*.xls',  
-	        'multi'          : false,  
-	        'buttonText'     : '本地文件',
-			'onUploadSuccess': function(file, data, response) {
-				$('#fileName').val(file.name) ;
-				$('#fileAddress').val( 'Accessory/' + data ) ;
-				saveAccessory( fileName , fileAddress ) ;
-			},
-	        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
-	    		alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
-	   		},
-		});
-	</script>
 </head>
 
 <body>
 	<jsp:include page="/actionBar.jsp"/>
+	<script type="text/javascript" src="js/uploadify/swfobject.js"></script>
+	<script type="text/javascript" src="js/uploadify/jquery.uploadify.min.js"></script>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
       		<div class="modal-content">
@@ -111,6 +87,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal fade -->
+	<script type="text/javascript">
+		$('#uploadify').uploadify({  
+	        'auto'           : false,  
+	        'swf'            : '/micromatch/js/uploadify/uploadify.swf',  
+	        'uploader'       : '/micromatch/servlet/UploadServlet',
+	        'queueID'        : 'fileQueue',
+	        'folder'         : 'Accessory',
+	        'cancelImg'      : '/micromatch/js/uploadify/uploadify-cancel.png',
+	        'queueSizeLimit' : 1,  
+	        'fileTypeDesc' : 'doc.ppt.pdf.xls',
+			'fileTypeExts' : '*.doc;*.ppt;*.pdf;*.xls',
+			'multi' : false,
+			'buttonText' : '本地文件',
+			'onUploadSuccess' : function(file, data, response) {
+				$('#fileName').val(file.name);
+				$('#fileAddress').val('Accessory/' + data);
+				$('.vedio-name').html('您上传上一份的附件为：' + file.name);
+				$('.vedio-name').show();
+			    saveAccessory(fileName, fileAddress);
+			},
+			'onUploadError' : function(file, errorCode,
+					errorMsg, errorString) {
+				alert('The file ' + file.name + ' could not be uploaded: '
+					+ errorString);
+			},
+		});
+	</script>
 	<div class="content">
 		<div class="content_cnt">	
 		<div class="content_left">
