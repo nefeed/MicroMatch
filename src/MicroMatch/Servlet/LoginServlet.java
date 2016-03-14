@@ -92,10 +92,10 @@ public class LoginServlet extends HttpServlet {
 			couserNickName.setMaxAge( dieTime ) ;
 			couserUserType.setMaxAge( dieTime ) ;
 			
-			response.addCookie( courseName ) ;
-			response.addCookie( couserNickName ) ;
-			response.addCookie( couserUserNum ) ;
-			response.addCookie( couserUserType ) ;
+//			response.addCookie( courseName ) ;
+//			response.addCookie( couserNickName ) ;
+//			response.addCookie( couserUserNum ) ;
+//			response.addCookie( couserUserType ) ;
 			// Session会话传值
 			try {
 				HttpSession session = request.getSession() ;

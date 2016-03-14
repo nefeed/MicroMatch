@@ -125,7 +125,7 @@ public class UploadVideoServlet extends HttpServlet {
             }  
         }  
         JSONObject json = new JSONObject() ;
-        json.put( "address" , "CuSunPlayer/Chaptervideo/"+ name + extName ) ;
+        json.put( "address" , "Chaptervideo/"+ name + extName ) ;
         json.put( "filename", originalName ) ;
         out.print( name + extName ) ;
 		out.flush();

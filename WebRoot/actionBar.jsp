@@ -75,7 +75,7 @@
                             <li>
                             	<span class="sp_txt">验证码</span>
                                 <input id = "signinvalidate" type="text" class="ipt_txt2" placeholder="验证码" />
-                                <img id="signindate" alt="" src=""/>  
+                                <img id="signindate" alt="" src="" onclick="getVerifyCode()"/>  
         						<a href="javascript:" onclick="getVerifyCode()">换一张</a>
                             </li>
                             <li class="modal_li1">
@@ -94,7 +94,7 @@
                             <li>
                             	<span class="sp_txt">验证码</span>
                                 <input id="signValidate" type="text" class="ipt_txt2" placeholder="验证码"/>
-                                <img id="signdate" alt="" src=""/>  
+                                <img id="signdate" alt="" src="" onclick="getVerifyCode()"/>  
         						<a href="javascript:" onclick="getVerifyCode()">换一张</a>
                             </li>
                              <li>

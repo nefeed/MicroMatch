@@ -202,11 +202,12 @@ function signUp() {
 			},function(json){
 				if ( json.result == 0 ){
 					alert( "注册成功！\n" +
-							json.NickName+"欢迎来到博古微课云平台！" ) ;
+							json.NickName+"欢迎来到Gavin 微课大赛！" ) ;
 					$('#signinAccount').val( userName ) ;
 					$('#signinPassword').val( userPassword ) ;
 					$('#signinvalidate').val( verifycode ) ;
 					signIn() ;
+					location.reload(true);
 				}else if ( json.result == 1 ) {
 					alert( "此账号已经存在！\n请修改账号继续尝试！" ) ;
 				}

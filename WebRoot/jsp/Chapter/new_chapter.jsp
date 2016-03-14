@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        'buttonText'     : '本地文件',
 			'onUploadSuccess' : function(file, data, response) {
 				$('#videoName').val(file.name) ;
-				$('#videoAddress').val('CuSunPlayer/Chaptervideo/' + data) ;
+				$('#videoAddress').val('Chaptervideo/' + data) ;
 				$('#myModal').modal('hide') ;
 				$('#myModal').hide() ;
 				$('#blockInit').hide() ;

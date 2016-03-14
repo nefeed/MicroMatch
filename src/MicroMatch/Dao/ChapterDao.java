@@ -27,6 +27,8 @@ public class ChapterDao extends DaoAbstract {
 	public ChapterEntity insert ( ChapterEntity chapter ) {
 
 		Session session = HibernateSessionFactory.getSession() ;
+		session.clear() ;
+		session.beginTransaction() ;
 		String courseNum = chapter.getCourseNum() ;
 		String ranString = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890" ;
 		String theRan = "" ;
@@ -34,18 +36,16 @@ public class ChapterDao extends DaoAbstract {
 		boolean clash = true ;
 		Random random = new Random() ;
 		char[] ranArray = new char[20] ;
-		session.clear() ;
-		session.beginTransaction() ;
 		while ( clash ) {
 			for (int i = 0; i < ranArray.length; i++) {
 				ranArray[i] = ranString.charAt( random.nextInt( 36 ) ) ;
 				theRan = theRan + ranArray[i] ;
 			}
-			session.flush();
 			hql = "from ChapterEntity where chapterNum=?" ;
+			session.flush();
 			Query query = session.createQuery(hql).setString( 0 , theRan ) ;
+			query.setMaxResults(1);
 			List<ChapterEntity> listChapter = query.list() ;
-			session.flush() ;
 			if( listChapter.size() == 0 ) {
 				clash = false ;
 			}
@@ -64,15 +64,15 @@ public class ChapterDao extends DaoAbstract {
 					Query query = session.createQuery( hql ) ;
 					query.setString( 0 , courseNum ) ;
 					query.setInteger( 1 , i ) ;
+					query.setMaxResults(1);
 					List<ChapterEntity> templ = query.list() ;
 					ChapterEntity tempe = templ.get(0) ;
-					session.flush() ;
 					tempe.setListId( tempe.getListId() + 1 ) ;
 					session.update(tempe) ;
 					session.flush() ;
 				}
 			}
-			session.saveOrUpdate( chapter ) ;
+			session.save(chapter) ;
 			session.flush() ;
 			session.getTransaction().commit() ;
 			return chapter ;
@@ -131,6 +131,7 @@ public class ChapterDao extends DaoAbstract {
 			session.beginTransaction() ;
 			Query query = session.createQuery(hql) ;
 			query.setString( 0 , chapterNum ) ;
+			query.setMaxResults(1);
 			List<ChapterEntity> listChapter = query.list() ;
 			session.flush() ;
 			session.getTransaction().commit() ;
@@ -157,11 +158,12 @@ public class ChapterDao extends DaoAbstract {
 			session.clear() ;
 			session.beginTransaction() ;
 			Query query = session.createQuery(hql).setString( 0, chapter.getChapterNum() ) ;
+			query.setMaxResults(1);
+			session.flush() ;
 			List<ChapterEntity> lists = query.list() ;
 			ChapterEntity c = lists.get(0) ;
 			c.setChapterVideo( chapter.getChapterVideo() ) ;
 			c.setChapterVideoName( chapter.getChapterVideoName( ) ) ;
-			session.flush() ;
 			session.update( c ) ;
 			session.flush() ;
 			session.getTransaction().commit() ;
@@ -220,7 +222,9 @@ public class ChapterDao extends DaoAbstract {
 			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , chapterNum ) ;
+			query.setMaxResults(1);
 			List<ChapterEntity> lists = query.list() ;
+			session.flush() ;
 			if( lists == null || lists.size() == 0 ) {
 				return false ;
 			} else {
@@ -232,7 +236,6 @@ public class ChapterDao extends DaoAbstract {
 					check = 1 ;
 				}
 				c.setIsChecked( check ) ;
-				session.flush() ;
 				session.update( c ) ;
 				session.flush() ;
 				session.getTransaction().commit() ;
@@ -296,10 +299,11 @@ public class ChapterDao extends DaoAbstract {
 			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , chapterNum ) ;
+			query.setMaxResults(1);
 			List<ChapterEntity> lists = query.list() ;
+			session.flush() ;
 			Short checkComment = 1 ;
 			lists.get(0).setIsComment( checkComment ) ; 
-			session.flush() ;
 			session.update( lists.get(0) ) ;
 			session.flush() ;
 			session.getTransaction().commit() ;
@@ -329,12 +333,10 @@ public class ChapterDao extends DaoAbstract {
 		hql = "from ChapterEntity where courseNum=?" ;
 		try {
 			session.clear() ;
-			session.beginTransaction() ;
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , courseNum ) ;
 			List<ChapterEntity> lists = query.list() ;
 			session.flush() ;
-			session.getTransaction().commit() ;
 			if( lists == null || lists.size() == 0 ) {
 				return 0 ;
 			}else {
@@ -366,6 +368,7 @@ public class ChapterDao extends DaoAbstract {
 			Query query = session.createQuery( hql ) ;
 			query.setString( 0 , cha.getCourseNum() ) ;
 			query.setInteger( 1 , cha.getListId() ) ;
+			query.setMaxResults(1);
 			List<ChapterEntity> lists = query.list() ;
 			session.flush() ;
 			session.getTransaction().commit() ;

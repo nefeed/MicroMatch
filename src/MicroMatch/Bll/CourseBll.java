@@ -1,5 +1,6 @@
 package MicroMatch.Bll;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -242,6 +243,9 @@ public class CourseBll extends BllAbstract {
 	public JSONArray QueryBySubId(Integer subId) {
 		// TODO Auto-generated method stub
 		List<CourseEntity> lists = courseDao.QueryBySubId( subId ) ;
+		if (lists == null) {
+			lists = new ArrayList<CourseEntity>();
+		}
 		lists = addChildSubCourse( lists , subId ) ;
 		return putIntoJsonArray( lists ) ;
 	}

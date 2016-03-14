@@ -339,7 +339,7 @@ function chooseCourse ( cNum ) {
 	},function(json){
 		if ( json.result == true ) {
 			alert('您已经投过票了！') ;
-			location.reload() ;
+			location.reload(true) ;
 		}
 	}) ;
 }
@@ -370,7 +370,7 @@ function givePeriod() {
 			} else if ( check == 4 ) {
 				alert('该课程并未报名该比赛！') ;
 			}
-			location.reload();
+			location.reload(true);
 		}) ;
 	}
 }

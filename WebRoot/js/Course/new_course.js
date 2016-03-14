@@ -5,29 +5,6 @@ var imgSrc = '' ;
 $(function(){
 	
 	loadSubject() ;
-//	window.onload=function(){
-//	    /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
-//		xiuxiu.embedSWF("altContent",5,"100%","99%");
-//	    //修改为您自己的图片上传接口
-//		xiuxiu.setUploadURL("./coursePic_upload_form.jsp");
-//		xiuxiu.setUploadType(2);
-//		xiuxiu.setUploadDataFieldName("TestFile");
-//		xiuxiu.onInit = function ()
-//		{
-//			xiuxiu.loadPhoto("") ;
-//		}	
-//		xiuxiu.onUploadResponse = function (data)
-//		{
-//			imgSrc = decodeURI(data) ;
-//			imgSrc = imgSrc.replace(/ /, '').replace( /\r/,'' ).replace( /\n/,'' ).replace( /\t/, '') ;
-//			$('#newPic').attr('src', basePath+imgSrc) ;
-//			$('#newPic').show() ;
-//			$('#pic_upbutton').hide() ;
-//			$('#blockInit').hide() ;
-//			$('#blockInit').attr( 'style', 'display: none;' ) ;
-//			$('#myModal').modal('hide') ;
-//		}
-//	}
 	$('#file_upload').change(function () {
 		ajaxFileUpload1();
 	}) ;
