@@ -49,7 +49,7 @@ public class BllFacade implements BllInterface{
 		return BllFacadeHolder.INSTANCE ;
 	}
 
-	// 调用Bll层，单例模式
+	// 调用Bll工厂
 	private BllFactory bllFactory = BllFactory.getBllFactory();
 	
 	// 访问业务层
